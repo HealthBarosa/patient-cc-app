@@ -1,7 +1,6 @@
 import React from 'react';
 import {TouchableOpacity, Text} from 'react-native';
 
-import AppStyles from '../../AppStyles';
 import Styles from './Styles';
 
 export type PrimaryButtonPropsType = {

@@ -1,8 +1,6 @@
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {View, Text, TextInput, TextInputProps} from 'react-native';
 
-import AppStyles from '../../AppStyles';
 import Styles from './Styles';
 
 export type InputAreaPropsType = {

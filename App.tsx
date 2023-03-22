@@ -6,8 +6,8 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {SafeAreaView, StatusBar, StyleSheet, useColorScheme} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+
 import {NavigationContainer} from '@react-navigation/native';
 
 import {ReferralScreen} from './src/screens';
@@ -16,9 +16,7 @@ import AppStyles from './src/AppStyles';
 
 function App(): JSX.Element {
 	return (
-		<SafeAreaView
-			style={styles.container}
-		>
+		<SafeAreaView style={styles.container}>
 			<StatusBar
 				translucent
 				barStyle="default"
@@ -31,15 +29,13 @@ function App(): JSX.Element {
 	);
 }
 
-
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		flexGrow: 1,
 		padding: 10,
 		backgroundColor: AppStyles.colorWhite,
-	}
-})
-
+	},
+});
 
 export default App;
