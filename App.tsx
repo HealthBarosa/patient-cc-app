@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -11,7 +13,7 @@ import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import SplashScreen from 'react-native-splash-screen';
 
-// import {ReferralScreen} from './src/screens';
+import {ReferralScreen} from './src/screens';
 
 import AppStyles from './src/AppStyles';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -32,20 +34,7 @@ function App(): JSX.Element {
 				backgroundColor="transparent"
 			/>
 			<NavigationContainer>
-				<Stack.Navigator>
-					<Stack.Screen
-						name="SignupScreen"
-						options={{
-							headerShown: false,
-						}}
-						component={SignupScreen}
-					/>
-					<Stack.Screen
-						name="OTPScreen"
-						options={{headerShown: false}}
-						component={OTPScreen}
-					/>
-				</Stack.Navigator>
+				<ReferralScreen />
 			</NavigationContainer>
 		</SafeAreaView>
 	);

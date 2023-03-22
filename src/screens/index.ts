@@ -3,6 +3,7 @@ import {
 	ReferralScreen,
 	SignupScreen,
 	OTPScreen,
+	ChooseProfessionScreen,
 } from './ConfigurationScreens';
 
 export {
@@ -11,4 +12,5 @@ export {
 	ReferralScreen,
 	SignupScreen,
 	OTPScreen,
+	ChooseProfessionScreen,
 };
