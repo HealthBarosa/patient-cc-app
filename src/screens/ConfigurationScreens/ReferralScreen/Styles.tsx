@@ -36,6 +36,7 @@ export default StyleSheet.create({
 	},
 	inputContainer: {
 		width: '90%',
+		height: 56,
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'space-around',
@@ -50,9 +51,10 @@ export default StyleSheet.create({
 	},
 	input: {
 		width: '90%',
+		height: '100%',
 		paddingLeft: 5,
 		fontFamily: AppStyles.fontManropeSemiBold,
-		fontSize: 15,
+		fontSize: 16,
 		color: 'rgba(46, 46, 46, 0.87)',
 	},
 	referralContentWrapper: {

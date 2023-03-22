@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -10,7 +12,7 @@ import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 
-import {ReferralScreen} from './src/screens';
+import {ReferralScreen, ChooseProfessionScreen} from './src/screens';
 
 import AppStyles from './src/AppStyles';
 
@@ -23,7 +25,7 @@ function App(): JSX.Element {
 				backgroundColor="transparent"
 			/>
 			<NavigationContainer>
-				<ReferralScreen />
+				<ChooseProfessionScreen />
 			</NavigationContainer>
 		</SafeAreaView>
 	);
