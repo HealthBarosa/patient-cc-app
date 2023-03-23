@@ -13,7 +13,7 @@ import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import SplashScreen from 'react-native-splash-screen';
 
-import {ReferralScreen} from './src/screens';
+import {ReferralScreen, ChooseProfessionScreen} from './src/screens';
 
 import AppStyles from './src/AppStyles';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
