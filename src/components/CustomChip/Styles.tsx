@@ -4,15 +4,16 @@ import AppStyles from '../../AppStyles';
 
 export default StyleSheet.create({
 	container: {
-		width: '90%',
+		height: 48,
 		alignItems: 'center',
 		justifyContent: 'center',
-		paddingVertical: 10,
-		borderRadius: 16,
+		borderWidth: 1.5,
+		gap: 4,
+		borderRadius: 10,
 	},
 	text: {
-		fontSize: 20,
+		fontSize: 15,
 		fontFamily: AppStyles.fontPoppinsSemiBold,
-		color: AppStyles.colorWhite,
+		color: AppStyles.colorGrey2,
 	},
 });
