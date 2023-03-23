@@ -39,7 +39,7 @@ export default StyleSheet.create({
 		fontFamily: AppStyles.fontManropeRegular,
 		color: AppStyles.colorGreyLight2,
 		textAlign: 'center',
-		marginTop: 100,
+		// marginTop: 100,
 	},
 	resendCodeTimerText: {
 		fontSize: 16,
@@ -47,7 +47,7 @@ export default StyleSheet.create({
 		color: '#9154A6',
 	},
 	resendOTPButtonContainer: {
-		marginTop: 100,
+		// marginTop: 100,
 		alignItems: 'center',
 		justifyContent: 'center',
 		width: '100%',

@@ -86,7 +86,7 @@ const OTPScreen = ({navigation}) => {
 				<OTPBox />
 			</View>
 
-			<View>
+			<View style={{marginTop: 180}}>
 				{OTPTime === 0 ? (
 					<OTPNotRecived />
 				) : (
