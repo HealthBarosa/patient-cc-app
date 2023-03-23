@@ -5,7 +5,7 @@ import {
 	OTPScreen,
 	ChooseProfessionScreen,
 } from './ConfigurationScreens';
-
+// export
 export {
 	// configuration screens
 	LandingScreen,
