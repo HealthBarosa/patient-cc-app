@@ -58,10 +58,11 @@ export default function ReferralScreen(): JSX.Element {
 					</Text>
 				</View>
 				<PrimaryButton
-					text="Continue"
 					backgroundColor={AppStyles.colorBrand1}
 					onPress={() => {}}
-				/>
+				>
+					Continue
+				</PrimaryButton>
 			</View>
 		</View>
 	);

@@ -1,17 +1,16 @@
 import {StyleSheet} from 'react-native';
 
-import AppStyles from '../../AppStyles';
+import AppStyles from '../../../AppStyles';
 
 export default StyleSheet.create({
 	container: {
-		width: '90%',
 		alignItems: 'center',
 		justifyContent: 'center',
-		paddingVertical: 8,
-		borderRadius: 7,
+		paddingVertical: 14,
+		borderRadius: 16,
 	},
 	text: {
-		fontSize: 20,
+		fontSize: 17,
 		fontFamily: AppStyles.fontPoppinsSemiBold,
 		color: AppStyles.colorWhite,
 	},
