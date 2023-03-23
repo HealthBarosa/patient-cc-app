@@ -34,7 +34,20 @@ function App(): JSX.Element {
 				backgroundColor="transparent"
 			/>
 			<NavigationContainer>
-				<ReferralScreen />
+				<Stack.Navigator>
+					<Stack.Screen
+						name="SignupScreen"
+						options={{
+							headerShown: false,
+						}}
+						component={SignupScreen}
+					/>
+					<Stack.Screen
+						name="OTPScreen"
+						options={{headerShown: false}}
+						component={OTPScreen}
+					/>
+				</Stack.Navigator>
 			</NavigationContainer>
 		</SafeAreaView>
 	);
