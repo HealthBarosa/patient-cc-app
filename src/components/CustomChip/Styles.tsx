@@ -10,6 +10,7 @@ export default StyleSheet.create({
 		borderWidth: 1.5,
 		gap: 4,
 		borderRadius: 10,
+		paddingVertical: 10,
 	},
 	text: {
 		fontSize: 15,
