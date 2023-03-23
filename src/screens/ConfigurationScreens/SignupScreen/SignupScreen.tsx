@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pressable, SafeAreaView, Text, TextInput, View} from 'react-native';
 import AppStyles from '../../../AppStyles';
-import UserIconSVG from '../../../constants/svg/UserIcon.svg';
+// import UserIconSVG from '../../../constants/svg/UserIcon.svg';
 import CallIconSVG from '../../../constants/svg/CallIcon.svg';
 import {PrimaryButton} from '../../../components';
 import Styles from './Styles';
