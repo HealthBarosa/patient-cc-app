@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		flexGrow: 1,
 		// padding: 10,
+		padding: 10,
 		backgroundColor: AppStyles.colorWhite,
 	},
 });
