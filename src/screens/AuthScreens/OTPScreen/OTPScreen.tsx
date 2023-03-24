@@ -51,7 +51,7 @@ const OTPNotRecived = () => {
 	);
 };
 
-const OTPScreen = ({navigation}) => {
+const OTPScreen = ({navigation}): JSX.Element => {
 	const [OTPTime, setOTPTime] = useState(43);
 
 	const handleBackPress = () => {

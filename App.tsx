@@ -1,3 +1,5 @@
+/* eslint-disable quotes */
+/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 /**
@@ -9,15 +11,16 @@
 
 import React, {useEffect} from 'react';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
-
 import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SplashScreen from 'react-native-splash-screen';
 
-import {ReferralScreen, ChooseProfessionScreen} from './src/screens';
+//import { ReferralScreen, ChooseProfessionScreen } from './src/screens';
+import { AppNavigation, AuthNavigation, ConfigurationNavigation } from "./src/navigations";
 
 import AppStyles from './src/AppStyles';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {OTPScreen, SignupScreen} from './src/screens';
+import { OTPScreen, SignupScreen } from './src/screens';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -34,20 +37,7 @@ function App(): JSX.Element {
 				backgroundColor="transparent"
 			/>
 			<NavigationContainer>
-				<Stack.Navigator>
-					<Stack.Screen
-						name="SignupScreen"
-						options={{
-							headerShown: false,
-						}}
-						component={SignupScreen}
-					/>
-					<Stack.Screen
-						name="OTPScreen"
-						options={{headerShown: false}}
-						component={OTPScreen}
-					/>
-				</Stack.Navigator>
+				<AppNavigation />
 			</NavigationContainer>
 		</SafeAreaView>
 	);
