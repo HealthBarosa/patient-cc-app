@@ -1,0 +1,6 @@
+.yarn
+.bundle
+dist
+node_modules
+metro.config.js
+babel.config.js
