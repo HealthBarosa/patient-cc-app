@@ -6,6 +6,11 @@ import CustomChip from './CustomChip';
 import {SubscriptionCard} from './SubscriptionComponents';
 import OTPBox from './OTPScreenComponents';
 import {SignupWithGoogleBtn} from './SignupScreenComponents';
+import ReferButton from './ReferButton';
+import TieupCarouselComponent from './TieupCarouselComponent';
+import HowItWorksCarouselComponent from './HowItWorksCarouselComponent';
+import ScreenHeader from './ScreenHeader';
+import Tab from './Tab';
 
 export {
 	InputArea,
@@ -14,5 +19,11 @@ export {
 	CustomChip,
 	OTPBox,
 	SignupWithGoogleBtn,
-	SubscriptionCard,
+	Banner,
+	ReferButton,
+	TieupCarouselComponent,
+	HowItWorksCarouselComponent,
+	ScreenHeader,
+	Tab,
+    SubscriptionCard,
 };
