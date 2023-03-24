@@ -1,5 +1,5 @@
-/* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
+/* eslint-disable quotes */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 /**

@@ -9,6 +9,27 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: AppStyles.colorWhite,
+    padding: 10,
+  },
+  scrollContainer: {
+    flexGrow: 1,
+  },
+  headerText: {
+    fontFamily: AppStyles.fontPoppinsSemiBold,
+    color: AppStyles.colorGrey2,
+    fontSize: 20,
+    marginBottom: 10,
+  },
+  bannerContainer: {
+  },
+  referContainer: {
+    marginVertical: 20,
+  },
+  tieupCarouselContainer: {
+
+  },
+  howItWorkContainer: {
+    marginTop: 30,
   },
 });
 

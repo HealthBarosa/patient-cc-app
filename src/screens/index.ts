@@ -16,6 +16,8 @@ import {
 // app screens
 import {
 	HomeScreen,
+	ServiceScreen,
+	ProfileScreen,
 } from './AppScreens';
 
 // export
@@ -32,5 +34,7 @@ export {
 
 	// app screens
 	HomeScreen,
+	ServiceScreen,
+	ProfileScreen,
 };
 

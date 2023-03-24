@@ -8,6 +8,8 @@ export default {
   app: {
     BottomTab: 'bottom-tab',
     HomeScreen: 'home-screen',
+    ServiceScreen: 'service-screen',
+    ProfileScreen: 'profile-screen',
   },
 };
 

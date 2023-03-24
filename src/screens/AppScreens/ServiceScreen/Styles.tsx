@@ -1,11 +1,9 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable quotes */
-import { StyleSheet } from "react-native";
+/* eslint-disable eol-last */
+import { StyleSheet } from "react-native/";
 
 
 export default StyleSheet.create({
-  container: {
-    
-  },
+  container: {},
 });
-
