@@ -9,7 +9,9 @@ import { SignupWithGoogleBtn } from './SignupScreenComponents';
 import ReferButton from './ReferButton';
 import TieupCarouselComponent from './TieupCarouselComponent';
 import HowItWorksCarouselComponent from './HowItWorksCarouselComponent';
+import ScreenHeader from './ScreenHeader';
+import Tab from './Tab';
 
 
-export {InputArea, ReferralOption, PrimaryButton, CustomChip, OTPBox, SignupWithGoogleBtn, Banner, ReferButton, TieupCarouselComponent, HowItWorksCarouselComponent};
+export {InputArea, ReferralOption, PrimaryButton, CustomChip, OTPBox, SignupWithGoogleBtn, Banner, ReferButton, TieupCarouselComponent, HowItWorksCarouselComponent, ScreenHeader, Tab};
 

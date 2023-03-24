@@ -1,10 +1,19 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-extra-semi */
+/* eslint-disable semi */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React from 'react';
+import { View, Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export default function ProfileScreen() {
+import Styles from './Styles';
+
+
+export default function ProfileScreen(): JSX.Element {
   return (
-    <View>
+    <SafeAreaView style={Styles.container} >
       <Text>ProfileScreen</Text>
-    </View>
+    </SafeAreaView>
   )
-}
+};
+

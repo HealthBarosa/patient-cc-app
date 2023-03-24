@@ -10,7 +10,7 @@
  */
 
 import React, {useEffect} from 'react';
-import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SplashScreen from 'react-native-splash-screen';
@@ -30,7 +30,7 @@ function App(): JSX.Element {
 	});
 
 	return (
-		<SafeAreaView style={styles.container}>
+		<View style={styles.container}>
 			<StatusBar
 				translucent
 				barStyle="default"
@@ -39,7 +39,7 @@ function App(): JSX.Element {
 			<NavigationContainer>
 				<AppNavigation />
 			</NavigationContainer>
-		</SafeAreaView>
+		</View>
 	);
 }
 
@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		flexGrow: 1,
-		padding: 10,
 		backgroundColor: AppStyles.colorWhite,
 	},
 });

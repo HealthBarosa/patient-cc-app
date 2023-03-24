@@ -9,7 +9,8 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: AppStyles.colorWhite,
-    padding: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
   },
   scrollContainer: {
     flexGrow: 1,
