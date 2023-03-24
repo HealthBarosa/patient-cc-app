@@ -1,3 +1,3 @@
 import OTPBox from './OTPBox';
 
-export {OTPBox};
+export default OTPBox;

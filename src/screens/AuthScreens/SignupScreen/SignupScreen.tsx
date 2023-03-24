@@ -1,11 +1,17 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import {Pressable, SafeAreaView, Text, TextInput, View} from 'react-native';
+import { Pressable, SafeAreaView, Text, TextInput, View } from 'react-native';
+
+import {PrimaryButton,SignupWithGoogleBtn} from '../../../components';
+
+import { NavigationTree } from '../../../utils';
+
 import AppStyles from '../../../AppStyles';
-// import UserIconSVG from '../../../constants/svg/UserIcon.svg';
-import CallIconSVG from '../../../constants/svg/CallIcon.svg';
-import {PrimaryButton} from '../../../components';
 import Styles from './Styles';
-import {SignupWithGoogleBtn} from '../../../components/SignupScreenComponents';
+
+import CallIconSVG from '../../../constants/svg/CallIcon.svg';
+// import UserIconSVG from '../../../constants/svg/UserIcon.svg';
+
 
 const SignupScreen = ({navigation}) => {
 	const handleSigninPress = () => {
@@ -13,7 +19,7 @@ const SignupScreen = ({navigation}) => {
 	};
 
 	const handleContinuePress = () => {
-		navigation.navigate('OTPScreen');
+		navigation.navigate(NavigationTree.auth.OTPScreen);
 		console.log('Continue Pressed');
 	};
 

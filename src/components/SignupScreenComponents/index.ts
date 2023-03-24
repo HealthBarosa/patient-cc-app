@@ -1,2 +1,2 @@
-import {SignupWithGoogleBtn} from './SignupWithGoogleBtn';
+import SignupWithGoogleBtn from './SignupWithGoogleBtn';
 export {SignupWithGoogleBtn};
