@@ -13,7 +13,11 @@ import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import SplashScreen from 'react-native-splash-screen';
 
-import {ReferralScreen, ChooseProfessionScreen} from './src/screens';
+import {
+	ReferralScreen,
+	ChooseProfessionScreen,
+	BillAndPayDashboardScreen,
+} from './src/screens';
 
 import AppStyles from './src/AppStyles';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -57,7 +61,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		flexGrow: 1,
-		padding: 10,
+		// padding: 10,
 		backgroundColor: AppStyles.colorWhite,
 	},
 });

@@ -6,6 +6,8 @@ import {
 	ChooseProfessionScreen,
 } from './ConfigurationScreens';
 // export
+// PaymentScreens
+import {BillAndPayDashboardScreen} from './PaymentScreens';
 
 export {
 	// configuration screens
@@ -15,3 +17,6 @@ export {
 	OTPScreen,
 	ChooseProfessionScreen,
 };
+
+// PaymentScreens export
+export {BillAndPayDashboardScreen};
