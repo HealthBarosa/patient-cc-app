@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-
 // config screens
 import {
 	LandingScreen,
@@ -8,10 +6,7 @@ import {
 } from './ConfigurationScreens';
 
 // auth screens
-import {
-	OTPScreen,
-	SignupScreen,
-} from './AuthScreens';
+import {OTPScreen, SignupScreen} from './AuthScreens';
 
 // app screens
 import {

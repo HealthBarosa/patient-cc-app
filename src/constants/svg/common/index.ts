@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import BackIcon from './backIcon.svg';
 import GlobIconSVG from './GlobIcon.svg';
 import NextPageIconSVG from './nextPageIcon.svg';

@@ -1,5 +1,3 @@
-/* eslint-disable quotes */
-/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 /**
@@ -22,11 +20,14 @@ import {
 	SubscriptionScreen,
 } from './src/screens';
 //import { ReferralScreen, ChooseProfessionScreen } from './src/screens';
-import { AppNavigation, AuthNavigation, ConfigurationNavigation } from "./src/navigations";
+import {
+	AppNavigation,
+	AuthNavigation,
+	ConfigurationNavigation,
+} from './src/navigations';
 
 import AppStyles from './src/AppStyles';
-import { OTPScreen, SignupScreen } from './src/screens';
-
+import {OTPScreen, SignupScreen} from './src/screens';
 
 const Stack = createNativeStackNavigator();
 
