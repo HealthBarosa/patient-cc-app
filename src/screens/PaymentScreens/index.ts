@@ -1,4 +1,5 @@
 import {BillAndPayDashboardScreen} from './BillAndPayDashboardScreen';
 import {SubscriptionScreen} from './SubscriptionScreen';
+import {PaymentHistory} from './PaymentHistory';
 
-export {BillAndPayDashboardScreen, SubscriptionScreen};
+export {BillAndPayDashboardScreen, SubscriptionScreen, PaymentHistory};

@@ -19,7 +19,11 @@ import {
 
 // export
 // PaymentScreens
-import {BillAndPayDashboardScreen, SubscriptionScreen} from './PaymentScreens';
+import {
+	BillAndPayDashboardScreen,
+	SubscriptionScreen,
+	PaymentHistory,
+} from './PaymentScreens';
 
 export {
 	// configuration screens
@@ -40,4 +44,4 @@ export {
 };
 
 // PaymentScreens export
-export {BillAndPayDashboardScreen, SubscriptionScreen};
+export {BillAndPayDashboardScreen, SubscriptionScreen, PaymentHistory};

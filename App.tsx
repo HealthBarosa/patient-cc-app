@@ -18,6 +18,7 @@ import {
 	ChooseProfessionScreen,
 	BillAndPayDashboardScreen,
 	SubscriptionScreen,
+	PaymentHistory,
 } from './src/screens';
 //import { ReferralScreen, ChooseProfessionScreen } from './src/screens';
 import {
@@ -46,6 +47,7 @@ function App(): JSX.Element {
 			<NavigationContainer>
 				<AppNavigation />
 			</NavigationContainer>
+			<PaymentHistory />
 		</View>
 	);
 }
