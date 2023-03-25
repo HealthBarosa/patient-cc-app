@@ -1,22 +1,44 @@
+/* eslint-disable prettier/prettier */
+
+// config screens
 import {
 	LandingScreen,
 	ReferralScreen,
-	SignupScreen,
-	OTPScreen,
 	ChooseProfessionScreen,
 } from './ConfigurationScreens';
+
+// auth screens
+import {
+	OTPScreen,
+	SignupScreen,
+} from './AuthScreens';
+
+// app screens
+import {
+	HomeScreen,
+	ServiceScreen,
+	ProfileScreen,
+	ChangeLanguage,
+	EditProfile,
+} from './AppScreens';
+
 // export
-// PaymentScreens
-import {BillAndPayDashboardScreen} from './PaymentScreens';
 
 export {
 	// configuration screens
 	LandingScreen,
 	ReferralScreen,
-	SignupScreen,
-	OTPScreen,
 	ChooseProfessionScreen,
+
+	// auth screens
+	OTPScreen,
+	SignupScreen,
+
+	// app screens
+	HomeScreen,
+	ServiceScreen,
+	ProfileScreen,
+	ChangeLanguage,
+	EditProfile,
 };
 
-// PaymentScreens export
-export {BillAndPayDashboardScreen};
