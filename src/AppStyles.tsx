@@ -8,6 +8,7 @@ export default {
 	colorGrey2: '#2E2E2E',
 	colorGreyLight1: '#F8F8F8',
 	colorGreyLight2: '#979797',
+	colorGreyLight3: '#F3F3F3',
 	colorRed1: '#F55459',
 	buttonBlue1: '#8A86F1',
 	colorGreen1: '#1AA703',

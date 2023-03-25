@@ -11,6 +11,7 @@ import TieupCarouselComponent from './TieupCarouselComponent';
 import HowItWorksCarouselComponent from './HowItWorksCarouselComponent';
 import ScreenHeader from './ScreenHeader';
 import Tab from './Tab';
+import MoreOptions from './common/MoreOptions/MoreOptions';
 
 export {
 	InputArea,
@@ -25,5 +26,6 @@ export {
 	HowItWorksCarouselComponent,
 	ScreenHeader,
 	Tab,
+	MoreOptions,
     SubscriptionCard,
 };

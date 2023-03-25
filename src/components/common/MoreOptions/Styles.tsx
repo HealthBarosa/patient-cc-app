@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 import AppStyles from '../../../AppStyles';
 
@@ -21,7 +22,7 @@ export default StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'space-between',
-		marginBottom: 20,
+		// marginBottom: 20,
 	},
 	logoContainer: {
 		backgroundColor: AppStyles.colorBrandLight1,
