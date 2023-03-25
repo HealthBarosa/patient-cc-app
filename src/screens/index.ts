@@ -18,6 +18,8 @@ import {
 	HomeScreen,
 	ServiceScreen,
 	ProfileScreen,
+	ChangeLanguage,
+	EditProfile,
 } from './AppScreens';
 
 // export
@@ -36,5 +38,7 @@ export {
 	HomeScreen,
 	ServiceScreen,
 	ProfileScreen,
+	ChangeLanguage,
+	EditProfile,
 };
 
