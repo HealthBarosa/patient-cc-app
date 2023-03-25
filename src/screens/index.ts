@@ -16,6 +16,10 @@ import {
 // app screens
 import {
 	HomeScreen,
+	ServiceScreen,
+	ProfileScreen,
+	ChangeLanguage,
+	EditProfile,
 } from './AppScreens';
 
 // export
@@ -34,6 +38,10 @@ export {
 
 	// app screens
 	HomeScreen,
+	ServiceScreen,
+	ProfileScreen,
+	ChangeLanguage,
+	EditProfile,
 };
 
 // PaymentScreens export

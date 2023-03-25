@@ -12,6 +12,7 @@ import HowItWorksCarouselComponent from './HowItWorksCarouselComponent';
 import ScreenHeader from './ScreenHeader';
 import Tab from './Tab';
 import MoreOptions from './common/MoreOptions/MoreOptions';
+import LanguageTab from './LanguageTab';
 
 export {
 	InputArea,
@@ -27,5 +28,5 @@ export {
 	ScreenHeader,
 	Tab,
 	MoreOptions,
-    SubscriptionCard,
+	LanguageTab,
 };
