@@ -13,6 +13,7 @@ import ScreenHeader from './ScreenHeader';
 import Tab from './Tab';
 import MoreOptions from './common/MoreOptions/MoreOptions';
 import LanguageTab from './LanguageTab';
+import {SubscriptionCard} from './SubscriptionComponents';
 
 export {
 	InputArea,
@@ -29,4 +30,5 @@ export {
 	Tab,
 	MoreOptions,
 	LanguageTab,
+	SubscriptionCard,
 };
