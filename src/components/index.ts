@@ -11,7 +11,8 @@ import TieupCarouselComponent from './TieupCarouselComponent';
 import HowItWorksCarouselComponent from './HowItWorksCarouselComponent';
 import ScreenHeader from './ScreenHeader';
 import Tab from './Tab';
+import MoreOptions from './common/MoreOptions/MoreOptions';
 
 
-export {InputArea, ReferralOption, PrimaryButton, CustomChip, OTPBox, SignupWithGoogleBtn, Banner, ReferButton, TieupCarouselComponent, HowItWorksCarouselComponent, ScreenHeader, Tab};
+export {InputArea, ReferralOption, PrimaryButton, CustomChip, OTPBox, SignupWithGoogleBtn, Banner, ReferButton, TieupCarouselComponent, HowItWorksCarouselComponent, ScreenHeader, Tab, MoreOptions};
 

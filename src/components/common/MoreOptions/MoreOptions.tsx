@@ -1,5 +1,7 @@
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View, StyleProp, ViewStyle} from 'react-native';
 import {
 	ChartSuccessIconSVG,
 	DocumentIconSVG,
@@ -8,6 +10,8 @@ import {
 	HeartIconSVG,
 	NextPageIconSVG,
 	StickyNoteIconSVG,
+	BankSVG,
+	ReferSVG,
 } from '../../../constants/svg/common';
 import Styles from './Styles';
 
@@ -23,6 +27,7 @@ interface MoreOptionsTabsProps
 	 * @type {string} `Glob`, `Heart`, `Dollar`, `Document`, `Chart`, `StickyNote`
 	 */
 	iconName: string;
+	tabStyle: StyleProp<ViewStyle>;
 }
 
 /**
@@ -45,6 +50,10 @@ const handleChoseIcon = (iconName: string) => {
 			return <GlobIconSVG />;
 		case 'Heart':
 			return <HeartIconSVG />;
+		case 'Bank':
+			return <BankSVG />;
+		case 'Refer':
+			return <ReferSVG />;
 		case 'Dollar':
 			return <DollarIconSVG />;
 		case 'Document':
@@ -61,10 +70,11 @@ const handleChoseIcon = (iconName: string) => {
 const OptionTabs = ({
 	optionName,
 	iconName,
+	tabStyle,
 	...moreOption
 }: MoreOptionsTabsProps) => {
 	return (
-		<TouchableOpacity {...moreOption} style={Styles.optionTabsContainer}>
+		<TouchableOpacity {...moreOption} style={[Styles.optionTabsContainer, tabStyle]}>
 			<View style={Styles.optionFirstContainer}>
 				<View style={Styles.logoContainer}>
 					{handleChoseIcon(iconName)}
