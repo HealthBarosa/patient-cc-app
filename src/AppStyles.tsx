@@ -10,6 +10,8 @@ export default {
 	colorGreyLight2: '#979797',
 	colorRed1: '#F55459',
 	buttonBlue1: '#8A86F1',
+	colorGreen1: '#1AA703',
+	colorGreen2: '#C9FAD6',
 	fontPoppinsBold: 'Poppins_Bold',
 	fontPoppinsThin: 'Poppins_Thin',
 	fontManropeBold: 'Manrope_Bold',

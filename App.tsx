@@ -17,6 +17,7 @@ import {
 	ReferralScreen,
 	ChooseProfessionScreen,
 	BillAndPayDashboardScreen,
+	SubscriptionScreen,
 } from './src/screens';
 
 import AppStyles from './src/AppStyles';
