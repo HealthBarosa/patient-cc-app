@@ -1,10 +1,12 @@
 {
 	"trailingComma": "es5",
 	"tabWidth": 4,
+	"detectIndentation": true,
+	"insertSpaces": false,
 	"semi": true,
-	"singleQuote": true,
+	"singleQuote": false,
 	"printWidth": 80,
-	"bracketSpacing": false,
+	"bracketSpacing": true,
 	"useTabs": true,
 	"endOfLine": "lf"
 }

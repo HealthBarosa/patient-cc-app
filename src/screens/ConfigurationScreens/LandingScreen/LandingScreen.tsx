@@ -1,14 +1,11 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 
-import OnlineMedicineSVG from '../../../constants/svg/OnlineMedicine.svg';
-import UserSVG from '../../../constants/svg/User.svg';
-import PeopleSVG from '../../../constants/svg/People.svg';
-
-import AppStyles from '../../../AppStyles';
-import Styles from './Styles';
+import Styles from "./Styles";
+import AppStyles from "@/AppStyles";
+import { OnlineMedicineSVG, PeopleSVG, UserSVG } from "@/constants/svg/Landing";
 
 export default function LandingScreen(): JSX.Element {
 	const [selectedOptionIndex, setSelectedOptionIndex] = useState<number>(-1);
@@ -36,9 +33,9 @@ export default function LandingScreen(): JSX.Element {
 								? {
 										borderColor: AppStyles.colorBrand1,
 										backgroundColor:
-											'rgba(138, 134, 241, 0.12)',
+											"rgba(138, 134, 241, 0.12)",
 								  }
-								: {borderColor: AppStyles.colorGrey2},
+								: { borderColor: AppStyles.colorGrey2 },
 						]}
 					>
 						<UserSVG width={40} height={40} />
@@ -53,9 +50,9 @@ export default function LandingScreen(): JSX.Element {
 								? {
 										borderColor: AppStyles.colorBrand1,
 										backgroundColor:
-											'rgba(138, 134, 241, 0.12)',
+											"rgba(138, 134, 241, 0.12)",
 								  }
-								: {borderColor: AppStyles.colorGrey2},
+								: { borderColor: AppStyles.colorGrey2 },
 						]}
 					>
 						<PeopleSVG width={40} height={40} />

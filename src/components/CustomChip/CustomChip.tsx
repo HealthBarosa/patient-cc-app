@@ -1,12 +1,7 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react-native/no-inline-styles */
+import React from "react";
+import { TouchableOpacity, Text, StyleProp, ViewStyle } from "react-native";
 
-import React from 'react';
-import {TouchableOpacity, Text, StyleProp, ViewStyle} from 'react-native';
-import AppStyles from '../../AppStyles';
-
-import Styles from './Styles';
+import Styles from "./Styles";
 
 export type CustomChipPropsType = {
 	text: string;
@@ -30,12 +25,12 @@ export default function CustomChip({
 				containerStyle,
 				isSelected
 					? {
-							borderColor: 'rgba(46, 46, 46, 0.5)',
-							backgroundColor: 'rgba(138, 134, 241, 0.33)',
+							borderColor: "rgba(46, 46, 46, 0.5)",
+							backgroundColor: "rgba(138, 134, 241, 0.33)",
 					  }
 					: {
-							borderColor: 'rgba(46, 46, 46, 0.5)',
-							backgroundColor: 'transparent',
+							borderColor: "rgba(46, 46, 46, 0.5)",
+							backgroundColor: "transparent",
 					  },
 			]}
 		>

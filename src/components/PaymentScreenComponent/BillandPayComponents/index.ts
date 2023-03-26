@@ -1,3 +1,3 @@
-import BillCard from './BillCard/BillCard';
+import BillCard from "./BillCard/BillCard";
 
-export {BillCard};
+export { BillCard };

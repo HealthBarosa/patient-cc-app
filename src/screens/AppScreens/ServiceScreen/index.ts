@@ -2,6 +2,4 @@
 /* eslint-disable quotes */
 import ServiceScreen from "./ServiceScreen";
 
-
 export default ServiceScreen;
-

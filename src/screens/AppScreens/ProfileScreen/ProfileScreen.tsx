@@ -1,17 +1,14 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable no-extra-semi */
-/* eslint-disable semi */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React from 'react';
-import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import React from "react";
+import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 
-import Styles from './Styles';
+import Styles from "./Styles";
 
-import UserProfile from '../../../constants/svg/icons/User.svg';
-import ProfessionIcon from '../../../constants/svg/icons/Profession.svg';
-import LocationIcon from '../../../constants/svg/icons/LocationGrey.svg';
-import {MoreOptions} from '../../../components';
+import { MoreOptions } from "@/components";
+import {
+	LocationIcon,
+	ProfessionIcon,
+	UserProfile,
+} from "@/constants/svg/icons";
 
 export default function ProfileScreen(): JSX.Element {
 	return (
@@ -23,7 +20,7 @@ export default function ProfileScreen(): JSX.Element {
 			>
 				<View style={Styles.coverContainer}>
 					<Image
-						source={require('../../../constants/image/Cover.png')}
+						source={require("../../../constants/image/Cover.png")}
 						style={Styles.coverImage}
 					/>
 					<View style={Styles.profileContainer}>
@@ -60,7 +57,6 @@ export default function ProfileScreen(): JSX.Element {
 								<MoreOptions.OptionTabs
 									iconName="Document"
 									optionName="Change Language"
-									tabStyle={{marginBottom: 0}}
 								/>
 							</MoreOptions>
 						</View>
@@ -68,27 +64,22 @@ export default function ProfileScreen(): JSX.Element {
 							<MoreOptions.OptionTabs
 								iconName="Glob"
 								optionName="Change Language"
-								tabStyle={{marginBottom: 20}}
 							/>
 							<MoreOptions.OptionTabs
 								iconName="Heart"
 								optionName="Subscription"
-								tabStyle={{marginBottom: 20}}
 							/>
 							<MoreOptions.OptionTabs
 								iconName="Dollar"
 								optionName="Payment"
-								tabStyle={{marginBottom: 20}}
 							/>
 							<MoreOptions.OptionTabs
 								iconName="Bank"
 								optionName="Add Bank"
-								tabStyle={{marginBottom: 20}}
 							/>
 							<MoreOptions.OptionTabs
 								iconName="Refer"
 								optionName="Refer Friend"
-								tabStyle={{marginBottom: 20}}
 							/>
 						</MoreOptions>
 					</View>

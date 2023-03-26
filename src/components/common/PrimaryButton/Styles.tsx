@@ -1,11 +1,10 @@
-import {StyleSheet} from 'react-native';
-
-import AppStyles from '../../../AppStyles';
+import AppStyles from "@/AppStyles";
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
 	container: {
-		alignItems: 'center',
-		justifyContent: 'center',
+		alignItems: "center",
+		justifyContent: "center",
 		paddingVertical: 14,
 		borderRadius: 16,
 	},

@@ -1,3 +1,3 @@
-import ReferralScreen from './ReferralScreen';
+import ReferralScreen from "./ReferralScreen";
 
 export default ReferralScreen;

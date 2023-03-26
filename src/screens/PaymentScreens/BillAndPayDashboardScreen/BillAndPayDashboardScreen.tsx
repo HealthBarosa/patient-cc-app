@@ -1,10 +1,10 @@
-import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
-import AppStyles from '../../../AppStyles';
-import {BillCard, PrimaryButton} from '../../../components';
-import MoreOptions from '../../../components/common/MoreOptions/MoreOptions';
-import NavHeader from '../../../components/common/NavHeader';
-import Styles from './Styles';
+import React from "react";
+import { SafeAreaView, Text, View } from "react-native";
+
+import NavHeader from "@/components/common/NavHeader";
+import { BillCard, MoreOptions, PrimaryButton } from "@/components";
+import Styles from "./Styles";
+import AppStyles from "@/AppStyles";
 
 interface BillAndPayDashboardScreenProps {
 	isPaymentDue?: boolean;
@@ -18,22 +18,22 @@ const BillAndPayDashboardScreen = ({
 }: BillAndPayDashboardScreenProps) => {
 	return (
 		<SafeAreaView>
-			<NavHeader headerName={'Bills & Payment'} />
+			<NavHeader headerName={"Bills & Payment"} />
 			<View style={Styles.billCardContainer}>
 				{isPaymentDue ? (
 					<BillCard
-						headingText={'You have remaining amount of'}
-						payBeforeDate={'12th March 2023'}
+						headingText={"You have remaining amount of"}
+						payBeforeDate={"12th March 2023"}
 						paymentDueAmmount={799}
 						isPaymentDue
-						dueOnDate={'13th March, 2023'}
+						dueOnDate={"13th March, 2023"}
 					/>
 				) : (
 					<BillCard
-						headingText={'Yay! bill is paid'}
+						headingText={"Yay! bill is paid"}
 						ammount={799}
-						lastPaid={'13th March, 2023'}
-						promoText={'never miss a due date'}
+						lastPaid={"13th March, 2023"}
+						promoText={"never miss a due date"}
 					/>
 				)}
 			</View>
@@ -41,20 +41,20 @@ const BillAndPayDashboardScreen = ({
 				<Text style={Styles.heading2Text}>More with bills</Text>
 				<MoreOptions>
 					<MoreOptions.OptionTabs
-						iconName={'StickyNote'}
-						optionName={'Previous Bills'}
+						iconName={"StickyNote"}
+						optionName={"Previous Bills"}
 					/>
 					<MoreOptions.OptionTabs
-						iconName={'Heart'}
-						optionName={'Auto-pay'}
+						iconName={"Heart"}
+						optionName={"Auto-pay"}
 					/>
 					<MoreOptions.OptionTabs
-						iconName={'Dollar'}
-						optionName={'Payment Settings'}
+						iconName={"Dollar"}
+						optionName={"Payment Settings"}
 					/>
 					<MoreOptions.OptionTabs
-						iconName={'Chart'}
-						optionName={'FAQ/ Support'}
+						iconName={"Chart"}
+						optionName={"FAQ/ Support"}
 					/>
 				</MoreOptions>
 			</View>

@@ -1,7 +1,7 @@
-import React from 'react';
-import {View, Text, TextInput, TextInputProps} from 'react-native';
+import React from "react";
+import { View, Text, TextInput, TextInputProps } from "react-native";
 
-import Styles from './Styles';
+import Styles from "./Styles";
 
 export type InputAreaPropsType = {
 	Icon: SVGElement;

@@ -1,8 +1,8 @@
-import React from 'react';
-import {Text, View} from 'react-native';
-import {DoctorHapySVG} from '../../../../constants/svg/PaymentAndBill';
-import Styles from './Styles';
+import React from "react";
+import { Text, View } from "react-native";
 
+import Styles from "./Styles";
+import { DoctorHapySVG } from "@/constants/svg/PaymentAndBill";
 interface BillCardProps {
 	ammount?: number;
 	lastPaid?: string;

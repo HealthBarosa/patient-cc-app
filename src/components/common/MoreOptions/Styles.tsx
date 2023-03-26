@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
-import {StyleSheet} from 'react-native';
-import AppStyles from '../../../AppStyles';
+import { StyleSheet } from "react-native";
+import AppStyles from "@/AppStyles";
 
 export default StyleSheet.create({
 	container: {
@@ -13,15 +13,15 @@ export default StyleSheet.create({
 	optionText: {
 		fontSize: 16,
 		fontFamily: AppStyles.fontPoppinsMedium,
-		fontWeight: '500',
+		fontWeight: "500",
 		color: AppStyles.colorGrey2,
 		paddingLeft: 9,
 	},
 	optionTabsContainer: {
-		display: 'flex',
-		flexDirection: 'row',
-		alignItems: 'center',
-		justifyContent: 'space-between',
+		display: "flex",
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "space-between",
 		// marginBottom: 20,
 	},
 	logoContainer: {
@@ -30,14 +30,14 @@ export default StyleSheet.create({
 		borderRadius: 100,
 	},
 	optionFirstContainer: {
-		display: 'flex',
-		flexDirection: 'row',
-		alignItems: 'center',
+		display: "flex",
+		flexDirection: "row",
+		alignItems: "center",
 	},
 	buttonText: {
 		fontSize: 16,
 		fontFamily: AppStyles.fontPoppinsMedium,
-		fontWeight: '500',
+		fontWeight: "500",
 		color: AppStyles.colorWhite,
 	},
 });

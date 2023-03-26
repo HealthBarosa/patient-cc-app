@@ -1,3 +1,3 @@
-import SubscriptionScreen from './SubscriptionScreen';
+import SubscriptionScreen from "./SubscriptionScreen";
 
-export {SubscriptionScreen};
+export { SubscriptionScreen };

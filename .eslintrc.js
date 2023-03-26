@@ -1,10 +1,41 @@
+/* eslint-env es6 */
+/* eslint-disable no-console */
 module.exports = {
 	root: true,
-	extends: '@react-native-community',
-	rules: {
-		//indent: ['error', 'tab', {SwitchCase: 1}],
-		// quotes: ['error', 'double'],
-		// 'object-curly-spacing': ['error', 'always'],
-		// 'array-bracket-spacing': ['error', 'always'],
+	// extends: '@react-native-community',
+	parserOptions: {
+		sourceType: "module",
+		ecmaVersion: 2020,
 	},
+	rules: {
+		"no-unused-vars": [ 1, { args: "after-used", argsIgnorePattern: "^_" } ],
+		indent: [ "error", "tab", { SwitchCase: 1 } ],
+		quotes: [ "error", "double" ],
+		"object-curly-spacing": [ "error", "always" ],
+		"array-bracket-spacing": [ "error", "always" ],
+	},
+	ignorePatterns: [
+		"node_modules/",
+		"android/",
+		"ios/",
+		"metro.config.js",
+		"babel.config.js",
+		"jest.config.js",
+		"commitlint.config.js",
+		"index.js",
+		"App.js",
+		"app.json",
+		"package.json",
+		"package-lock.json",
+		"yarn.lock",
+		"README.md",
+		"LICENSE",
+		"CHANGELOG.md",
+		"CODE_OF_CONDUCT.md",
+		"CONTRIBUTING.md",
+		"SECURITY.md",
+		"CODEOWNERS",
+		"CODE_OF_CONDUCT.md",
+		"CONTRIBUTING.md",
+	],
 };

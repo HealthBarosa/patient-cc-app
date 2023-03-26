@@ -1,6 +1,4 @@
 /* eslint-disable prettier/prettier */
-import Tab from './Tab';
-
+import Tab from "./Tab";
 
 export default Tab;
-

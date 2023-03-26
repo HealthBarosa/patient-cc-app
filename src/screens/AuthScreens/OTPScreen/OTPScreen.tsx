@@ -1,23 +1,23 @@
-import React, {useEffect, useState} from 'react';
+/* eslint-disable react-native/no-inline-styles */
+import React, { useEffect, useState } from "react";
 import {
 	Pressable,
 	SafeAreaView,
 	Text,
 	TouchableOpacity,
 	View,
-} from 'react-native';
-import Styles from './Styles';
-import LeftIconSVG from '../../../constants/svg/LeftIcon.svg';
-import {OTPBox} from '../../../components/OTPScreenComponents';
-import {PrimaryButton} from '../../../components';
-import AppStyles from '../../../AppStyles';
+} from "react-native";
+import Styles from "./Styles";
+import { OTPBox, PrimaryButton } from "@/components";
+import AppStyles from "@/AppStyles";
+import { LeftIconSVG } from "@/constants/svg/OTPScreen";
 
 interface OTPTimmerProps {
 	OTPTime: number;
 	setOTPTime: (OTPTime: number) => void;
 }
 
-const OTPTimer = ({OTPTime, setOTPTime}: OTPTimmerProps) => {
+const OTPTimer = ({ OTPTime, setOTPTime }: OTPTimmerProps) => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			OTPTime !== 0 && setOTPTime(OTPTime - 1);
@@ -27,7 +27,7 @@ const OTPTimer = ({OTPTime, setOTPTime}: OTPTimmerProps) => {
 
 	return (
 		<Text style={Styles.resendCodeText}>
-			Resend code in{' '}
+			Resend code in{" "}
 			<Text style={Styles.resendOTPButtonText}>{OTPTime}</Text> Seconds
 		</Text>
 	);
@@ -51,7 +51,7 @@ const OTPNotRecived = () => {
 	);
 };
 
-const OTPScreen = ({navigation}): JSX.Element => {
+const OTPScreen = ({ navigation }): JSX.Element => {
 	const [OTPTime, setOTPTime] = useState(43);
 
 	const handleBackPress = () => {
@@ -69,7 +69,7 @@ const OTPScreen = ({navigation}): JSX.Element => {
 		<SafeAreaView style={Styles.container}>
 			<Pressable
 				onPress={() => handleBackPress()}
-				hitSlop={{top: 20, bottom: 20, left: 20, right: 20}}
+				hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
 			>
 				<LeftIconSVG />
 			</Pressable>
@@ -86,7 +86,7 @@ const OTPScreen = ({navigation}): JSX.Element => {
 				<OTPBox />
 			</View>
 
-			<View style={{marginTop: 180}}>
+			<View style={{ marginTop: 180 }}>
 				{OTPTime === 0 ? (
 					<OTPNotRecived />
 				) : (
@@ -94,7 +94,7 @@ const OTPScreen = ({navigation}): JSX.Element => {
 				)}
 			</View>
 
-			<View style={{marginTop: 180}}>
+			<View style={{ marginTop: 180 }}>
 				<PrimaryButton
 					onPress={() => {}}
 					backgroundColor={AppStyles.colorBrand1}

@@ -1,3 +1,3 @@
-import OTPScreen from './OTPScreen';
+import OTPScreen from "./OTPScreen";
 
 export default OTPScreen;

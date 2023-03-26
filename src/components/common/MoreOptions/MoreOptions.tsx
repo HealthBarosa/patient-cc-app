@@ -1,5 +1,11 @@
-import React from 'react';
-import {Text, TouchableOpacity, View, StyleProp, ViewStyle} from 'react-native';
+import React from "react";
+import {
+	Text,
+	TouchableOpacity,
+	View,
+	StyleProp,
+	ViewStyle,
+} from "react-native";
 import {
 	ChartSuccessIconSVG,
 	DocumentIconSVG,
@@ -10,8 +16,8 @@ import {
 	StickyNoteIconSVG,
 	BankSVG,
 	ReferSVG,
-} from '../../../constants/svg/common';
-import Styles from './Styles';
+} from "@/constants/svg/common";
+import Styles from "./Styles";
 
 interface MoreOptionsProps {
 	children?: React.ReactNode;
@@ -37,27 +43,27 @@ interface MoreOptionsTabsProps
  *      <MoreOptions.OptionTabs iconName={'Dollar'} optionName={'FAQ/ Support'} />
  * </MoreOptions>
  */
-const MoreOptions = ({children}: MoreOptionsProps) => {
+const MoreOptions = ({ children }: MoreOptionsProps) => {
 	return <View style={Styles.container}>{children}</View>;
 };
 
 const handleChoseIcon = (iconName: string) => {
 	switch (iconName) {
-		case 'Glob':
+		case "Glob":
 			return <GlobIconSVG />;
-		case 'Heart':
+		case "Heart":
 			return <HeartIconSVG />;
-		case 'Bank':
+		case "Bank":
 			return <BankSVG />;
-		case 'Refer':
+		case "Refer":
 			return <ReferSVG />;
-		case 'Dollar':
+		case "Dollar":
 			return <DollarIconSVG />;
-		case 'Document':
+		case "Document":
 			return <DocumentIconSVG />;
-		case 'Chart':
+		case "Chart":
 			return <ChartSuccessIconSVG />;
-		case 'StickyNote':
+		case "StickyNote":
 			return <StickyNoteIconSVG />;
 		default:
 			return <GlobIconSVG />;
@@ -78,7 +84,7 @@ const OptionTabs = ({
 
 				<Text style={Styles.optionText}>{optionName}</Text>
 			</View>
-			<View style={{marginRight: 24.9}}>
+			<View style={{ marginRight: 24.9 }}>
 				<NextPageIconSVG />
 			</View>
 		</TouchableOpacity>

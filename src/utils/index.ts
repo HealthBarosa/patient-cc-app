@@ -2,8 +2,4 @@
 /* eslint-disable quotes */
 import NavigationTree from "./NavigationTree";
 
-
-export {
-  NavigationTree,
-};
-
+export { NavigationTree };

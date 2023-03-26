@@ -1,15 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 
-import React, {useState} from 'react';
-import {View, Text, Dimensions} from 'react-native';
-import AppStyles from '../../../AppStyles';
-import {PrimaryButton} from '../../../components';
+import React, { useState } from "react";
+import { View, Text, Dimensions } from "react-native";
 
-import {CustomChip} from '../../../components';
+import { CustomChip, PrimaryButton } from "@/components";
+import AppStyles from "@/AppStyles";
 
-import BannerSVG from '../../../constants/svg/Insurance.svg';
-
-import Styles from './Styles';
+import Styles from "./Styles";
+import { InsuranceSVG } from "@/constants/svg/ChooseProfession";
 
 type professionObject = {
 	text: string;
@@ -17,10 +15,10 @@ type professionObject = {
 };
 
 const professions: professionObject[] = [
-	{text: 'Pro', width: '30%'},
-	{text: 'Pharmacist', width: '67.5%'},
-	{text: 'Lab Technician', width: '52.5%'},
-	{text: 'Others...', width: '45%'},
+	{ text: "Pro", width: "30%" },
+	{ text: "Pharmacist", width: "67.5%" },
+	{ text: "Lab Technician", width: "52.5%" },
+	{ text: "Others...", width: "45%" },
 ];
 
 export default function ChooseProfessionScreen(): JSX.Element {
@@ -30,9 +28,9 @@ export default function ChooseProfessionScreen(): JSX.Element {
 	return (
 		<View style={Styles.container}>
 			<View style={Styles.imageWrapper}>
-				<BannerSVG
-					width={Dimensions.get('window').width}
-					height={Dimensions.get('window').height * 0.5}
+				<InsuranceSVG
+					width={Dimensions.get("window").width}
+					height={Dimensions.get("window").height * 0.5}
 				/>
 			</View>
 			<View style={Styles.contentWrapper}>
@@ -46,16 +44,20 @@ export default function ChooseProfessionScreen(): JSX.Element {
 							text={item.text}
 							isSelected={selectedProfessionIndex === index}
 							onPress={() => setSelectedProfessionIndex(index)}
-							containerStyle={{width: item.width, marginTop: 10}}
+							containerStyle={{
+								width: item.width,
+								marginTop: 10,
+							}}
 						/>
 					))}
 				</View>
 			</View>
 			<PrimaryButton
-				text="Continue"
 				backgroundColor={AppStyles.colorBrand1}
 				onPress={() => {}}
-			/>
+			>
+				Continue
+			</PrimaryButton>
 		</View>
 	);
 }

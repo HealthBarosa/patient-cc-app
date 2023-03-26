@@ -1,3 +1,3 @@
-import SubscriptionCard from './SubscriptionCard/SubscriptionCard';
+import SubscriptionCard from "./SubscriptionCard/SubscriptionCard";
 
-export {SubscriptionCard};
+export { SubscriptionCard };

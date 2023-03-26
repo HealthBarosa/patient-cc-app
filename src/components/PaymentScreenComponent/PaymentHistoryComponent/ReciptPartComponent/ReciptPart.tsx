@@ -1,6 +1,6 @@
-import React from 'react';
-import {Text, View} from 'react-native';
-import Styles from './Styles';
+import React from "react";
+import { Text, View } from "react-native";
+import Styles from "./Styles";
 
 interface ReciptPartProps {
 	headingText: string;

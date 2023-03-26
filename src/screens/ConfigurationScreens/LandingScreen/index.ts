@@ -1,3 +1,3 @@
-import LandingScreen from './LandingScreen';
+import LandingScreen from "./LandingScreen";
 
 export default LandingScreen;

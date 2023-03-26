@@ -1,7 +1,7 @@
-import React from 'react';
-import {TouchableOpacity, Text} from 'react-native';
+import React from "react";
+import { TouchableOpacity, Text } from "react-native";
 
-import Styles from './Styles';
+import Styles from "./Styles";
 
 interface PrimaryButtonPropsType
 	extends React.ComponentProps<typeof TouchableOpacity> {
@@ -25,7 +25,7 @@ export default function PrimaryButton({
 		<TouchableOpacity
 			activeOpacity={0.85}
 			{...primaryButtonProps}
-			style={[Styles.container, {backgroundColor: backgroundColor}]}
+			style={[Styles.container, { backgroundColor: backgroundColor }]}
 		>
 			<Text style={Styles.text}>{children}</Text>
 		</TouchableOpacity>

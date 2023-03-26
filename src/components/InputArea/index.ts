@@ -1,3 +1,3 @@
-import InputArea from './InputArea';
+import InputArea from "./InputArea";
 
 export default InputArea;
