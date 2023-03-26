@@ -1,10 +1,10 @@
 import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
-import AppStyles from '../../../AppStyles';
-import {BillCard, PrimaryButton} from '../../../components';
-import MoreOptions from '../../../components/common/MoreOptions/MoreOptions';
-import NavHeader from '../../../components/common/NavHeader';
+
+import NavHeader from '@/components/common/NavHeader';
+import {BillCard, MoreOptions, PrimaryButton} from '@/components';
 import Styles from './Styles';
+import AppStyles from '@/AppStyles';
 
 interface BillAndPayDashboardScreenProps {
 	isPaymentDue?: boolean;

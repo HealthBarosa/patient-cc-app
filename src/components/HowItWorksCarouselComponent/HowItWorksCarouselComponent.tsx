@@ -6,7 +6,7 @@ import { View, ImageBackground, Pressable } from 'react-native';
 
 import Styles from './Styles';
 
-import PlayIcon from '../../constants/svg/icons/Play.svg';
+import PlayIcon from '@/constants/svg/icons/Play.svg';
 
 
 type TieupCarouselComponentPropsType = {

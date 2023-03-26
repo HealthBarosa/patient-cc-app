@@ -6,7 +6,7 @@ import { View, Text, Pressable } from 'react-native';
 
 import Styles from './Styles';
 
-import BackArrowIcon from '../../constants/svg/icons/BackArrow.svg';
+import BackArrowIcon from '@/constants/svg/icons/BackArrow.svg';
 
 
 export type ScreenHeaderPropsType = {

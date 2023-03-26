@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {TextInput, View} from 'react-native';
-import AppStyles from '../../AppStyles';
+import AppStyles from '@/AppStyles';
 import Styles from './Styles';
 
 const OTPBox = () => {

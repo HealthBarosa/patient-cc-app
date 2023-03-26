@@ -7,7 +7,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native';
 
 import Styles from './Styles';
 
-import HomeBanner from '../../constants/svg/HomeBanner.svg';
+import HomeBanner from '@/constants/svg/HomeBanner.svg';
 
 
 export default function Banner(): JSX.Element {

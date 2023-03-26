@@ -2,14 +2,12 @@
 
 import React, {useState} from 'react';
 import {View, Text, Dimensions} from 'react-native';
-import AppStyles from '../../../AppStyles';
-import {PrimaryButton} from '../../../components';
 
-import {CustomChip} from '../../../components';
-
-import BannerSVG from '../../../constants/svg/Insurance.svg';
+import {CustomChip, PrimaryButton} from '@/components';
+import AppStyles from '@/AppStyles';
 
 import Styles from './Styles';
+import {InsuranceSVG} from '@/constants/svg/ChooseProfession';
 
 type professionObject = {
 	text: string;
@@ -30,7 +28,7 @@ export default function ChooseProfessionScreen(): JSX.Element {
 	return (
 		<View style={Styles.container}>
 			<View style={Styles.imageWrapper}>
-				<BannerSVG
+				<InsuranceSVG
 					width={Dimensions.get('window').width}
 					height={Dimensions.get('window').height * 0.5}
 				/>
@@ -52,10 +50,11 @@ export default function ChooseProfessionScreen(): JSX.Element {
 				</View>
 			</View>
 			<PrimaryButton
-				text="Continue"
 				backgroundColor={AppStyles.colorBrand1}
 				onPress={() => {}}
-			/>
+			>
+				Continue
+			</PrimaryButton>
 		</View>
 	);
 }

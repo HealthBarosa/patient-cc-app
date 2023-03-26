@@ -1,16 +1,11 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
-import { Pressable, SafeAreaView, Text, TextInput, View } from 'react-native';
+import {Pressable, SafeAreaView, Text, TextInput, View} from 'react-native';
 
-import {PrimaryButton,SignupWithGoogleBtn} from '../../../components';
-
-import { NavigationTree } from '../../../utils';
-
-import AppStyles from '../../../AppStyles';
 import Styles from './Styles';
-
-import CallIconSVG from '../../../constants/svg/CallIcon.svg';
-// import UserIconSVG from '../../../constants/svg/UserIcon.svg';
+import AppStyles from '@/AppStyles';
+import {PrimaryButton, SignupWithGoogleBtn} from '@/components';
+import {NavigationTree} from '@/utils';
+import {CallIconSVG} from '@/constants/svg/Signup';
 
 const SignupScreen = ({navigation}) => {
 	const handleSigninPress = () => {
@@ -108,6 +103,7 @@ const SignupScreen = ({navigation}) => {
 					}}
 				/>
 			</View>
+			{/* eslint-disable-next-line react-native/no-inline-styles */}
 			<View style={{flex: 1}}>
 				<SignupWithGoogleBtn
 					onPress={() => handleGoogleSignupPress()}

@@ -1,8 +1,9 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
-import {ReciptPart} from '../../../components';
-import NavHeader from '../../../components/common/NavHeader';
 import Styles from './Styles';
+
+import NavHeader from '@/components/common/NavHeader';
+import {ReciptPart} from '@/components';
 
 const data = [
 	{

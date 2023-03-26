@@ -1,5 +1,5 @@
+import AppStyles from '@/AppStyles';
 import {StyleSheet, Dimensions} from 'react-native';
-import AppStyles from '../../../AppStyles';
 
 export default StyleSheet.create({
 	container: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pressable, StatusBar, Text, View} from 'react-native';
-import AppStyles from '../../../AppStyles';
-import {BackIcon} from '../../../constants/svg/common';
+import AppStyles from '@/AppStyles';
+import {BackIcon} from '@/constants/svg/common';
 import Styles from './Styles';
 
 interface NavHeaderProps {

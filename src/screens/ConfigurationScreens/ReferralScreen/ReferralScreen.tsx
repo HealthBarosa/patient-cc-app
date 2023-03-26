@@ -1,13 +1,10 @@
 import React, {useState} from 'react';
 import {View, Text, TextInput, Dimensions} from 'react-native';
 
-import {ReferralOption, PrimaryButton} from '../../../components';
-
-import BannerSVG from '../../../constants/svg/Banner.svg';
-import UserIconSVG from '../../../constants/svg/UserIcon.svg';
-
-import AppStyles from '../../../AppStyles';
+import AppStyles from '@/AppStyles';
 import Styles from './Styles';
+import {BannerSVG, UserIconSVG} from '@/constants/svg/Referral';
+import {PrimaryButton, ReferralOption} from '@/components';
 
 export default function ReferralScreen(): JSX.Element {
 	const [selectedReferralOption, setSelectedReferralOption] = useState<

@@ -1,9 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
 
-import AppStyles from '../../AppStyles';
-import Styles from './Styles';
+import AppStyles from "@/AppStyles";
+import Styles from "./Styles";
 
 export type ReferralOptionPropsType = {
 	isActive: boolean;
@@ -28,8 +28,8 @@ export default function ReferralOption({
 					style={[
 						Styles.button,
 						isActive
-							? {backgroundColor: AppStyles.colorBrand1}
-							: {backgroundColor: 'transparent'},
+							? { backgroundColor: AppStyles.colorBrand1 }
+							: { backgroundColor: "transparent" },
 					]}
 				/>
 			</TouchableOpacity>

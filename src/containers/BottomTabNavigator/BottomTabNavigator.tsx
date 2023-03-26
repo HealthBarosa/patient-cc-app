@@ -1,9 +1,9 @@
-import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import {HomeScreen} from '../../screens';
+import { HomeScreen } from "@/screens";
 
-import {NavigationTree} from '../../utils';
+import { NavigationTree } from "@/utils";
 
 //import Styles from './Styles';
 

@@ -10,7 +10,7 @@ import {
 	StickyNoteIconSVG,
 	BankSVG,
 	ReferSVG,
-} from '../../../constants/svg/common';
+} from '@/constants/svg/common';
 import Styles from './Styles';
 
 interface MoreOptionsProps {

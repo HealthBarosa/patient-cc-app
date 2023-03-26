@@ -1,8 +1,10 @@
 import React from 'react';
 import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
-import {SubscriptionCard} from '../../../components';
-import NavHeader from '../../../components/common/NavHeader';
-import {CheckIconSVG} from '../../../constants/svg/Subscription';
+
+import NavHeader from '@/components/common/NavHeader';
+import {SubscriptionCard} from '@/components/SubscriptionComponents';
+import {CheckIconSVG} from '@/constants/svg/Subscription';
+
 import Styles from './Styles';
 
 interface SubscriptionScreenProps {

@@ -15,11 +15,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SplashScreen from 'react-native-splash-screen';
 
-//import { ReferralScreen, ChooseProfessionScreen } from './src/screens';
-import { AppNavigation, AuthNavigation, ConfigurationNavigation } from "./src/navigations";
 
-import AppStyles from './src/AppStyles';
-import { OTPScreen, PaymentHistory, SignupScreen } from './src/screens';
+import AppStyles from '@/AppStyles';
+import { PaymentHistory } from '@/screens';
 
 
 const Stack = createNativeStackNavigator();

@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState} from 'react';
 import {
 	Pressable,
@@ -7,10 +8,9 @@ import {
 	View,
 } from 'react-native';
 import Styles from './Styles';
-import LeftIconSVG from '../../../constants/svg/LeftIcon.svg';
-import {OTPBox} from '../../../components/OTPScreenComponents';
-import {PrimaryButton} from '../../../components';
-import AppStyles from '../../../AppStyles';
+import {OTPBox, PrimaryButton} from '@/components';
+import AppStyles from '@/AppStyles';
+import {LeftIconSVG} from '@/constants/svg/OTPScreen';
 
 interface OTPTimmerProps {
 	OTPTime: number;

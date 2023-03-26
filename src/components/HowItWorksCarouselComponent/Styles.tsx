@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable quotes */
 import { Dimensions, StyleSheet } from "react-native";
-import AppStyles from "../../AppStyles";
+import AppStyles from "@/AppStyles";
 
 
 export default StyleSheet.create({

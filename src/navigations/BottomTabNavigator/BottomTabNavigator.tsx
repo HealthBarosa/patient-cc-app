@@ -7,9 +7,9 @@ import React from 'react';
 import { Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { HomeScreen, ServiceScreen, ProfileScreen } from '../../screens';
+import { HomeScreen, ServiceScreen, ProfileScreen } from '@/screens';
 
-import { NavigationTree } from '../../utils';
+import { NavigationTree } from '@/utils';
 
 import FocusedHomeSVG from '../../constants/svg/icons/FocusedHome.svg';
 import BlurredHomeSVG from '../../constants/svg/icons/BlurredHome.svg';

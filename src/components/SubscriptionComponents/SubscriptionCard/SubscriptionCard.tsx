@@ -1,20 +1,21 @@
-import React from 'react';
-import {Text, View} from 'react-native';
-import {DoctorHapySVG} from '../../../constants/svg/PaymentAndBill';
-import {StarPrimeSVG} from '../../../constants/svg/Subscription';
-import Styles from './Styles';
+import React from "react";
+import { Text, View } from "react-native";
+
+import { DoctorHapySVG } from "@/constants/svg/PaymentAndBill";
+import { StarPrimeSVG } from "@/constants/svg/Subscription";
+import Styles from "./Styles";
 
 interface SubscriptionCardProps {
 	isPrime?: boolean;
 }
 
-const SubscriptionCard = ({isPrime}: SubscriptionCardProps) => {
+const SubscriptionCard = ({ isPrime }: SubscriptionCardProps) => {
 	return (
 		<View style={Styles.innerContainer}>
-			<Text style={Styles.headingText}>{'Subscription'}</Text>
+			<Text style={Styles.headingText}>{"Subscription"}</Text>
 
 			<Text style={Styles.subHeadingText}>
-				{'You have subscribed for premium Membership'}
+				{"You have subscribed for premium Membership"}
 			</Text>
 
 			{isPrime && (
