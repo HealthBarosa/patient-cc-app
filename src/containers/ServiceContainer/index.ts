@@ -1,6 +1,4 @@
 /* eslint-disable prettier/prettier */
-import ServiceContainer from './ServiceContainer';
-
+import ServiceContainer from "./ServiceContainer";
 
 export default ServiceContainer;
-

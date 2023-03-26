@@ -1,4 +1,4 @@
-import StarPrimeSVG from './StarPrime.svg';
-import CheckIconSVG from './CheckIcon.svg';
+import StarPrimeSVG from "./StarPrime.svg";
+import CheckIconSVG from "./CheckIcon.svg";
 
-export {StarPrimeSVG, CheckIconSVG};
+export { StarPrimeSVG, CheckIconSVG };

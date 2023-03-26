@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import AppStyles from '@/AppStyles';
+import { StyleSheet } from "react-native";
+import AppStyles from "@/AppStyles";
 
 export default StyleSheet.create({
 	container: {
@@ -10,8 +10,8 @@ export default StyleSheet.create({
 		padding: 3,
 		marginTop: 15,
 		elevation: 10, // For Android devices
-		shadowColor: '#000', // For iOS devices
-		shadowOffset: {width: 0, height: 2},
+		shadowColor: "#000", // For iOS devices
+		shadowOffset: { width: 0, height: 2 },
 		shadowOpacity: 0.25,
 		shadowRadius: 3.84,
 	},
@@ -19,14 +19,14 @@ export default StyleSheet.create({
 		backgroundColor: AppStyles.colorBrandLight1,
 		borderRadius: 20,
 		padding: 20,
-		width: '100%',
+		width: "100%",
 		height: 138,
 	},
 	headingText: {
 		fontSize: 22,
 		fontFamily: AppStyles.fontPoppinsSemiBold,
 		color: AppStyles.colorGrey2,
-		fontWeight: 'bold',
+		fontWeight: "bold",
 		width: 200,
 	},
 	subHeadingText: {
@@ -35,7 +35,7 @@ export default StyleSheet.create({
 		color: AppStyles.colorGrey2,
 	},
 	imageContainer: {
-		position: 'absolute',
+		position: "absolute",
 		right: 0,
 		borderTopRightRadius: 20,
 	},

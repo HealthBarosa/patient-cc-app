@@ -1,13 +1,13 @@
-import {StyleSheet} from 'react-native';
-import AppStyles from '@/AppStyles';
+import { StyleSheet } from "react-native";
+import AppStyles from "@/AppStyles";
 
 export default StyleSheet.create({
 	container: {
 		flex: 1,
-		flexDirection: 'row',
+		flexDirection: "row",
 		gap: 16,
 		marginTop: 52,
-		justifyContent: 'center',
+		justifyContent: "center",
 	},
 
 	inputFields: {
@@ -21,6 +21,6 @@ export default StyleSheet.create({
 		fontFamily: AppStyles.fontManropeSemiBold,
 		color: AppStyles.colorDark2,
 		borderColor: AppStyles.colorDark1,
-		textAlign: 'center',
+		textAlign: "center",
 	},
 });

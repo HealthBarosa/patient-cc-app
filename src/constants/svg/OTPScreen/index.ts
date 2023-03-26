@@ -1,3 +1,3 @@
-import LeftIconSVG from './LeftIcon.svg';
+import LeftIconSVG from "./LeftIcon.svg";
 
-export {LeftIconSVG};
+export { LeftIconSVG };

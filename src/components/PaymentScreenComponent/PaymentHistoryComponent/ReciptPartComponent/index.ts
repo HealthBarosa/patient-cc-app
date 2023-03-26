@@ -1,3 +1,3 @@
-import ReciptPart from './ReciptPart';
+import ReciptPart from "./ReciptPart";
 
-export {ReciptPart};
+export { ReciptPart };

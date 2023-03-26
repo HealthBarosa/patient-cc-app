@@ -9,16 +9,14 @@
  * @format
  */
 
-import React, {useEffect} from 'react';
-import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import SplashScreen from 'react-native-splash-screen';
+import React, { useEffect } from "react";
+import { SafeAreaView, StatusBar, StyleSheet, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import SplashScreen from "react-native-splash-screen";
 
-
-import AppStyles from '@/AppStyles';
-import { PaymentHistory } from '@/screens';
-
+import AppStyles from "@/AppStyles";
+import { PaymentHistory } from "@/screens";
 
 const Stack = createNativeStackNavigator();
 

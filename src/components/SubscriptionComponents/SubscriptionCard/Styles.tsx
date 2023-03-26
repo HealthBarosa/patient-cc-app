@@ -1,16 +1,16 @@
-import {StyleSheet} from 'react-native';
-import AppStyles from '@/AppStyles';
+import { StyleSheet } from "react-native";
+import AppStyles from "@/AppStyles";
 
 export default StyleSheet.create({
 	innerContainer: {
 		backgroundColor: AppStyles.colorBrandLight1,
 		borderRadius: 20,
 		padding: 20,
-		width: '100%',
+		width: "100%",
 		height: 165,
 	},
 	imageContainer: {
-		position: 'absolute',
+		position: "absolute",
 		right: 0,
 		borderTopRightRadius: 20,
 	},
@@ -18,7 +18,7 @@ export default StyleSheet.create({
 		fontSize: 22,
 		fontFamily: AppStyles.fontPoppinsSemiBold,
 		color: AppStyles.colorGrey2,
-		fontWeight: 'bold',
+		fontWeight: "bold",
 		width: 200,
 		marginBottom: 5,
 	},
@@ -32,17 +32,17 @@ export default StyleSheet.create({
 		backgroundColor: AppStyles.colorBrand1,
 		padding: 10,
 		borderRadius: 100,
-		display: 'flex',
-		flexDirection: 'row',
+		display: "flex",
+		flexDirection: "row",
 		width: 150,
-		alignItems: 'center',
+		alignItems: "center",
 		marginTop: 16,
 	},
 	premiumMemberText: {
 		fontSize: 12,
 		fontFamily: AppStyles.fontPoppinsSemiBold,
 		color: AppStyles.colorWhite,
-		transform: [{translateY: 1}],
+		transform: [{ translateY: 1 }],
 		marginLeft: 5,
 	},
 });

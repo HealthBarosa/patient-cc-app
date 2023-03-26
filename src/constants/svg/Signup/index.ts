@@ -1,3 +1,3 @@
-import CallIconSVG from './CallIcon.svg';
+import CallIconSVG from "./CallIcon.svg";
 
-export {CallIconSVG};
+export { CallIconSVG };

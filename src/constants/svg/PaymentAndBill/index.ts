@@ -1,3 +1,3 @@
-import DoctorHapySVG from './DoctorHappy.svg';
+import DoctorHapySVG from "./DoctorHappy.svg";
 
-export {DoctorHapySVG};
+export { DoctorHapySVG };

@@ -1,5 +1,5 @@
-import AppStyles from '@/AppStyles';
-import {StyleSheet} from 'react-native';
+import AppStyles from "@/AppStyles";
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
 	container: {
@@ -7,20 +7,20 @@ export default StyleSheet.create({
 		marginHorizontal: 18,
 		borderBottomColor: AppStyles.colorBrandLight1,
 		borderBottomWidth: 3,
-		borderStyle: 'dotted',
+		borderStyle: "dotted",
 	},
 	headtingText: {
 		fontSize: 20,
 		fontFamily: AppStyles.fontPoppinsSemiBold,
 		color: AppStyles.colorGrey2,
-		fontWeight: 'bold',
+		fontWeight: "bold",
 		width: 200,
 		marginBottom: 13,
 	},
 	sectionContainer: {
-		display: 'flex',
-		flexDirection: 'row',
-		justifyContent: 'space-between',
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "space-between",
 		marginVertical: 5,
 	},
 	sectionHeadingText: {

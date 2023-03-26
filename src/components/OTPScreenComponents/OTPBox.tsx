@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
-import {TextInput, View} from 'react-native';
-import AppStyles from '@/AppStyles';
-import Styles from './Styles';
+import React, { useState } from "react";
+import { TextInput, View } from "react-native";
+import AppStyles from "@/AppStyles";
+import Styles from "./Styles";
 
 const OTPBox = () => {
 	const [_digitOne, setDigitOne] = useState<string>();
-	const [_digitTwo, setDigitTwo] = useState<string>('');
-	const [_digitThree, setDigitThree] = useState<string>('');
-	const [_digitFour, setDigitFour] = useState<string>('');
+	const [_digitTwo, setDigitTwo] = useState<string>("");
+	const [_digitThree, setDigitThree] = useState<string>("");
+	const [_digitFour, setDigitFour] = useState<string>("");
 
 	const pin1Ref = React.useRef<TextInput>(null);
 	const pin2Ref = React.useRef<TextInput>(null);
@@ -24,7 +24,7 @@ const OTPBox = () => {
 			<View>
 				<TextInput
 					keyboardType="numeric"
-					placeholder={isFocousedOne ? '' : '—'}
+					placeholder={isFocousedOne ? "" : "—"}
 					placeholderTextColor={AppStyles.colorDark2}
 					style={Styles.inputFields}
 					maxLength={1}
@@ -41,7 +41,7 @@ const OTPBox = () => {
 			<View>
 				<TextInput
 					keyboardType="numeric"
-					placeholder={isFocousedTwo ? '' : '—'}
+					placeholder={isFocousedTwo ? "" : "—"}
 					placeholderTextColor={AppStyles.colorDark2}
 					style={Styles.inputFields}
 					maxLength={1}
@@ -61,7 +61,7 @@ const OTPBox = () => {
 			<View>
 				<TextInput
 					keyboardType="numeric"
-					placeholder={isFocousedThree ? '' : '—'}
+					placeholder={isFocousedThree ? "" : "—"}
 					placeholderTextColor={AppStyles.colorDark2}
 					style={Styles.inputFields}
 					maxLength={1}
@@ -81,7 +81,7 @@ const OTPBox = () => {
 			<View>
 				<TextInput
 					keyboardType="numeric"
-					placeholder={isFocousedFour ? '' : '—'}
+					placeholder={isFocousedFour ? "" : "—"}
 					placeholderTextColor={AppStyles.colorDark2}
 					style={Styles.inputFields}
 					maxLength={1}

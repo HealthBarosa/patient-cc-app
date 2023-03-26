@@ -5,13 +5,10 @@ import {
 	LandingScreen,
 	ReferralScreen,
 	ChooseProfessionScreen,
-} from './ConfigurationScreens';
+} from "./ConfigurationScreens";
 
 // auth screens
-import {
-	OTPScreen,
-	SignupScreen,
-} from './AuthScreens';
+import { OTPScreen, SignupScreen } from "./AuthScreens";
 
 // app screens
 import {
@@ -20,7 +17,7 @@ import {
 	ProfileScreen,
 	ChangeLanguage,
 	EditProfile,
-} from './AppScreens';
+} from "./AppScreens";
 
 // export
 // PaymentScreens
@@ -28,7 +25,7 @@ import {
 	BillAndPayDashboardScreen,
 	SubscriptionScreen,
 	PaymentHistory,
-} from './PaymentScreens';
+} from "./PaymentScreens";
 
 export {
 	// configuration screens
@@ -49,4 +46,4 @@ export {
 };
 
 // PaymentScreens export
-export {BillAndPayDashboardScreen, SubscriptionScreen, PaymentHistory};
+export { BillAndPayDashboardScreen, SubscriptionScreen, PaymentHistory };

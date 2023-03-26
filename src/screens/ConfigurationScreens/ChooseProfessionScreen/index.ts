@@ -1,3 +1,3 @@
-import ChooseProfessionScreen from './ChooseProfessionScreen';
+import ChooseProfessionScreen from "./ChooseProfessionScreen";
 
 export default ChooseProfessionScreen;

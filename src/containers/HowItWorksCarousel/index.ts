@@ -2,6 +2,4 @@
 /* eslint-disable quotes */
 import HowItWorkCarousel from "./HowItWorksCarousel";
 
-
 export default HowItWorkCarousel;
-

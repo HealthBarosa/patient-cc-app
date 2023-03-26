@@ -9,12 +9,11 @@ import LanguageSearchContainer from "./LanguageSearchContainer";
 import EditProfileInputArea from "./EditProfileInputArea";
 
 export {
-  AppReferContainer,
-  TieupCarousel,
-  HowItWorkCarousel,
-  TabContainer,
-  ServiceContainer,
-  LanguageSearchContainer,
-  EditProfileInputArea,
+	AppReferContainer,
+	TieupCarousel,
+	HowItWorkCarousel,
+	TabContainer,
+	ServiceContainer,
+	LanguageSearchContainer,
+	EditProfileInputArea,
 };
-

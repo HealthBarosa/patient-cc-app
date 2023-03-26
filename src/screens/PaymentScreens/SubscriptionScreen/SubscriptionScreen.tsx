@@ -1,20 +1,20 @@
-import React from 'react';
-import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
+import React from "react";
+import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 
-import NavHeader from '@/components/common/NavHeader';
-import {SubscriptionCard} from '@/components/SubscriptionComponents';
-import {CheckIconSVG} from '@/constants/svg/Subscription';
+import NavHeader from "@/components/common/NavHeader";
+import { SubscriptionCard } from "@/components/SubscriptionComponents";
+import { CheckIconSVG } from "@/constants/svg/Subscription";
 
-import Styles from './Styles';
+import Styles from "./Styles";
 
 interface SubscriptionScreenProps {
 	isPrime?: boolean;
 }
 
-const SubscriptionScreen = ({isPrime}: SubscriptionScreenProps) => {
+const SubscriptionScreen = ({ isPrime }: SubscriptionScreenProps) => {
 	return (
 		<SafeAreaView>
-			<NavHeader headerName={'Subscription'} />
+			<NavHeader headerName={"Subscription"} />
 			<View style={Styles.container}>
 				<SubscriptionCard isPrime={isPrime} />
 				<View style={Styles.subPlanContainer}>

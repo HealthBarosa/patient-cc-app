@@ -1,24 +1,24 @@
-import React from 'react';
-import {Pressable, SafeAreaView, Text, TextInput, View} from 'react-native';
+import React from "react";
+import { Pressable, SafeAreaView, Text, TextInput, View } from "react-native";
 
-import Styles from './Styles';
-import AppStyles from '@/AppStyles';
-import {PrimaryButton, SignupWithGoogleBtn} from '@/components';
-import {NavigationTree} from '@/utils';
-import {CallIconSVG} from '@/constants/svg/Signup';
+import Styles from "./Styles";
+import AppStyles from "@/AppStyles";
+import { PrimaryButton, SignupWithGoogleBtn } from "@/components";
+import { NavigationTree } from "@/utils";
+import { CallIconSVG } from "@/constants/svg/Signup";
 
-const SignupScreen = ({navigation}) => {
+const SignupScreen = ({ navigation }) => {
 	const handleSigninPress = () => {
-		console.log('Signin Pressed');
+		console.log("Signin Pressed");
 	};
 
 	const handleContinuePress = () => {
 		navigation.navigate(NavigationTree.auth.OTPScreen);
-		console.log('Continue Pressed');
+		console.log("Continue Pressed");
 	};
 
 	const handleGoogleSignupPress = () => {
-		console.log('Google Signup Pressed');
+		console.log("Google Signup Pressed");
 	};
 
 	return (
@@ -72,9 +72,9 @@ const SignupScreen = ({navigation}) => {
 
 			<View>
 				<Text style={Styles.alreadyAccountText}>
-					Already have account?{' '}
+					Already have account?{" "}
 					<Pressable
-						hitSlop={{top: 20, bottom: 20, left: 20, right: 20}}
+						hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
 						onPress={() => handleSigninPress()}
 					>
 						<Text style={Styles.loginText}> Sign In</Text>
@@ -88,7 +88,7 @@ const SignupScreen = ({navigation}) => {
 					style={{
 						borderBottomColor: AppStyles.colorGreyLight2,
 						borderBottomWidth: 1,
-						width: '30%',
+						width: "30%",
 					}}
 				/>
 				<Text style={Styles.loginWithPlaceholderText}>
@@ -99,12 +99,12 @@ const SignupScreen = ({navigation}) => {
 					style={{
 						borderBottomColor: AppStyles.colorGreyLight2,
 						borderBottomWidth: 1,
-						width: '30%',
+						width: "30%",
 					}}
 				/>
 			</View>
 			{/* eslint-disable-next-line react-native/no-inline-styles */}
-			<View style={{flex: 1}}>
+			<View style={{ flex: 1 }}>
 				<SignupWithGoogleBtn
 					onPress={() => handleGoogleSignupPress()}
 				/>

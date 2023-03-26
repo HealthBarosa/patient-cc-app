@@ -1,3 +1,3 @@
-import BillAndPayDashboardScreen from './BillAndPayDashboardScreen';
+import BillAndPayDashboardScreen from "./BillAndPayDashboardScreen";
 
-export {BillAndPayDashboardScreen};
+export { BillAndPayDashboardScreen };

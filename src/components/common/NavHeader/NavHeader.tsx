@@ -1,8 +1,8 @@
-import React from 'react';
-import {Pressable, StatusBar, Text, View} from 'react-native';
-import AppStyles from '@/AppStyles';
-import {BackIcon} from '@/constants/svg/common';
-import Styles from './Styles';
+import React from "react";
+import { Pressable, StatusBar, Text, View } from "react-native";
+import AppStyles from "@/AppStyles";
+import { BackIcon } from "@/constants/svg/common";
+import Styles from "./Styles";
 
 interface NavHeaderProps {
 	headerName: string;
@@ -13,7 +13,7 @@ interface NavHeaderProps {
  * @example
  * <NavHeader headerName={'Bills & Payment'} />
  */
-const NavHeader = ({headerName}: NavHeaderProps) => {
+const NavHeader = ({ headerName }: NavHeaderProps) => {
 	return (
 		<View style={Styles.headerContainer}>
 			<StatusBar

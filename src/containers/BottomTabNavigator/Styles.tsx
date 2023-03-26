@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import AppStyles from '@/AppStyles';
+import { StyleSheet } from "react-native";
+import AppStyles from "@/AppStyles";
 
 export default StyleSheet.create({
 	container: {
@@ -10,45 +10,45 @@ export default StyleSheet.create({
 		flexGrow: 1,
 	},
 	coverContainer: {
-		position: 'relative',
-		width: '100%',
+		position: "relative",
+		width: "100%",
 	},
 	coverImage: {
-		width: '100%',
+		width: "100%",
 	},
 	profileContainer: {
-		position: 'absolute',
-		bottom: '-20%',
+		position: "absolute",
+		bottom: "-20%",
 		left: 0,
-		width: '100%',
-		alignItems: 'center',
-		justifyContent: 'center',
+		width: "100%",
+		alignItems: "center",
+		justifyContent: "center",
 		//borderWidth: 1,
 		//borderColor: AppStyles.colorBrand1,
 	},
 	profileWrapper: {
-		position: 'relative',
+		position: "relative",
 	},
 	profileText: {
-		position: 'absolute',
+		position: "absolute",
 		bottom: -10,
-		alignSelf: 'center',
+		alignSelf: "center",
 		fontFamily: AppStyles.fontPoppinsMedium,
 		fontSize: 14,
 		color: AppStyles.colorBrand1,
-		textAlign: 'center',
+		textAlign: "center",
 		backgroundColor: AppStyles.colorGreyLight3,
 		borderRadius: 5,
-		alignItems: 'center',
-		justifyContent: 'center',
+		alignItems: "center",
+		justifyContent: "center",
 		paddingHorizontal: 10,
 	},
 	content: {
 		marginTop: 80,
 	},
 	profileDetails: {
-		alignItems: 'center',
-		justifyContent: 'center',
+		alignItems: "center",
+		justifyContent: "center",
 	},
 	profileName: {
 		fontFamily: AppStyles.fontPoppinsSemiBold,
@@ -56,8 +56,8 @@ export default StyleSheet.create({
 		color: AppStyles.colorGrey2,
 	},
 	professionContainer: {
-		flexDirection: 'row',
-		justifyContent: 'center',
+		flexDirection: "row",
+		justifyContent: "center",
 		//alignItems: 'center',
 		gap: 5,
 		marginVertical: 5,
@@ -68,15 +68,15 @@ export default StyleSheet.create({
 		color: AppStyles.colorGrey2,
 	},
 	locationContainer: {
-		flexDirection: 'row',
-		justifyContent: 'center',
-		alignItems: 'center',
+		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "center",
 		gap: 5,
 	},
 	locationName: {
 		fontFamily: AppStyles.fontPoppinsRegular,
 		fontSize: 14,
-		color: 'rgba(46, 46, 46, 0.7)',
+		color: "rgba(46, 46, 46, 0.7)",
 	},
 	contentBody: {
 		paddingHorizontal: 15,
@@ -96,9 +96,9 @@ export default StyleSheet.create({
 	editProfileButtonText: {
 		fontSize: 16,
 		fontFamily: AppStyles.fontPoppinsMedium,
-		fontWeight: '500',
+		fontWeight: "500",
 		color: AppStyles.colorGrey2,
 		paddingLeft: 9,
-		textAlign: 'center',
+		textAlign: "center",
 	},
 });

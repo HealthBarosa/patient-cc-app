@@ -1,3 +1,3 @@
-import InsuranceSVG from './Insurance.svg';
+import InsuranceSVG from "./Insurance.svg";
 
-export {InsuranceSVG};
+export { InsuranceSVG };

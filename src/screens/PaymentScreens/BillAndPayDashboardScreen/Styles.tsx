@@ -1,11 +1,11 @@
-import {StyleSheet} from 'react-native';
-import AppStyles from '../../../AppStyles';
+import { StyleSheet } from "react-native";
+import AppStyles from "../../../AppStyles";
 
 export default StyleSheet.create({
 	billCardContainer: {
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "center",
 	},
 	billOptionSectionContainer: {
 		marginHorizontal: 24,

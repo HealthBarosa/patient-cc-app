@@ -1,3 +1,3 @@
-import ReferralOption from './ReferralOption';
+import ReferralOption from "./ReferralOption";
 
 export default ReferralOption;

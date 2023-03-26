@@ -1,6 +1,4 @@
 /* eslint-disable prettier/prettier */
-import ScreenHeader from './ScreenHeader';
-
+import ScreenHeader from "./ScreenHeader";
 
 export default ScreenHeader;
-

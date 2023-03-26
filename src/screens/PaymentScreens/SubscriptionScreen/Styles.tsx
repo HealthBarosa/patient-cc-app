@@ -1,7 +1,7 @@
-import {Dimensions, StyleSheet} from 'react-native';
-import AppStyles from '@/AppStyles';
+import { Dimensions, StyleSheet } from "react-native";
+import AppStyles from "@/AppStyles";
 
-const windowHeight = Dimensions.get('window').height;
+const windowHeight = Dimensions.get("window").height;
 
 export default StyleSheet.create({
 	container: {
@@ -33,9 +33,9 @@ export default StyleSheet.create({
 		color: AppStyles.colorDark1,
 	},
 	planContainer1: {
-		display: 'flex',
-		flexDirection: 'row',
-		justifyContent: 'space-between',
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "space-between",
 	},
 	planPriceText: {
 		fontFamily: AppStyles.fontPoppinsSemiBold,
@@ -50,13 +50,13 @@ export default StyleSheet.create({
 	primePromoText: {
 		fontFamily: AppStyles.fontPoppinsMedium,
 		fontSize: 15,
-		color: '#000000',
-		alignItems: 'center',
+		color: "#000000",
+		alignItems: "center",
 	},
 	primeTextContainer: {
-		display: 'flex',
-		flexDirection: 'row',
-		alignItems: 'center',
+		display: "flex",
+		flexDirection: "row",
+		alignItems: "center",
 		columnGap: 10,
 	},
 	primeContainer: {
@@ -72,16 +72,16 @@ export default StyleSheet.create({
 		fontFamily: AppStyles.fontPoppinsRegular,
 		fontSize: 15,
 		color: AppStyles.colorGreen1,
-		textAlign: 'center',
+		textAlign: "center",
 	},
 	commingSoonContainer: {
 		backgroundColor: AppStyles.colorGreen2,
-		alignItems: 'center',
+		alignItems: "center",
 		borderRadius: 5,
 		paddingVertical: 2,
 		paddingHorizontal: 5,
 		marginLeft: 5,
-		transform: [{translateY: 8}, {translateX: 50}],
+		transform: [{ translateY: 8 }, { translateX: 50 }],
 	},
 	planRenewDateText: {
 		fontFamily: AppStyles.fontPoppinsRegular,
@@ -93,8 +93,8 @@ export default StyleSheet.create({
 		borderColor: AppStyles.colorBrand1,
 		borderWidth: 2,
 		borderRadius: 100,
-		alignItems: 'center',
-		justifyContent: 'center',
+		alignItems: "center",
+		justifyContent: "center",
 		paddingVertical: 15,
 		marginTop: windowHeight * 0.05,
 	},
@@ -104,10 +104,10 @@ export default StyleSheet.create({
 		color: AppStyles.colorDark1,
 	},
 	getPrimeButton: {
-		backgroundColor: '#FB8315',
+		backgroundColor: "#FB8315",
 		borderRadius: 100,
-		alignItems: 'center',
-		justifyContent: 'center',
+		alignItems: "center",
+		justifyContent: "center",
 		paddingVertical: 15,
 		marginTop: windowHeight * 0.05,
 	},

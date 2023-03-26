@@ -1,4 +1,4 @@
-import {BillCard} from './BillandPayComponents';
-import {ReciptPart} from './PaymentHistoryComponent';
+import { BillCard } from "./BillandPayComponents";
+import { ReciptPart } from "./PaymentHistoryComponent";
 
-export {BillCard, ReciptPart};
+export { BillCard, ReciptPart };

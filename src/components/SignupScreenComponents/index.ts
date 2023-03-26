@@ -1,3 +1,3 @@
 /* eslint-disable prettier/prettier */
-import SignupWithGoogleBtn from './SignupWithGoogleBtn';
-export {SignupWithGoogleBtn};
+import SignupWithGoogleBtn from "./SignupWithGoogleBtn";
+export { SignupWithGoogleBtn };

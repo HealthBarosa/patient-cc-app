@@ -1,4 +1,4 @@
 /* eslint-disable prettier/prettier */
-import SignupWithGoogleBtn from './SignupWithGoogleBtn';
+import SignupWithGoogleBtn from "./SignupWithGoogleBtn";
 
 export default SignupWithGoogleBtn;
