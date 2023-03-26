@@ -47,7 +47,7 @@ function App(): JSX.Element {
 			<NavigationContainer>
 				<AppNavigation />
 			</NavigationContainer>
-			<PaymentHistory />
+			{/* <PaymentHistory /> */}
 		</View>
 	);
 }
