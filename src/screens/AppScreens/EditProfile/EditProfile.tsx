@@ -2,7 +2,7 @@
 /* eslint-disable semi */
 /* eslint-disable no-extra-semi */
 import React from 'react';
-import { View, Text, StatusBar, ScrollView } from 'react-native';
+import { View,  StatusBar, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { ScreenHeader } from '../../../components';
