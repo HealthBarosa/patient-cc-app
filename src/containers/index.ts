@@ -5,7 +5,7 @@ import TieupCarousel from "./TieupCarousel";
 import HowItWorkCarousel from "./HowItWorksCarousel";
 import TabContainer from "./TabContainer";
 import ServiceContainer from "./ServiceContainer";
-import LanguageSearchContainer from "./LanguageSearchContainer";
+import SearchContainer from "./SearchContainer";
 import EditProfileInputArea from "./EditProfileInputArea";
 
 export {
@@ -14,7 +14,7 @@ export {
   HowItWorkCarousel,
   TabContainer,
   ServiceContainer,
-  LanguageSearchContainer,
+  SearchContainer,
   EditProfileInputArea,
 };
 

@@ -1,12 +1,11 @@
-/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable no-extra-semi */
 /* eslint-disable semi */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
-import { View, Text, StatusBar, ScrollView } from 'react-native';
+import { View, StatusBar, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { ScreenHeader } from '../../../components';
 import { TabContainer, ServiceContainer } from '../../../containers';

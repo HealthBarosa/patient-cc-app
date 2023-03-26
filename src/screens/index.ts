@@ -20,6 +20,7 @@ import {
 	ProfileScreen,
 	ChangeLanguage,
 	EditProfile,
+	AddBankScreen,
 } from './AppScreens';
 
 // export
@@ -40,5 +41,6 @@ export {
 	ProfileScreen,
 	ChangeLanguage,
 	EditProfile,
+	AddBankScreen,
 };
 

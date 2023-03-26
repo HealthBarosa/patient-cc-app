@@ -13,7 +13,8 @@ import ScreenHeader from './ScreenHeader';
 import Tab from './Tab';
 import MoreOptions from './common/MoreOptions/MoreOptions';
 import LanguageTab from './LanguageTab';
+import ActionModal from './ActionModal';
 
 
-export {InputArea, ReferralOption, PrimaryButton, CustomChip, OTPBox, SignupWithGoogleBtn, Banner, ReferButton, TieupCarouselComponent, HowItWorksCarouselComponent, ScreenHeader, Tab, MoreOptions, LanguageTab};
+export {InputArea, ReferralOption, PrimaryButton, CustomChip, OTPBox, SignupWithGoogleBtn, Banner, ReferButton, TieupCarouselComponent, HowItWorksCarouselComponent, ScreenHeader, Tab, MoreOptions, LanguageTab, ActionModal};
 
