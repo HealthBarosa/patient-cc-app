@@ -19,7 +19,7 @@ import SplashScreen from 'react-native-splash-screen';
 import { AppNavigation, AuthNavigation, ConfigurationNavigation } from "./src/navigations";
 
 import AppStyles from './src/AppStyles';
-import { OTPScreen, SignupScreen } from './src/screens';
+import { OTPScreen, PaymentHistory, SignupScreen } from './src/screens';
 
 
 const Stack = createNativeStackNavigator();
@@ -37,7 +37,8 @@ function App(): JSX.Element {
 				backgroundColor="transparent"
 			/>
 			<NavigationContainer>
-				<AppNavigation />
+				{/* <AppNavigation /> */}
+				<PaymentHistory />
 			</NavigationContainer>
 		</View>
 	);

@@ -1,8 +1,7 @@
 import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 import AppStyles from '../../../AppStyles';
-import {PrimaryButton} from '../../../components';
-import BillCard from '../../../components/BillandPayComponents/BillCard/BillCard';
+import {BillCard, PrimaryButton} from '../../../components';
 import MoreOptions from '../../../components/common/MoreOptions/MoreOptions';
 import NavHeader from '../../../components/common/NavHeader';
 import Styles from './Styles';

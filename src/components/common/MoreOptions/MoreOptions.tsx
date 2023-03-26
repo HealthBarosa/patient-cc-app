@@ -25,7 +25,6 @@ interface MoreOptionsTabsProps
 	 * @type {string} `Glob`, `Heart`, `Dollar`, `Document`, `Chart`, `StickyNote`
 	 */
 	iconName: string;
-	tabStyle: StyleProp<ViewStyle>;
 }
 
 /**
@@ -68,7 +67,6 @@ const handleChoseIcon = (iconName: string) => {
 const OptionTabs = ({
 	optionName,
 	iconName,
-	tabStyle,
 	...moreOption
 }: MoreOptionsTabsProps) => {
 	return (
