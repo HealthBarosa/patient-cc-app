@@ -1,5 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
-
 import React from 'react';
 import {Text, TouchableOpacity, View, StyleProp, ViewStyle} from 'react-native';
 import {
@@ -74,10 +72,7 @@ const OptionTabs = ({
 	...moreOption
 }: MoreOptionsTabsProps) => {
 	return (
-		<TouchableOpacity
-			{...moreOption}
-			style={[Styles.optionTabsContainer, tabStyle]}
-		>
+		<TouchableOpacity {...moreOption} style={Styles.optionTabsContainer}>
 			<View style={Styles.optionFirstContainer}>
 				<View style={Styles.logoContainer}>
 					{handleChoseIcon(iconName)}

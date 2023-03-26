@@ -1,9 +1,10 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import {Pressable, SafeAreaView, Text, TextInput, View} from 'react-native';
+import { Pressable, SafeAreaView, Text, TextInput, View } from 'react-native';
 
-import {PrimaryButton, SignupWithGoogleBtn} from '../../../components';
+import {PrimaryButton,SignupWithGoogleBtn} from '../../../components';
 
-import {NavigationTree} from '../../../utils';
+import { NavigationTree } from '../../../utils';
 
 import AppStyles from '../../../AppStyles';
 import Styles from './Styles';

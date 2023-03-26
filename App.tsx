@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable quotes */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 /**
@@ -13,22 +15,12 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SplashScreen from 'react-native-splash-screen';
 
-import {
-	ReferralScreen,
-	ChooseProfessionScreen,
-	BillAndPayDashboardScreen,
-	SubscriptionScreen,
-	PaymentHistory,
-} from './src/screens';
 //import { ReferralScreen, ChooseProfessionScreen } from './src/screens';
-import {
-	AppNavigation,
-	AuthNavigation,
-	ConfigurationNavigation,
-} from './src/navigations';
+import { AppNavigation, AuthNavigation, ConfigurationNavigation } from "./src/navigations";
 
 import AppStyles from './src/AppStyles';
-import {OTPScreen, SignupScreen} from './src/screens';
+import { OTPScreen, SignupScreen } from './src/screens';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -47,7 +39,6 @@ function App(): JSX.Element {
 			<NavigationContainer>
 				<AppNavigation />
 			</NavigationContainer>
-			{/* <PaymentHistory /> */}
 		</View>
 	);
 }

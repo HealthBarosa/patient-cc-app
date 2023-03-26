@@ -1,6 +1,8 @@
+/* eslint-disable prettier/prettier */
 export default {
 	colorWhite: '#FFFFFF',
 	colorBrand1: '#8A86F1',
+	colorBrand2: '#FB8315',
 	colorBrandLight1: '#E3DFFF',
 	colorDark1: '#282828',
 	colorDark2: '#4E4E4E',

@@ -1,3 +1,9 @@
-import NavigationTree from './NavigationTree';
+/* eslint-disable prettier/prettier */
+/* eslint-disable quotes */
+import NavigationTree from "./NavigationTree";
 
-export {NavigationTree};
+
+export {
+  NavigationTree,
+};
+
