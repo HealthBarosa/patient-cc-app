@@ -11,6 +11,9 @@ interface BillAndPayDashboardScreenProps {
 	isPaymentDue?: boolean;
 }
 
+/**
+ * @param {boolean} isPaymentDue - if payment is due or not
+ */
 const BillAndPayDashboardScreen = ({
 	isPaymentDue,
 }: BillAndPayDashboardScreenProps) => {

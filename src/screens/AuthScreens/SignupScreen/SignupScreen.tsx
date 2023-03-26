@@ -12,7 +12,6 @@ import Styles from './Styles';
 import CallIconSVG from '../../../constants/svg/CallIcon.svg';
 // import UserIconSVG from '../../../constants/svg/UserIcon.svg';
 
-
 const SignupScreen = ({navigation}) => {
 	const handleSigninPress = () => {
 		console.log('Signin Pressed');

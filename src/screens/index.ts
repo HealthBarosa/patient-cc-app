@@ -23,6 +23,12 @@ import {
 } from './AppScreens';
 
 // export
+// PaymentScreens
+import {
+	BillAndPayDashboardScreen,
+	SubscriptionScreen,
+	PaymentHistory,
+} from './PaymentScreens';
 
 export {
 	// configuration screens
@@ -42,3 +48,5 @@ export {
 	EditProfile,
 };
 
+// PaymentScreens export
+export {BillAndPayDashboardScreen, SubscriptionScreen, PaymentHistory};
