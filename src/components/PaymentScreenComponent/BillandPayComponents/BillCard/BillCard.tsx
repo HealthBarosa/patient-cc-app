@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {DoctorHapySVG} from '../../../constants/svg/PaymentAndBill';
+import {DoctorHapySVG} from '../../../../constants/svg/PaymentAndBill';
 import Styles from './Styles';
 
 interface BillCardProps {
