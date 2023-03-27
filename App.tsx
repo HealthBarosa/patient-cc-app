@@ -15,7 +15,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SplashScreen from "react-native-splash-screen";
 
-import AppStyles from "@/AppStyles";
+// import AppStyles from "@/AppStyles";
 import { PaymentHistory } from "@/screens";
 
 const Stack = createNativeStackNavigator();
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		flexGrow: 1,
-		backgroundColor: AppStyles.colorWhite,
+		backgroundColor: "#FFFFFF",
 	},
 });
 

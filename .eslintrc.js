@@ -3,10 +3,6 @@
 module.exports = {
 	root: true,
 	// extends: '@react-native-community',
-	parserOptions: {
-		sourceType: "module",
-		ecmaVersion: 2020,
-	},
 	rules: {
 		"no-unused-vars": [ 1, { args: "after-used", argsIgnorePattern: "^_" } ],
 		indent: [ "error", "tab", { SwitchCase: 1 } ],
