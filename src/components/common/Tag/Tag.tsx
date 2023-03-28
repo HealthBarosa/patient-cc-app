@@ -11,7 +11,7 @@ interface TagProps {
 const Tag = ({ children, colorBG, colorText }: TagProps) => {
 	return (
 		<View style={[Styles.container, { backgroundColor: colorBG }]}>
-			<Text style={[Styles.text, {color: colorText}]}>{children}</Text>
+			<Text style={[Styles.text, { color: colorText }]}>{children}</Text>
 		</View>
 	);
 };
