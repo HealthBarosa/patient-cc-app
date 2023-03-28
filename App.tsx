@@ -16,7 +16,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SplashScreen from "react-native-splash-screen";
 
 // import AppStyles from "@/AppStyles";
-import { PaymentHistory } from "@/screens";
+import { PaymentHistory, PaymentProcessScreen } from "./src/screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -34,7 +34,8 @@ function App(): JSX.Element {
 			/>
 			<NavigationContainer>
 				{/* <AppNavigation /> */}
-				<PaymentHistory />
+				<PaymentProcessScreen />
+				{/* <PaymentHistory /> */}
 			</NavigationContainer>
 		</View>
 	);
