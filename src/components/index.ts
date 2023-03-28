@@ -15,7 +15,7 @@ import MoreOptions from "./common/MoreOptions/MoreOptions";
 import LanguageTab from "./LanguageTab";
 
 // PaymentScreens
-import { BillCard, ReciptPart } from "./PaymentScreenComponent";
+import { BillCard, ReciptPart, TrackStatus } from "./PaymentScreenComponent";
 
 export {
 	InputArea,
@@ -35,4 +35,4 @@ export {
 };
 
 // PaymentScreens export
-export { BillCard, ReciptPart };
+export { BillCard, ReciptPart, TrackStatus };

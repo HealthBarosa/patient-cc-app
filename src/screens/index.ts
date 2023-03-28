@@ -25,6 +25,7 @@ import {
 	BillAndPayDashboardScreen,
 	SubscriptionScreen,
 	PaymentHistory,
+	PaymentProcessScreen,
 } from "./PaymentScreens";
 
 export {
@@ -46,4 +47,9 @@ export {
 };
 
 // PaymentScreens export
-export { BillAndPayDashboardScreen, SubscriptionScreen, PaymentHistory };
+export {
+	BillAndPayDashboardScreen,
+	SubscriptionScreen,
+	PaymentHistory,
+	PaymentProcessScreen,
+};
