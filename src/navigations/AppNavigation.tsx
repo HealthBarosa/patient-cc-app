@@ -5,7 +5,12 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import BottomTabNavigator from "./BottomTabNavigator";
-import { ChangeLanguage, EditProfile } from "@/screens";
+import {
+	ChangeLanguage,
+	EditProfile,
+	AddBankScreen,
+	ReferFriendScreen,
+} from "../screens";
 
 import { NavigationTree } from "@/utils";
 
@@ -19,6 +24,10 @@ export default function AppNavigation(): JSX.Element {
 	return (
 		<AppNavigationStack.Navigator screenOptions={screenOptions}>
 			<AppNavigationStack.Screen
+				name={NavigationTree.app.BottomTab}
+				component={BottomTabNavigator}
+			/>
+			<AppNavigationStack.Screen
 				name={NavigationTree.app.EditProfile}
 				component={EditProfile}
 			/>
@@ -27,8 +36,12 @@ export default function AppNavigation(): JSX.Element {
 				component={ChangeLanguage}
 			/>
 			<AppNavigationStack.Screen
-				name={NavigationTree.app.BottomTab}
-				component={BottomTabNavigator}
+				name={NavigationTree.app.AddBankScreen}
+				component={AddBankScreen}
+			/>
+			<AppNavigationStack.Screen
+				name={NavigationTree.app.ReferFriendScreen}
+				component={ReferFriendScreen}
 			/>
 		</AppNavigationStack.Navigator>
 	);

@@ -68,35 +68,4 @@ export default StyleSheet.create({
 		borderBottomWidth: 1,
 		borderBottomColor: AppStyles.colorGreyLight4,
 	},
-
-	modalContainer: {
-		backgroundColor: "rgba(27, 27, 27, 0.3);",
-		height: "100%",
-		width: "100%",
-		justifyContent: "center",
-		alignItems: "center",
-	},
-	modalView: {
-		backgroundColor: "white",
-		width: 311,
-		height: 280,
-		borderRadius: 20,
-		padding: 20,
-	},
-	paymentSuccessIcon: {
-		alignSelf: "center",
-		justifyContent: "center",
-	},
-	contentContainer: {
-		alignSelf: "center",
-		justifyContent: "center",
-	},
-	textCenter: {
-		textAlign: "center",
-	},
-	modalSubText: {
-		fontSize: 16,
-		fontFamily: AppStyles.fontPoppinsMedium,
-		color: AppStyles.colorGreyLight2,
-	},
 });

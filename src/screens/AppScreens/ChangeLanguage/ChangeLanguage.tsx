@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable semi */
 /* eslint-disable no-extra-semi */
 import React from "react";
@@ -14,7 +15,7 @@ import { useNavigation } from "@react-navigation/native";
 import { LanguageTab, ScreenHeader } from "../../../components";
 
 import Styles from "./Styles";
-import { LanguageSearchContainer } from "../../../containers";
+import { SearchContainer } from "../../../containers";
 import AppStyles from "../../../AppStyles";
 
 const languages = [
@@ -45,7 +46,23 @@ export default function ChangeLanguage(): JSX.Element {
 				onPress={onPressGoBack}
 			/>
 			<View style={Styles.wrapper}>
-				<LanguageSearchContainer />
+				<SearchContainer
+					containerStyle={{
+						borderRadius: 14,
+						backgroundColor: AppStyles.colorGreyLight3,
+					}}
+					iconWidth={16}
+					iconHeight={16}
+					placeholder="Search Languages"
+					value=""
+					onChangeValue={() => {}}
+					iconContainerStyle={{ width: "10%" }}
+					inputContainerStyle={{ width: "87%" }}
+					inputStyle={{
+						fontFamily: AppStyles.fontPoppinsMedium,
+						fontSize: 14,
+					}}
+				/>
 				<ScrollView
 					showsVerticalScrollIndicator={false}
 					scrollEventThrottle={16}

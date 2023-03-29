@@ -1,16 +1,33 @@
 import React from "react";
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
-
-import Styles from "./Styles";
+import { useNavigation } from "@react-navigation/native";
 
 import { MoreOptions } from "@/components";
+import { NavigationTree } from "@/utils";
 import {
 	LocationIcon,
 	ProfessionIcon,
 	UserProfile,
 } from "@/constants/svg/icons";
 
+import Styles from "./Styles";
+
 export default function ProfileScreen(): JSX.Element {
+	const navigation = useNavigation();
+
+	function onPressEditProfile() {
+		navigation.navigate(NavigationTree.app.EditProfile as never);
+	}
+	function onPressChangeLanguage() {
+		navigation.navigate(NavigationTree.app.ChangeLanguage as never);
+	}
+	function onPressAddBank() {
+		navigation.navigate(NavigationTree.app.AddBankScreen as never);
+	}
+	function onPressReferFriend() {
+		navigation.navigate(NavigationTree.app.ReferFriendScreen as never);
+	}
+
 	return (
 		<View style={Styles.container}>
 			<ScrollView
@@ -47,7 +64,11 @@ export default function ProfileScreen(): JSX.Element {
 						</View>
 					</View>
 					<View style={Styles.contentBody}>
-						<TouchableOpacity style={Styles.editProfileButton}>
+						<TouchableOpacity
+							activeOpacity={0.85}
+							onPress={onPressEditProfile}
+							style={Styles.editProfileButton}
+						>
 							<Text style={Styles.editProfileButtonText}>
 								Edit Profile
 							</Text>
@@ -56,31 +77,47 @@ export default function ProfileScreen(): JSX.Element {
 							<MoreOptions>
 								<MoreOptions.OptionTabs
 									iconName="Document"
-									optionName="Change Language"
+									optionName="My Document"
 								/>
 							</MoreOptions>
 						</View>
 						<MoreOptions>
-							<MoreOptions.OptionTabs
-								iconName="Glob"
-								optionName="Change Language"
-							/>
-							<MoreOptions.OptionTabs
-								iconName="Heart"
-								optionName="Subscription"
-							/>
-							<MoreOptions.OptionTabs
-								iconName="Dollar"
-								optionName="Payment"
-							/>
-							<MoreOptions.OptionTabs
-								iconName="Bank"
-								optionName="Add Bank"
-							/>
-							<MoreOptions.OptionTabs
-								iconName="Refer"
-								optionName="Refer Friend"
-							/>
+							<View style={Styles.optionTabContainer}>
+								<MoreOptions.OptionTabs
+									activeOpacity={0.85}
+									iconName="Glob"
+									optionName="Change Language"
+									onPress={onPressChangeLanguage}
+								/>
+							</View>
+							<View style={Styles.optionTabContainer}>
+								<MoreOptions.OptionTabs
+									iconName="Heart"
+									optionName="Subscription"
+								/>
+							</View>
+							<View style={Styles.optionTabContainer}>
+								<MoreOptions.OptionTabs
+									iconName="Dollar"
+									optionName="Payment"
+								/>
+							</View>
+							<View style={Styles.optionTabContainer}>
+								<MoreOptions.OptionTabs
+									activeOpacity={0.85}
+									iconName="Bank"
+									optionName="Add Bank"
+									onPress={onPressAddBank}
+								/>
+							</View>
+							<View style={Styles.optionTabContainer}>
+								<MoreOptions.OptionTabs
+									activeOpacity={0.85}
+									iconName="Refer"
+									optionName="Refer Friend"
+									onPress={onPressReferFriend}
+								/>
+							</View>
 						</MoreOptions>
 					</View>
 				</View>

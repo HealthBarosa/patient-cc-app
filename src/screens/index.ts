@@ -17,6 +17,8 @@ import {
 	ProfileScreen,
 	ChangeLanguage,
 	EditProfile,
+	AddBankScreen,
+	ReferFriendScreen,
 } from "./AppScreens";
 
 // export
@@ -44,6 +46,8 @@ export {
 	ProfileScreen,
 	ChangeLanguage,
 	EditProfile,
+	AddBankScreen,
+	ReferFriendScreen,
 };
 
 // PaymentScreens export

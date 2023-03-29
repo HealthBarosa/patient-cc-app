@@ -2,8 +2,8 @@ import React from "react";
 import { View, StatusBar, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import { ScreenHeader } from "@/components";
-import { EditProfileInputArea } from "@/containers";
+import { ScreenHeader } from "../../../components";
+import { EditProfileInputArea } from "../../../containers";
 
 import Styles from "./Styles";
 
@@ -50,16 +50,6 @@ export default function EditProfile(): JSX.Element {
 						keyboardType="email-address"
 						placeholder="Enter your email address"
 						value="rajc12@gmail.com"
-						containerStyle={{ width: "100%", marginBottom: 25 }}
-						buttonText="Update"
-						buttonOnPress={() => {}}
-					/>
-					<EditProfileInputArea
-						label="Password"
-						keyboardType="email-address"
-						placeholder="Enter your password"
-						value="---------------------"
-						isPassword={true}
 						containerStyle={{ width: "100%", marginBottom: 25 }}
 						buttonText="Update"
 						buttonOnPress={() => {}}

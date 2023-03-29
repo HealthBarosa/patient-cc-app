@@ -101,4 +101,8 @@ export default StyleSheet.create({
 		paddingLeft: 9,
 		textAlign: "center",
 	},
+	optionTabContainer: {
+		marginTop: 5,
+		marginBottom: 10,
+	},
 });
