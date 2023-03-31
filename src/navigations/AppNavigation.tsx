@@ -3,6 +3,7 @@
 /* eslint-disable semi */
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { PortalHost } from "@gorhom/portal";
 
 import BottomTabNavigator from "./BottomTabNavigator";
 import {
@@ -22,27 +23,30 @@ export default function AppNavigation(): JSX.Element {
 	};
 
 	return (
-		<AppNavigationStack.Navigator screenOptions={screenOptions}>
-			<AppNavigationStack.Screen
-				name={NavigationTree.app.BottomTab}
-				component={BottomTabNavigator}
-			/>
-			<AppNavigationStack.Screen
-				name={NavigationTree.app.EditProfile}
-				component={EditProfile}
-			/>
-			<AppNavigationStack.Screen
-				name={NavigationTree.app.ChangeLanguage}
-				component={ChangeLanguage}
-			/>
-			<AppNavigationStack.Screen
-				name={NavigationTree.app.AddBankScreen}
-				component={AddBankScreen}
-			/>
-			<AppNavigationStack.Screen
-				name={NavigationTree.app.ReferFriendScreen}
-				component={ReferFriendScreen}
-			/>
-		</AppNavigationStack.Navigator>
+		<>
+			<AppNavigationStack.Navigator screenOptions={screenOptions}>
+				<AppNavigationStack.Screen
+					name={NavigationTree.app.BottomTab}
+					component={BottomTabNavigator}
+				/>
+				<AppNavigationStack.Screen
+					name={NavigationTree.app.EditProfile}
+					component={EditProfile}
+				/>
+				<AppNavigationStack.Screen
+					name={NavigationTree.app.ChangeLanguage}
+					component={ChangeLanguage}
+				/>
+				<AppNavigationStack.Screen
+					name={NavigationTree.app.AddBankScreen}
+					component={AddBankScreen}
+				/>
+				<AppNavigationStack.Screen
+					name={NavigationTree.app.ReferFriendScreen}
+					component={ReferFriendScreen}
+				/>
+			</AppNavigationStack.Navigator>
+			<PortalHost name="bottom-sheet" />
+		</>
 	);
 }

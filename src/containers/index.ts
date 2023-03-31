@@ -7,6 +7,7 @@ import TabContainer from "./TabContainer";
 import ServiceContainer from "./ServiceContainer";
 import SearchContainer from "./SearchContainer";
 import EditProfileInputArea from "./EditProfileInputArea";
+import BottomActionSheet from "./BottomActionSheet";
 
 export {
 	AppReferContainer,
@@ -16,4 +17,5 @@ export {
 	ServiceContainer,
 	SearchContainer,
 	EditProfileInputArea,
+	BottomActionSheet,
 };

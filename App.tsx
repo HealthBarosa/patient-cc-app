@@ -14,6 +14,8 @@ import { SafeAreaView, StatusBar, StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SplashScreen from "react-native-splash-screen";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { PortalProvider } from "@gorhom/portal";
 
 // import AppStyles from "@/AppStyles";
 import { AppNavigation } from "@/navigations";
@@ -27,18 +29,22 @@ function App(): JSX.Element {
 	});
 
 	return (
-		<View style={styles.container}>
-			<StatusBar
-				translucent
-				barStyle="default"
-				backgroundColor="transparent"
-			/>
-			<NavigationContainer>
-				<AppNavigation />
-				{/*<PaymentProcessScreen />*/}
-				{/* <PaymentHistory /> */}
-			</NavigationContainer>
-		</View>
+		<PortalProvider>
+			<GestureHandlerRootView style={{ flex: 1 }} >
+				<View style={styles.container}>
+					<StatusBar
+						translucent
+						barStyle="default"
+						backgroundColor="transparent"
+					/>
+					<NavigationContainer>
+						<AppNavigation />
+						{/*<PaymentProcessScreen />*/}
+						{/* <PaymentHistory /> */}
+					</NavigationContainer>
+				</View>
+			</GestureHandlerRootView>
+		</PortalProvider>
 	);
 }
 

@@ -105,4 +105,47 @@ export default StyleSheet.create({
 		marginTop: 5,
 		marginBottom: 10,
 	},
+	bottomSheetContainer: {
+		padding: 15,
+	},
+	bottomSheetHeader: {
+		fontFamily: AppStyles.fontPoppinsSemiBold,
+		fontSize: 16,
+		color: AppStyles.colorGrey2,
+	},
+	bottomSheetText: {
+		fontFamily: AppStyles.fontPoppinsRegular,
+		fontSize: 12,
+		color: AppStyles.colorGrey2,
+	},
+	bottomSheetButtonsContainer: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'space-between',
+		marginTop: 20,
+	},
+	bottomSheetButton: {
+		paddingVertical: 15,
+		paddingHorizontal: 15,
+		borderRadius: 15,
+		borderWidth: 1,
+		borderColor: 'rgba(46, 46, 46, 0.3)',
+		backgroundColor: AppStyles.colorGreyLight1,
+	},
+	bottomSheetButtonText: {
+		fontFamily: AppStyles.fontPoppinsSemiBold,
+		fontSize: 12,
+		color: AppStyles.colorGrey2,
+	},
+	bottomSheetDocText: {
+		fontFamily: AppStyles.fontPoppinsRegular,
+		fontSize: 12,
+		color: AppStyles.colorGrey2,
+		marginTop: 7,
+		marginBottom: 30,
+	},
+	bottomSheetBody: {
+		flexDirection: 'column',
+		justifyContent: 'space-between'
+	},
 });
