@@ -30,7 +30,7 @@ function App(): JSX.Element {
 
 	return (
 		<PortalProvider>
-			<GestureHandlerRootView style={{ flex: 1 }} >
+			<GestureHandlerRootView style={{ flex: 1 }}>
 				<View style={styles.container}>
 					<StatusBar
 						translucent

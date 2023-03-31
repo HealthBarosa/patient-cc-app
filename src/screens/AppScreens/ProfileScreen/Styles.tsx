@@ -119,9 +119,9 @@ export default StyleSheet.create({
 		color: AppStyles.colorGrey2,
 	},
 	bottomSheetButtonsContainer: {
-		flexDirection: 'row',
-		alignItems: 'center',
-		justifyContent: 'space-between',
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "space-between",
 		marginTop: 20,
 	},
 	bottomSheetButton: {
@@ -129,7 +129,7 @@ export default StyleSheet.create({
 		paddingHorizontal: 15,
 		borderRadius: 15,
 		borderWidth: 1,
-		borderColor: 'rgba(46, 46, 46, 0.3)',
+		borderColor: "rgba(46, 46, 46, 0.3)",
 		backgroundColor: AppStyles.colorGreyLight1,
 	},
 	bottomSheetButtonText: {
@@ -145,7 +145,7 @@ export default StyleSheet.create({
 		marginBottom: 30,
 	},
 	bottomSheetBody: {
-		flexDirection: 'column',
-		justifyContent: 'space-between'
+		flexDirection: "column",
+		justifyContent: "space-between",
 	},
 });
