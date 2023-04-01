@@ -33,7 +33,13 @@ const PaymentProcessScreen = () => {
 						{/* <View style={Styles.contentContainer}>
 
 						</View> */}
-						<Text style={[Styles.headingText, Styles.textCenter, {marginTop: 20}]}>
+						<Text
+							style={[
+								Styles.headingText,
+								Styles.textCenter,
+								{ marginTop: 20 },
+							]}
+						>
 							Payment Received
 						</Text>
 						<Text style={[Styles.modalSubText, Styles.textCenter]}>
@@ -45,7 +51,10 @@ const PaymentProcessScreen = () => {
 								style={[
 									Styles.headingText,
 									Styles.textCenter,
-									{ color: AppStyles.colorBrand1, marginTop: 10 },
+									{
+										color: AppStyles.colorBrand1,
+										marginTop: 10,
+									},
 								]}
 							>
 								Yes, Sure

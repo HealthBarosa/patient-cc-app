@@ -3,6 +3,8 @@ export default {
 	auth: {
 		OTPScreen: "otp-screen",
 		SignupScreen: "signup-screen",
+		SignInScreen: "sign-in-screen",
+		TermsOfService: "terms-of-service",
 	},
 	configuration: {},
 	app: {

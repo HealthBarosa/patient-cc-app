@@ -19,6 +19,10 @@ export default function AppNavigation(): JSX.Element {
 	return (
 		<AppNavigationStack.Navigator screenOptions={screenOptions}>
 			<AppNavigationStack.Screen
+				name={NavigationTree.app.BottomTab}
+				component={BottomTabNavigator}
+			/>
+			<AppNavigationStack.Screen
 				name={NavigationTree.app.EditProfile}
 				component={EditProfile}
 			/>
@@ -26,10 +30,7 @@ export default function AppNavigation(): JSX.Element {
 				name={NavigationTree.app.ChangeLanguage}
 				component={ChangeLanguage}
 			/>
-			<AppNavigationStack.Screen
-				name={NavigationTree.app.BottomTab}
-				component={BottomTabNavigator}
-			/>
+			
 		</AppNavigationStack.Navigator>
 	);
 }

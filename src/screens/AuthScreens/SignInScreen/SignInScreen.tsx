@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 import { Pressable, SafeAreaView, Text, TextInput, View } from "react-native";
 
-import Styles from "./Styles";
 import AppStyles from "@/AppStyles";
 import { PrimaryButton, SignupWithGoogleBtn } from "@/components";
 import { NavigationTree } from "@/utils";
-import { CallIconFocousedSVG, CallIconSVG } from "@/constants/svg/Signup";
-import CheckBox from "@react-native-community/checkbox";
+import {
+	CallIconFocousedSVG,
+	CallIconSVG,
+	UserFocousedSVG,
+} from "@/constants/svg/Signup";
+import Styles from "./Styles";
+import { UserIconSVG } from "@/constants/svg/Referral";
 
-const SignupScreen = ({ navigation }) => {
-	const [isFocoused, setIsFocoused] = useState<boolean>(false);
-	const [toggleCheckBox, setToggleCheckBox] = useState(false);
+const SignInScreen = ({ navigation }) => {
+	const [isFocousedPhone, setIsFocousedPhone] = useState<boolean>(false);
+	const [isFocousedName, setIsFocousedName] = useState<boolean>(false);
 	const [phoneNumber, setPhoneNumber] = useState<string>("");
+	const [name, setName] = useState<string>("");
 
-	const handleSigninPress = () => {
-		navigation.navigate(NavigationTree.auth.SignInScreen);
+	const handleSignUpPress = () => {
+		navigation.navigate(NavigationTree.auth.SignupScreen);
 		console.log("Signin Pressed");
-	};
-	
-	const termsOfServicePress = () => {
-		navigation.navigate(NavigationTree.auth.TermsOfService);
-		console.log("termsOfService Pressed");
 	};
 
 	const handleContinuePress = () => {
@@ -33,19 +33,16 @@ const SignupScreen = ({ navigation }) => {
 	};
 
 	const enableContinueBtn = () => {
-		if (phoneNumber.length === 10 && toggleCheckBox) {
+		if (phoneNumber.length === 10 && name.length > 0) {
 			console.log("enableContinueBtn", true);
-			
+
 			return true;
 		} else {
 			console.log("enableContinueBtn", false);
-			
+
 			return false;
 		}
 	};
-
-	console.log("phoneNumber", phoneNumber);
-	
 
 	return (
 		<SafeAreaView style={Styles.container}>
@@ -58,20 +55,28 @@ const SignupScreen = ({ navigation }) => {
 
 			<View style={Styles.inputContainer}>
 				{/* Name input field */}
-				{/* <View style={Styles.inputFieldContainer}>
-					<UserIconSVG style={Styles.inputIcon} />
+				<View style={Styles.inputFieldContainer}>
+					{isFocousedName ? (
+						<UserIconSVG style={Styles.inputIcon} />
+					) : (
+						<UserFocousedSVG style={Styles.inputIcon} />
+					)}
+
 					<TextInput
 						style={Styles.textInputField}
 						placeholder="Enter your name"
 						autoCapitalize="words"
 						placeholderTextColor={AppStyles.colorGreyLight2}
 						cursorColor={AppStyles.colorGreyLight2}
+						onChangeText={(text) => setName(text)}
+						onFocus={() => setIsFocousedName((val) => !val)}
+						onBlur={() => setIsFocousedName((val) => !val)}
 					/>
-				</View> */}
+				</View>
 
 				{/* Phone number input field */}
 				<View style={Styles.inputFieldContainer}>
-					{isFocoused ? (
+					{isFocousedPhone ? (
 						<CallIconFocousedSVG style={Styles.inputIcon} />
 					) : (
 						<CallIconSVG style={Styles.inputIcon} />
@@ -84,54 +89,17 @@ const SignupScreen = ({ navigation }) => {
 						maxLength={10}
 						placeholderTextColor={AppStyles.colorGreyLight2}
 						cursorColor={AppStyles.colorGreyLight2}
-						onFocus={() => setIsFocoused((val) => !val)}
-						onBlur={() => setIsFocoused((val) => !val)}
+						onFocus={() => setIsFocousedPhone((val) => !val)}
+						onBlur={() => setIsFocousedPhone((val) => !val)}
 						onChangeText={(text) => setPhoneNumber(text)}
 					/>
 				</View>
 
-				<View style={Styles.termsAndConditionsContainer}>
-					<CheckBox
-						value={toggleCheckBox}
-						onValueChange={(newValue) =>
-							setToggleCheckBox(newValue)
-						}
-						tintColors={{ true: AppStyles.colorBrand1 }}
-						tintColor={AppStyles.colorBrand1}
-						style={Styles.checkBox}
-					/>
-
-					<Text style={Styles.termsAndConditionsText}>
-						I agree to the{" "}
-						<Pressable
-							hitSlop={{
-								top: 20,
-								bottom: 20,
-								left: 20,
-								right: 20,
-							}}
-							onPress={() => termsOfServicePress()}
-						>
-							<Text style={Styles.highlightText}>
-								Terms of Service
-							</Text>
-						</Pressable>
-						{"  "}&{"  "}
-						<Pressable
-							hitSlop={{
-								top: 20,
-								bottom: 20,
-								left: 20,
-								right: 20,
-							}}
-							onPress={() => handleSigninPress()}
-						>
-							<Text style={Styles.highlightText}>
-								Privacy Policy
-							</Text>
-						</Pressable>
+				{isFocousedName && name.length > 0 && (
+					<Text style={Styles.authAsText}>
+						Authenticate as {name}?
 					</Text>
-				</View>
+				)}
 			</View>
 			<PrimaryButton
 				backgroundColor={AppStyles.colorBrand1}
@@ -146,9 +114,9 @@ const SignupScreen = ({ navigation }) => {
 					Already have account?{" "}
 					<Pressable
 						hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
-						onPress={() => handleSigninPress()}
+						onPress={() => handleSignUpPress()}
 					>
-						<Text style={Styles.loginText}> Sign In</Text>
+						<Text style={Styles.loginText}> Sign Up</Text>
 					</Pressable>
 				</Text>
 			</View>
@@ -184,4 +152,4 @@ const SignupScreen = ({ navigation }) => {
 	);
 };
 
-export default SignupScreen;
+export default SignInScreen;
