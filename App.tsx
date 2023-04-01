@@ -17,13 +17,19 @@ import SplashScreen from "react-native-splash-screen";
 
 // import AppStyles from "@/AppStyles";
 import { PaymentHistory, PaymentProcessScreen } from "./src/screens";
+import { AppNavigation, AuthNavigation } from "@/navigations";
 
 const Stack = createNativeStackNavigator();
 
 function App(): JSX.Element {
+
+	
+
 	useEffect(() => {
 		SplashScreen.hide();
 	});
+
+	const isLoggedIn = false;
 
 	return (
 		<View style={styles.container}>
@@ -32,10 +38,11 @@ function App(): JSX.Element {
 				barStyle="default"
 				backgroundColor="transparent"
 			/>
+
 			<NavigationContainer>
 				{/* <AppNavigation /> */}
-				<PaymentProcessScreen />
-				{/* <PaymentHistory /> */}
+				{isLoggedIn ? <AppNavigation /> : <AuthNavigation />}
+				{/* <PaymentProcessScreen /> */}
 			</NavigationContainer>
 		</View>
 	);

@@ -107,4 +107,9 @@ export default StyleSheet.create({
 		transform: [{ translateY: 3 }],
 		borderRadius: 5,
 	},
+	authAsText: {
+		fontSize: 16,
+		fontFamily: AppStyles.fontManropeRegular,
+		color: AppStyles.colorGreyLight2,
+	},
 });
