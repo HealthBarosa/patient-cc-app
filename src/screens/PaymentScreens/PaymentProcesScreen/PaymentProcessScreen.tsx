@@ -2,9 +2,8 @@ import AppStyles from "@/AppStyles";
 import { TrackStatus } from "@/components";
 import NavHeader from "@/components/common/NavHeader";
 import { Tag } from "@/components/common/Tag";
-import { PaymentSuccessIconSVG } from "@/constants/svg/PaymentAndBill";
-import React, { useState } from "react";
-import { Dimensions, Modal, Pressable, Text, View } from "react-native";
+import React from "react";
+import { Dimensions, Text, View } from "react-native";
 import Styles from "./Styles";
 
 const data = {
@@ -15,8 +14,6 @@ const data = {
 };
 
 const PaymentProcessScreen = () => {
-	const [paymentSuccessful, setPaymentSuccessful] = useState<boolean>(false);
-
 	return (
 		<>
 			<NavHeader headerName="Payment" />
@@ -63,7 +60,6 @@ const PaymentProcessScreen = () => {
 					</View>
 				</View>
 			</Modal>
-
 			<View style={Styles.container}>
 				<Text style={Styles.headingText}>Check Patient Details</Text>
 				<View style={Styles.topContainer}>

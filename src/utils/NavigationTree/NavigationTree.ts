@@ -14,5 +14,7 @@ export default {
 		ProfileScreen: "profile-screen",
 		ChangeLanguage: "change-language-screen",
 		EditProfile: "edit-profile-screen",
+		AddBankScreen: "add-bank-screen",
+		ReferFriendScreen: "refer-friend-screen",
 	},
 };

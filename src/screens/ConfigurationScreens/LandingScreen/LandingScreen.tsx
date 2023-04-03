@@ -1,11 +1,9 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
-/* eslint-disable react-native/no-inline-styles */
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 
 import Styles from "./Styles";
 import AppStyles from "@/AppStyles";
-import { OnlineMedicineSVG, PeopleSVG, UserSVG } from "@/constants/svg/Landing";
+import { OnlineMedicineSVG, UserSVG, PeopleSVG } from "@/constants/svg/Landing";
 
 export default function LandingScreen(): JSX.Element {
 	const [selectedOptionIndex, setSelectedOptionIndex] = useState<number>(-1);
