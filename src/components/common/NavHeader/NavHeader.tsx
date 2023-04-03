@@ -6,6 +6,7 @@ import Styles from "./Styles";
 
 interface NavHeaderProps {
 	headerName: string;
+	navigation?: any;
 }
 /**
  * This is a NavHeader component which is used to render a header for the screen
@@ -13,7 +14,12 @@ interface NavHeaderProps {
  * @example
  * <NavHeader headerName={'Bills & Payment'} />
  */
-const NavHeader = ({ headerName }: NavHeaderProps) => {
+const NavHeader = ({ headerName,navigation }: NavHeaderProps) => {
+
+	const handleBackPress = () => {
+		navigation.goBack();
+	};
+
 	return (
 		<View style={Styles.headerContainer}>
 			<StatusBar
@@ -21,7 +27,7 @@ const NavHeader = ({ headerName }: NavHeaderProps) => {
 				translucent
 				barStyle="light-content"
 			/>
-			<Pressable>
+			<Pressable onPress={() => handleBackPress()}>
 				<BackIcon />
 			</Pressable>
 

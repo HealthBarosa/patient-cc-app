@@ -20,13 +20,19 @@ import { PortalProvider } from "@gorhom/portal";
 // import AppStyles from "@/AppStyles";
 import { AppNavigation } from "@/navigations";
 import { PaymentHistory, PaymentProcessScreen } from "./src/screens";
+import { AppNavigation, AuthNavigation } from "@/navigations";
 
 const Stack = createNativeStackNavigator();
 
 function App(): JSX.Element {
+
+	
+
 	useEffect(() => {
 		SplashScreen.hide();
 	});
+
+	const isLoggedIn = false;
 
 	return (
 		<PortalProvider>

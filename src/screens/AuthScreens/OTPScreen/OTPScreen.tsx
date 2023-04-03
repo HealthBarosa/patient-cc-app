@@ -53,9 +53,14 @@ const OTPNotRecived = () => {
 
 const OTPScreen = ({ navigation }): JSX.Element => {
 	const [OTPTime, setOTPTime] = useState(43);
+	const [OTP, setOTP] = useState<string>("");
 
 	const handleBackPress = () => {
 		navigation.goBack();
+	};
+
+	const disableContinueButton = () => {
+		return OTP.length !== 4;
 	};
 
 	// useEffect(() => {
@@ -64,7 +69,7 @@ const OTPScreen = ({ navigation }): JSX.Element => {
 	// 	}, 1000);
 	// 	return () => clearInterval(interval);
 	// }, [OTPTime]);
-
+	
 	return (
 		<SafeAreaView style={Styles.container}>
 			<Pressable
@@ -83,7 +88,7 @@ const OTPScreen = ({ navigation }): JSX.Element => {
 			</View>
 
 			<View>
-				<OTPBox />
+				<OTPBox setOTP={setOTP} />
 			</View>
 
 			<View style={{ marginTop: 180 }}>
@@ -98,6 +103,7 @@ const OTPScreen = ({ navigation }): JSX.Element => {
 				<PrimaryButton
 					onPress={() => {}}
 					backgroundColor={AppStyles.colorBrand1}
+					disabled={disableContinueButton()}
 				>
 					Continue
 				</PrimaryButton>

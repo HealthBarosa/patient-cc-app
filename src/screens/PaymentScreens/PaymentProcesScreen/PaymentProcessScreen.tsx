@@ -17,6 +17,49 @@ const PaymentProcessScreen = () => {
 	return (
 		<>
 			<NavHeader headerName="Payment" />
+			<Modal
+				visible={paymentSuccessful}
+				animationType="fade"
+				transparent={true}
+			>
+				<View style={Styles.modalContainer}>
+					<View style={Styles.modalView}>
+						<PaymentSuccessIconSVG
+							style={Styles.paymentSuccessIcon}
+						/>
+						{/* <View style={Styles.contentContainer}>
+
+						</View> */}
+						<Text
+							style={[
+								Styles.headingText,
+								Styles.textCenter,
+								{ marginTop: 20 },
+							]}
+						>
+							Payment Received
+						</Text>
+						<Text style={[Styles.modalSubText, Styles.textCenter]}>
+							Your payment is received now track your patient
+							status
+						</Text>
+						<Pressable onPress={() => setPaymentSuccessful(false)}>
+							<Text
+								style={[
+									Styles.headingText,
+									Styles.textCenter,
+									{
+										color: AppStyles.colorBrand1,
+										marginTop: 10,
+									},
+								]}
+							>
+								Yes, Sure
+							</Text>
+						</Pressable>
+					</View>
+				</View>
+			</Modal>
 			<View style={Styles.container}>
 				<Text style={Styles.headingText}>Check Patient Details</Text>
 				<View style={Styles.topContainer}>

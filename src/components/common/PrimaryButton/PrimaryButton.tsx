@@ -7,6 +7,7 @@ interface PrimaryButtonPropsType
 	extends React.ComponentProps<typeof TouchableOpacity> {
 	children: React.ReactNode;
 	backgroundColor: string;
+	disabled?: boolean;
 }
 /**
  * This is a Primary Button component which is used to render a button with a primary color
@@ -19,13 +20,15 @@ interface PrimaryButtonPropsType
 export default function PrimaryButton({
 	children,
 	backgroundColor,
+	disabled,
 	...primaryButtonProps
 }: PrimaryButtonPropsType) {
 	return (
 		<TouchableOpacity
 			activeOpacity={0.85}
 			{...primaryButtonProps}
-			style={[Styles.container, { backgroundColor: backgroundColor }]}
+			style={[Styles.container, { backgroundColor: backgroundColor }, disabled && { opacity: 0.7 }]}
+			disabled={disabled}
 		>
 			<Text style={Styles.text}>{children}</Text>
 		</TouchableOpacity>
