@@ -3,7 +3,7 @@ import { TrackStatus } from "@/components";
 import NavHeader from "@/components/common/NavHeader";
 import { Tag } from "@/components/common/Tag";
 import React from "react";
-import { Dimensions, Text, View } from "react-native";
+import { Dimensions, Text, View, Modal } from "react-native";
 import Styles from "./Styles";
 
 const data = {

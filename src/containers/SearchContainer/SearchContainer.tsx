@@ -17,7 +17,7 @@ export type SearchContainerPropsType = {
 	iconContainerStyle?: StyleProp<ViewStyle>;
 	inputContainerStyle?: StyleProp<ViewStyle>;
 	value: string;
-	onChangeValue: () => void;
+	onChangeValue: (value: string) => void;
 };
 
 export default function SearchContainer({

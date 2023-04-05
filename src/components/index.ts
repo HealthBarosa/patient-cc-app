@@ -13,6 +13,7 @@ import ScreenHeader from "./ScreenHeader";
 import Tab from "./Tab";
 import MoreOptions from "./common/MoreOptions/MoreOptions";
 import LanguageTab from "./LanguageTab";
+import Skeleton from "./Skeleton";
 
 // PaymentScreens
 import { BillCard, ReciptPart, TrackStatus } from "./PaymentScreenComponent";
@@ -32,6 +33,7 @@ export {
 	Tab,
 	MoreOptions,
 	LanguageTab,
+	Skeleton,
 };
 
 // PaymentScreens export

@@ -20,4 +20,5 @@ export default StyleSheet.create({
 		fontSize: 14,
 		paddingHorizontal: 7,
 	},
+	inputContainer: {}
 });
