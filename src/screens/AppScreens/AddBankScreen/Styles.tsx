@@ -5,7 +5,7 @@ import AppStyles from "../../../AppStyles";
 
 export default StyleSheet.create({
 	container: {
-		position: 'relative',
+		position: "relative",
 		flex: 1,
 		//padding: 10,
 		paddingBottom: 120,
@@ -51,30 +51,30 @@ export default StyleSheet.create({
 		color: AppStyles.colorGrey2,
 	},
 	modalContainer: {
-		position: 'absolute',
-		width: Dimensions.get('window').width,
-		height: Dimensions.get('window').height,
+		position: "absolute",
+		width: Dimensions.get("window").width,
+		height: Dimensions.get("window").height,
 		top: 0,
 		left: 0,
-		justifyContent: 'center',
-		alignItems: 'center',
+		justifyContent: "center",
+		alignItems: "center",
 		zIndex: 99,
 	},
 	mask: {
 		flex: 1,
-		width: Dimensions.get('window').width,
-		height: Dimensions.get('window').height,
-		position: 'absolute',
+		width: Dimensions.get("window").width,
+		height: Dimensions.get("window").height,
+		position: "absolute",
 		top: 0,
 		left: 0,
-		backgroundColor: '#000000',
+		backgroundColor: "#000000",
 		opacity: 0.5,
 	},
 	modal: {
-		width: '90%',
+		width: "90%",
 		height: 270,
 		padding: 20,
-		justifyContent: 'space-between',
+		justifyContent: "space-between",
 		//alignItems: 'center',
 		borderRadius: 10,
 		backgroundColor: AppStyles.colorWhite,
@@ -83,6 +83,6 @@ export default StyleSheet.create({
 	bankName: {
 		fontFamily: AppStyles.fontPoppinsRegular,
 		fontSize: 16,
-		color: '#000000',
+		color: "#000000",
 	},
 });

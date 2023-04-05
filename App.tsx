@@ -25,9 +25,6 @@ import { AuthNavigation } from "@/navigations";
 const Stack = createNativeStackNavigator();
 
 function App(): JSX.Element {
-
-	
-
 	useEffect(() => {
 		SplashScreen.hide();
 	});

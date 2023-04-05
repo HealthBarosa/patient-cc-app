@@ -3,7 +3,14 @@
 /* eslint-disable semi */
 /* eslint-disable no-extra-semi */
 import React, { useState } from "react";
-import { View, Text, StatusBar, TouchableOpacity, Modal, Pressable } from "react-native";
+import {
+	View,
+	Text,
+	StatusBar,
+	TouchableOpacity,
+	Modal,
+	Pressable,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { PrimaryButton, ScreenHeader } from "@/components";
@@ -33,11 +40,15 @@ const banks = [
 ];
 
 export default function AddBackScreen(): JSX.Element {
-	const navigation = useNavigation()
-	const [isModalVisible, setIsModalVisible] = useState<boolean>(false)
+	const navigation = useNavigation();
+	const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
 
-	function onPressGoBack() { navigation.goBack() }
-	function onPressBank() { setIsModalVisible(true) }
+	function onPressGoBack() {
+		navigation.goBack();
+	}
+	function onPressBank() {
+		setIsModalVisible(true);
+	}
 
 	return (
 		<View style={Styles.container}>
@@ -47,21 +58,33 @@ export default function AddBackScreen(): JSX.Element {
 				backgroundColor={"transparent"}
 			/>
 			{isModalVisible && (
-				<View style={Styles.modalContainer} >
-					<Pressable style={Styles.mask} onPress={() => setIsModalVisible(false)} />
-					<View style={Styles.modal} >
-						<Text style={Styles.headerText} >Select your bank account</Text>
+				<View style={Styles.modalContainer}>
+					<Pressable
+						style={Styles.mask}
+						onPress={() => setIsModalVisible(false)}
+					/>
+					<View style={Styles.modal}>
+						<Text style={Styles.headerText}>
+							Select your bank account
+						</Text>
 						<View>
-							<Text style={Styles.bankName} >Axis Bank</Text>
-							<Text style={Styles.subHeaderText} >Account Name: Riya Bajaj</Text>
-							<Text style={Styles.subHeaderText} >Account No.: 0123456789</Text>
+							<Text style={Styles.bankName}>Axis Bank</Text>
+							<Text style={Styles.subHeaderText}>
+								Account Name: Riya Bajaj
+							</Text>
+							<Text style={Styles.subHeaderText}>
+								Account No.: 0123456789
+							</Text>
 						</View>
-						<PrimaryButton onPress={() => setIsModalVisible(false)} backgroundColor={AppStyles.colorBrand1}>
+						<PrimaryButton
+							onPress={() => setIsModalVisible(false)}
+							backgroundColor={AppStyles.colorBrand1}
+						>
 							Add Bank Account
 						</PrimaryButton>
 					</View>
 				</View>
-			)}	
+			)}
 			<ScreenHeader
 				screenName="Add Bank Account"
 				onPress={onPressGoBack}

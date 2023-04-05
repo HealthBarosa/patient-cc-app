@@ -18,7 +18,6 @@ import Styles from "./Styles";
 import { SearchContainer } from "../../../containers";
 import AppStyles from "../../../AppStyles";
 
-
 const languages = [
 	{ id: 1, name: "English" },
 	{ id: 2, name: "Hindi" },
@@ -26,30 +25,33 @@ const languages = [
 	{ id: 4, name: "Urdu" },
 	{ id: 5, name: "Punjabi" },
 	{ id: 6, name: "Bengali" },
-]
+];
 
 export default function ChangeLanguage(): JSX.Element {
-	const navigation = useNavigation()
-	const [searchText, setSearchText] = useState<string>("")
-	const [searchedLanguages, setSearchedLanguages] = useState<{ id: number; name: string}[]>(languages)
+	const navigation = useNavigation();
+	const [searchText, setSearchText] = useState<string>("");
+	const [searchedLanguages, setSearchedLanguages] =
+		useState<{ id: number; name: string }[]>(languages);
 
-	function onPressGoBack() { navigation.goBack() }
+	function onPressGoBack() {
+		navigation.goBack();
+	}
 
 	function searchLanguage(language: string) {
-		const currentLanguages = languages
+		const currentLanguages = languages;
 		setSearchedLanguages(
-			currentLanguages.filter(item =>
+			currentLanguages.filter((item) =>
 				item.name.toLocaleLowerCase().includes(language.toLowerCase())
 			)
-		)
+		);
 	}
 
 	useEffect(() => {
-		if (searchText.length !== 0) searchLanguage(searchText)
-		else setSearchedLanguages(languages)
-	
-		return () => {}
-	}, [searchText])
+		if (searchText.length !== 0) searchLanguage(searchText);
+		else setSearchedLanguages(languages);
+
+		return () => {};
+	}, [searchText]);
 
 	return (
 		<View style={Styles.container}>
