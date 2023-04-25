@@ -1,5 +1,12 @@
 import React, { useState, useMemo } from "react";
-import { View, Text, ScrollView, StatusBar, TouchableOpacity, Pressable } from "react-native";
+import {
+	View,
+	Text,
+	ScrollView,
+	StatusBar,
+	TouchableOpacity,
+	Pressable,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import CopyGreyIcon from "@/constants/svg/icons/CopyGreyIcon.svg";
@@ -17,7 +24,6 @@ import Styles from "./Styles";
 import AppStyles from "@/AppStyles";
 import { BottomSheetView } from "@gorhom/bottom-sheet";
 import Style from "@/screens/PolicyScreen/Style";
-
 
 const TieupHospitals = [
 	{
@@ -53,13 +59,20 @@ const HowItWorks = [
 
 export default function HomeScreen(): JSX.Element {
 	const snapPoints = useMemo(() => ["45%"], []);
-	const [isBottomSheetActive, setIsBottomSheetActive] = useState<boolean>(false);
-	const [method, setMethod] = useState<'refer' | 'treat'>();
+	const [isBottomSheetActive, setIsBottomSheetActive] =
+		useState<boolean>(false);
+	const [method, setMethod] = useState<"refer" | "treat">();
 
-	function openBottomSheet() { setIsBottomSheetActive(true) }
-	function onPressContinue() {  }
-	function onPressRefer() { setMethod('refer') }
-	function onPressTreat() { setMethod('treat') }
+	function openBottomSheet() {
+		setIsBottomSheetActive(true);
+	}
+	function onPressContinue() {}
+	function onPressRefer() {
+		setMethod("refer");
+	}
+	function onPressTreat() {
+		setMethod("treat");
+	}
 
 	return (
 		<SafeAreaView style={Styles.container}>
@@ -71,16 +84,30 @@ export default function HomeScreen(): JSX.Element {
 				contentContainerStyle={Styles.scrollContainer}
 			>
 				<Text style={Styles.headerText}>Patient. CC</Text>
-				<Text style={[Styles.headerText, { marginBottom: 10, }]}>Welcome, <Text style={{ color: AppStyles.colorBrand1 }} >User Name</Text></Text>
-				<View style={Styles.completeSetupBox} >
+				<Text style={[Styles.headerText, { marginBottom: 10 }]}>
+					Welcome,{" "}
+					<Text style={{ color: AppStyles.colorBrand1 }}>
+						User Name
+					</Text>
+				</Text>
+				<View style={Styles.completeSetupBox}>
 					<SetupSVG />
-					<View style={Styles.completeSetupBody} >
-						<Text style={Styles.completeSetupText} >Complete to setup your account</Text>
-						<Text style={Styles.completeSetupTime} >1 min ago</Text>
-						<View style={Styles.completeSetupFooter} >
-							<Text style={Styles.completeSetupBodyStep} >2/3 steps left</Text>
-							<TouchableOpacity activeOpacity={0.85} style={Styles.completeSetupButton} >
-								<Text style={Styles.completeSetupButtonText} >Set-Up Now</Text>
+					<View style={Styles.completeSetupBody}>
+						<Text style={Styles.completeSetupText}>
+							Complete to setup your account
+						</Text>
+						<Text style={Styles.completeSetupTime}>1 min ago</Text>
+						<View style={Styles.completeSetupFooter}>
+							<Text style={Styles.completeSetupBodyStep}>
+								2/3 steps left
+							</Text>
+							<TouchableOpacity
+								activeOpacity={0.85}
+								style={Styles.completeSetupButton}
+							>
+								<Text style={Styles.completeSetupButtonText}>
+									Set-Up Now
+								</Text>
 							</TouchableOpacity>
 						</View>
 					</View>
@@ -99,40 +126,77 @@ export default function HomeScreen(): JSX.Element {
 				<View style={Styles.howItWorkContainer}>
 					<HowItWorkCarousel data={HowItWorks as any} />
 				</View>
-				<View style={Styles.invitationContainer} >
-					<Text style={Styles.invitationContainerHeader} >Invitation Code</Text>
-					<View style={Styles.codeContainer} >
-						<View style={Styles.codeTextContainer} >
+				<View style={Styles.invitationContainer}>
+					<Text style={Styles.invitationContainerHeader}>
+						Invitation Code
+					</Text>
+					<View style={Styles.codeContainer}>
+						<View style={Styles.codeTextContainer}>
 							<CopyGreyIcon />
-							<Text style={Styles.codeText} >docvhg</Text>
+							<Text style={Styles.codeText}>docvhg</Text>
 						</View>
-						<TouchableOpacity style={Styles.copyContainer} >
-							<Text style={Styles.copyText} >Copy</Text>
+						<TouchableOpacity style={Styles.copyContainer}>
+							<Text style={Styles.copyText}>Copy</Text>
 						</TouchableOpacity>
 					</View>
 				</View>
 			</ScrollView>
-			<Pressable onPress={openBottomSheet} style={Styles.floatingButton} >
+			<Pressable onPress={openBottomSheet} style={Styles.floatingButton}>
 				<AddIcon />
-				<Text style={Styles.floatingButtonText} >Treat or Refer</Text>
+				<Text style={Styles.floatingButtonText}>Treat or Refer</Text>
 			</Pressable>
-			<BottomActionSheet snapPoints={snapPoints} isActive={isBottomSheetActive} setIsActive={setIsBottomSheetActive} >
-				<BottomSheetView style={Styles.bottomSheetContainer} >
-					<Text style={Styles.bottomSheetHeader} >Create or Join</Text>
-					<Text style={Styles.bottomSheetText} >select one method to create refer case or join to refer case for patient</Text>
-					<TouchableOpacity style={Styles.caseButton} activeOpacity={0.85} onPress={onPressRefer} >
-						<Text style={Styles.bottomSheetButtonText} >Want to refer a case?</Text>
-						<View style={Styles.bottomSheetButtonindicatorContainer} >
-							{method === 'refer' && <View style={Styles.bottomSheetButtonindicator} />}
+			<BottomActionSheet
+				snapPoints={snapPoints}
+				isActive={isBottomSheetActive}
+				setIsActive={setIsBottomSheetActive}
+			>
+				<BottomSheetView style={Styles.bottomSheetContainer}>
+					<Text style={Styles.bottomSheetHeader}>Create or Join</Text>
+					<Text style={Styles.bottomSheetText}>
+						select one method to create refer case or join to refer
+						case for patient
+					</Text>
+					<TouchableOpacity
+						style={Styles.caseButton}
+						activeOpacity={0.85}
+						onPress={onPressRefer}
+					>
+						<Text style={Styles.bottomSheetButtonText}>
+							Want to refer a case?
+						</Text>
+						<View
+							style={Styles.bottomSheetButtonindicatorContainer}
+						>
+							{method === "refer" && (
+								<View
+									style={Styles.bottomSheetButtonindicator}
+								/>
+							)}
 						</View>
 					</TouchableOpacity>
-					<TouchableOpacity style={Styles.caseButton} activeOpacity={0.85} onPress={onPressTreat} >
-						<Text style={Styles.bottomSheetButtonText} >Want to treat a case?</Text>
-						<View style={Styles.bottomSheetButtonindicatorContainer} >
-							{method === 'treat' && <View style={Styles.bottomSheetButtonindicator} />}
+					<TouchableOpacity
+						style={Styles.caseButton}
+						activeOpacity={0.85}
+						onPress={onPressTreat}
+					>
+						<Text style={Styles.bottomSheetButtonText}>
+							Want to treat a case?
+						</Text>
+						<View
+							style={Styles.bottomSheetButtonindicatorContainer}
+						>
+							{method === "treat" && (
+								<View
+									style={Styles.bottomSheetButtonindicator}
+								/>
+							)}
 						</View>
 					</TouchableOpacity>
-					<PrimaryButton activeOpacity={0.85} onPress={onPressContinue} backgroundColor={AppStyles.colorBrand1} >
+					<PrimaryButton
+						activeOpacity={0.85}
+						onPress={onPressContinue}
+						backgroundColor={AppStyles.colorBrand1}
+					>
 						Continue
 					</PrimaryButton>
 				</BottomSheetView>
