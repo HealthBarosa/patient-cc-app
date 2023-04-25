@@ -32,7 +32,7 @@ export default function TieupCarousel({
 	return (
 		<View style={Styles.container}>
 			<View style={Styles.headerContainer}>
-				<Text style={Styles.headerText}>Tie-Up Hospitals</Text>
+				<Text style={Styles.headerText}>Previous Cures</Text>
 				<Pressable style={Styles.seeAllContainer}>
 					<Text style={Styles.seeText}>see all</Text>
 					<ForwardIcon />
