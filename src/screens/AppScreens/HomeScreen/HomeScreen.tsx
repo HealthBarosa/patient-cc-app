@@ -139,8 +139,8 @@ export default function HomeScreen(): JSX.Element {
 							<Text style={Styles.copyText}>Copy</Text>
 						</TouchableOpacity>
 					</View>
-					<TouchableOpacity style={Styles.inviteButton} >
-						<Text style={Styles.inviteButtonText} >Invite</Text>
+					<TouchableOpacity style={Styles.inviteButton}>
+						<Text style={Styles.inviteButtonText}>Invite</Text>
 					</TouchableOpacity>
 				</View>
 			</ScrollView>

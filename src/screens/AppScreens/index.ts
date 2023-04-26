@@ -9,7 +9,6 @@ import EditProfile from "./EditProfile";
 import AddBankScreen from "./AddBankScreen";
 import ReferFriendScreen from "./ReferFriendScreen";
 
-
 export {
 	IndividualSplashScreen,
 	HomeScreen,
@@ -20,4 +19,3 @@ export {
 	AddBankScreen,
 	ReferFriendScreen,
 };
-

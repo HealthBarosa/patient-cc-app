@@ -181,8 +181,8 @@ export default StyleSheet.create({
 		height: 50,
 		marginTop: 20,
 		borderRadius: 10,
-		justifyContent: 'center',
-		alignItems: 'center'
+		justifyContent: "center",
+		alignItems: "center",
 	},
 	inviteButtonText: {
 		fontFamily: AppStyles.fontPoppinsSemiBold,
