@@ -14,6 +14,7 @@ import { TermsOfService } from "./PolicyScreen";
 
 // app screens
 import {
+	IndividualSplashScreen,
 	HomeScreen,
 	ServiceScreen,
 	ProfileScreen,
@@ -45,6 +46,7 @@ export {
 	SignInScreen,
 
 	// app screens
+	IndividualSplashScreen,
 	HomeScreen,
 	ServiceScreen,
 	ProfileScreen,

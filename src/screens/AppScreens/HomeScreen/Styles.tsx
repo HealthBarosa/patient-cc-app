@@ -175,4 +175,18 @@ export default StyleSheet.create({
 		fontFamily: AppStyles.fontPoppinsRegular,
 		color: AppStyles.colorWhite,
 	},
+	inviteButton: {
+		backgroundColor: AppStyles.colorBrand1,
+		width: 120,
+		height: 50,
+		marginTop: 20,
+		borderRadius: 10,
+		justifyContent: 'center',
+		alignItems: 'center'
+	},
+	inviteButtonText: {
+		fontFamily: AppStyles.fontPoppinsSemiBold,
+		color: AppStyles.colorWhite,
+		fontSize: 16,
+	},
 });

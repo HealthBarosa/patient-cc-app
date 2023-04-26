@@ -11,6 +11,7 @@ import {
 	EditProfile,
 	AddBankScreen,
 	ReferFriendScreen,
+	IndividualSplashScreen,
 } from "../screens";
 
 import { NavigationTree } from "@/utils";
@@ -25,6 +26,10 @@ export default function AppNavigation(): JSX.Element {
 	return (
 		<>
 			<AppNavigationStack.Navigator screenOptions={screenOptions}>
+				<AppNavigationStack.Screen
+					name={NavigationTree.app.IndividualSplashScreen}
+					component={IndividualSplashScreen}
+				/>
 				<AppNavigationStack.Screen
 					name={NavigationTree.app.BottomTab}
 					component={BottomTabNavigator}
