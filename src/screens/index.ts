@@ -31,6 +31,7 @@ import {
 	SubscriptionScreen,
 	PaymentHistory,
 	PaymentProcessScreen,
+	ApplyCoupon,
 } from "./PaymentScreens";
 
 export {
@@ -62,4 +63,5 @@ export {
 	SubscriptionScreen,
 	PaymentHistory,
 	PaymentProcessScreen,
+	ApplyCoupon,
 };

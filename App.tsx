@@ -22,7 +22,7 @@ import { AppNavigation } from "@/navigations";
 import {
 	PaymentHistory,
 	PaymentProcessScreen,
-	IndividualSplashScreen,
+	ApplyCoupon,
 } from "./src/screens";
 import { AuthNavigation } from "@/navigations";
 
@@ -46,6 +46,7 @@ function App(): JSX.Element {
 					/>
 					<NavigationContainer>
 						<AppNavigation />
+						{/*<ApplyCoupon />*/}
 						{/*<PaymentProcessScreen />*/}
 						{/* <PaymentHistory /> */}
 					</NavigationContainer>
