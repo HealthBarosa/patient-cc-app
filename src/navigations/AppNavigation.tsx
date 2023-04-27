@@ -12,7 +12,6 @@ import {
 	AddBankScreen,
 	ReferFriendScreen,
 	IndividualSplashScreen,
-
 	ApplyCoupon,
 } from "../screens";
 
