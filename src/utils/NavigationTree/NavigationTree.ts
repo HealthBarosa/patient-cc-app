@@ -22,5 +22,6 @@ export default {
 		EditProfile: "edit-profile-screen",
 		AddBankScreen: "add-bank-screen",
 		ReferFriendScreen: "refer-friend-screen",
+		ApplyCouponScreen: "apply-coupon-screen",
 	},
 };
