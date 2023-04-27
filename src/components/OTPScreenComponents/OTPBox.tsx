@@ -7,7 +7,7 @@ interface OTPBoxProps {
 	setOTP: (otp: string) => void;
 }
 
-const OTPBox = ({setOTP}: OTPBoxProps) => {
+const OTPBox = ({ setOTP }: OTPBoxProps) => {
 	const [_digitOne, setDigitOne] = useState<string>("");
 	const [_digitTwo, setDigitTwo] = useState<string>("");
 	const [_digitThree, setDigitThree] = useState<string>("");
@@ -24,16 +24,13 @@ const OTPBox = ({setOTP}: OTPBoxProps) => {
 	const [isFocousedFour, setIsFocousedFour] = useState<boolean>(false);
 
 	const handleSetOTP = () => {
-
 		if (_digitOne && _digitTwo && _digitThree && _digitFour) {
 			// console.log("OTP: ", _digitOne + _digitTwo + _digitThree + _digitFour);
 			setOTP(_digitOne + _digitTwo + _digitThree + _digitFour);
-		}
-		else{
+		} else {
 			setOTP("");
 		}
-
-	}
+	};
 
 	// if (_digitOne && _digitTwo && _digitThree && _digitFour) {
 	// 	// console.log("OTP: ", _digitOne + _digitTwo + _digitThree + _digitFour);
@@ -51,7 +48,9 @@ const OTPBox = ({setOTP}: OTPBoxProps) => {
 					maxLength={1}
 					ref={pin1Ref}
 					onFocus={() => setIsFocousedOne(true)}
-					onBlur={() => {_digitOne === "" && setIsFocousedOne(false)}}
+					onBlur={() => {
+						_digitOne === "" && setIsFocousedOne(false);
+					}}
 					onChangeText={(text) => {
 						setDigitOne(text);
 						if (text.length === 1) {
@@ -69,7 +68,9 @@ const OTPBox = ({setOTP}: OTPBoxProps) => {
 					maxLength={1}
 					ref={pin2Ref}
 					onFocus={() => setIsFocousedTwo(true)}
-					onBlur={() => {_digitTwo === "" && setIsFocousedTwo(false)}}
+					onBlur={() => {
+						_digitTwo === "" && setIsFocousedTwo(false);
+					}}
 					onChangeText={(text) => {
 						setDigitTwo(text);
 						if (text.length === 1) {
@@ -90,7 +91,9 @@ const OTPBox = ({setOTP}: OTPBoxProps) => {
 					maxLength={1}
 					ref={pin3Ref}
 					onFocus={() => setIsFocousedThree(true)}
-					onBlur={() => {_digitThree === "" && setIsFocousedThree(false)}}
+					onBlur={() => {
+						_digitThree === "" && setIsFocousedThree(false);
+					}}
 					onChangeText={(text) => {
 						setDigitThree(text);
 						if (text.length === 1) {
@@ -112,7 +115,10 @@ const OTPBox = ({setOTP}: OTPBoxProps) => {
 					ref={pin4Ref}
 					onFocus={() => setIsFocousedFour(true)}
 					// onBlur={handleSetOTP}
-					onBlur={() => {_digitFour === "" && setIsFocousedFour(false); handleSetOTP()}}
+					onBlur={() => {
+						_digitFour === "" && setIsFocousedFour(false);
+						handleSetOTP();
+					}}
 					onChangeText={(text) => {
 						setDigitFour(text);
 						if (text.length === 0) {

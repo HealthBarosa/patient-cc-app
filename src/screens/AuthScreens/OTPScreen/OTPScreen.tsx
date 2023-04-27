@@ -69,7 +69,7 @@ const OTPScreen = ({ navigation }): JSX.Element => {
 	// 	}, 1000);
 	// 	return () => clearInterval(interval);
 	// }, [OTPTime]);
-	
+
 	return (
 		<SafeAreaView style={Styles.container}>
 			<Pressable

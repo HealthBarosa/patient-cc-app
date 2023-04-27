@@ -27,7 +27,11 @@ export default function PrimaryButton({
 		<TouchableOpacity
 			activeOpacity={0.85}
 			{...primaryButtonProps}
-			style={[Styles.container, { backgroundColor: backgroundColor }, disabled && { opacity: 0.7 }]}
+			style={[
+				Styles.container,
+				{ backgroundColor: backgroundColor },
+				disabled && { opacity: 0.7 },
+			]}
 			disabled={disabled}
 		>
 			<Text style={Styles.text}>{children}</Text>

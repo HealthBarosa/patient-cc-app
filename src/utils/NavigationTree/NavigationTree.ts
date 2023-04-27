@@ -8,6 +8,7 @@ export default {
 	},
 	configuration: {},
 	app: {
+		IndividualSplashScreen: "individual-splash-screen",
 		BottomTab: "bottom-tab",
 		HomeScreen: "home-screen",
 		ServiceScreen: "service-screen",

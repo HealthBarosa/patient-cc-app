@@ -14,8 +14,7 @@ interface NavHeaderProps {
  * @example
  * <NavHeader headerName={'Bills & Payment'} />
  */
-const NavHeader = ({ headerName,navigation }: NavHeaderProps) => {
-
+const NavHeader = ({ headerName, navigation }: NavHeaderProps) => {
 	const handleBackPress = () => {
 		navigation.goBack();
 	};

@@ -2,7 +2,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable semi */
 /* eslint-disable no-extra-semi */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
 	View,
 	Text,
@@ -29,10 +29,29 @@ const languages = [
 
 export default function ChangeLanguage(): JSX.Element {
 	const navigation = useNavigation();
+	const [searchText, setSearchText] = useState<string>("");
+	const [searchedLanguages, setSearchedLanguages] =
+		useState<{ id: number; name: string }[]>(languages);
 
 	function onPressGoBack() {
 		navigation.goBack();
 	}
+
+	function searchLanguage(language: string) {
+		const currentLanguages = languages;
+		setSearchedLanguages(
+			currentLanguages.filter((item) =>
+				item.name.toLocaleLowerCase().includes(language.toLowerCase())
+			)
+		);
+	}
+
+	useEffect(() => {
+		if (searchText.length !== 0) searchLanguage(searchText);
+		else setSearchedLanguages(languages);
+
+		return () => {};
+	}, [searchText]);
 
 	return (
 		<View style={Styles.container}>
@@ -54,8 +73,8 @@ export default function ChangeLanguage(): JSX.Element {
 					iconWidth={16}
 					iconHeight={16}
 					placeholder="Search Languages"
-					value=""
-					onChangeValue={() => {}}
+					value={searchText}
+					onChangeValue={setSearchText}
 					iconContainerStyle={{ width: "10%" }}
 					inputContainerStyle={{ width: "87%" }}
 					inputStyle={{
@@ -69,7 +88,7 @@ export default function ChangeLanguage(): JSX.Element {
 					style={{ marginTop: 20 }}
 					contentContainerStyle={Styles.scrollContainer}
 				>
-					{languages.map((item, index) => (
+					{searchedLanguages.map((item, index) => (
 						<LanguageTab
 							key={index.toString()}
 							item={item.name}
@@ -80,6 +99,7 @@ export default function ChangeLanguage(): JSX.Element {
 				<View style={Styles.footer}>
 					<TouchableOpacity
 						activeOpacity={0.85}
+						onPress={onPressGoBack}
 						style={Styles.footerButton}
 					>
 						<Text

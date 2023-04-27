@@ -17,7 +17,7 @@ const SignupScreen = ({ navigation }) => {
 		navigation.navigate(NavigationTree.auth.SignInScreen);
 		console.log("Signin Pressed");
 	};
-	
+
 	const termsOfServicePress = () => {
 		navigation.navigate(NavigationTree.auth.TermsOfService);
 		console.log("termsOfService Pressed");
@@ -35,17 +35,16 @@ const SignupScreen = ({ navigation }) => {
 	const enableContinueBtn = () => {
 		if (phoneNumber.length === 10 && toggleCheckBox) {
 			console.log("enableContinueBtn", true);
-			
+
 			return true;
 		} else {
 			console.log("enableContinueBtn", false);
-			
+
 			return false;
 		}
 	};
 
 	console.log("phoneNumber", phoneNumber);
-	
 
 	return (
 		<SafeAreaView style={Styles.container}>
