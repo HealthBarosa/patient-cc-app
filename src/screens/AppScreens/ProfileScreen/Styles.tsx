@@ -125,17 +125,19 @@ export default StyleSheet.create({
 		marginTop: 20,
 	},
 	bottomSheetButton: {
+		flexDirection: "row",
+		gap: 5,
+		justifyContent: "center",
+		alignItems: "center",
 		paddingVertical: 15,
 		paddingHorizontal: 15,
 		borderRadius: 15,
 		borderWidth: 1,
-		borderColor: "rgba(46, 46, 46, 0.3)",
 		backgroundColor: AppStyles.colorGreyLight1,
 	},
 	bottomSheetButtonText: {
 		fontFamily: AppStyles.fontPoppinsSemiBold,
-		fontSize: 12,
-		color: AppStyles.colorGrey2,
+		fontSize: 10,
 	},
 	bottomSheetDocText: {
 		fontFamily: AppStyles.fontPoppinsRegular,
