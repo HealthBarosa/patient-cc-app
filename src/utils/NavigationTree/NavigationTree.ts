@@ -5,6 +5,11 @@ export default {
 		SignupScreen: "signup-screen",
 		SignInScreen: "sign-in-screen",
 		TermsOfService: "terms-of-service",
+		OnboardingScreen: "onboarding-screen",
+		EnterRefferCodeScreen: "enter-reffer-code",
+		EnterDetailsScreen: "enter-details-screen",
+		EnterProfessionScreen: "enter-profession",
+		PartOfOrgScreen: "part-of-org",
 	},
 	configuration: {},
 	app: {

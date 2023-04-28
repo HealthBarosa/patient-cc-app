@@ -9,9 +9,9 @@ export default StyleSheet.create({
 		borderBottomColor: "rgba(0, 0, 0, 0.17)",
 	},
 	label: {
-		fontFamily: AppStyles.fontManropeSemiBold,
+		fontFamily: AppStyles.fontPoppinsBold,
 		fontSize: 14,
-		color: "rgba(0, 0, 0, 0.34)",
+		color: AppStyles.colorGrey2,
 	},
 	inputContainer: {
 		flexDirection: "row",
