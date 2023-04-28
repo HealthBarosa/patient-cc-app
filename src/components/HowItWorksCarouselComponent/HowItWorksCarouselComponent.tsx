@@ -2,7 +2,12 @@
 /* eslint-disable no-extra-semi */
 /* eslint-disable semi */
 import React from "react";
-import { View, ImageBackground, Pressable, ImageSourcePropType } from "react-native";
+import {
+	View,
+	ImageBackground,
+	Pressable,
+	ImageSourcePropType,
+} from "react-native";
 
 import Styles from "./Styles";
 
@@ -20,12 +25,17 @@ type TieupCarouselComponentPropsType = {
 export default function HowItWorksCarouselComponent({
 	item,
 }: TieupCarouselComponentPropsType): JSX.Element {
-	const navigation = useNavigation()
+	const navigation = useNavigation();
 
-	function onPressPlay() { navigation.navigate(NavigationTree.app.DemoVideosScreen as never) }
+	function onPressPlay() {
+		navigation.navigate(NavigationTree.app.DemoVideosScreen as never);
+	}
 
 	return (
-		<ImageBackground source={item.image as ImageSourcePropType} style={Styles.imageBackground} >
+		<ImageBackground
+			source={item.image as ImageSourcePropType}
+			style={Styles.imageBackground}
+		>
 			<Pressable onPress={onPressPlay} style={Styles.playContainer}>
 				<PlayIcon />
 			</Pressable>

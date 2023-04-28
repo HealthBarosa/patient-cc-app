@@ -26,7 +26,10 @@ export default function TieupCarouselComponent({
 }: TieupCarouselComponentPropsType): JSX.Element {
 	return (
 		<View style={Styles.container}>
-			<Image source={item.image as ImageSourcePropType } style={Styles.image} />
+			<Image
+				source={item.image as ImageSourcePropType}
+				style={Styles.image}
+			/>
 			<View style={Styles.content}>
 				<Text style={Styles.headerText}>{item.name}</Text>
 				<View style={Styles.reviewContainer}>

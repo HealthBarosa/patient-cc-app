@@ -5,7 +5,13 @@
 /* eslint-disable no-extra-semi */
 /* eslint-disable semi */
 import React from "react";
-import { View, FlatList, Text, Pressable, ImageSourcePropType } from "react-native";
+import {
+	View,
+	FlatList,
+	Text,
+	Pressable,
+	ImageSourcePropType,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { PreviousCureCard } from "@/components";
@@ -17,10 +23,10 @@ import { NavigationTree } from "@/utils";
 
 type DataObject = {
 	id: number;
-  image: ImageSourcePropType,
-  name: string;
-  price: string;
-  location: string;
+	image: ImageSourcePropType;
+	name: string;
+	price: string;
+	location: string;
 };
 
 export type TieupCarouselPropsType = {
@@ -30,16 +36,21 @@ export type TieupCarouselPropsType = {
 export default function TieupCarousel({
 	data,
 }: TieupCarouselPropsType): JSX.Element {
-	const navigation = useNavigation()
-	
-	function onPressSeeAll() { navigation.navigate(NavigationTree.app.PreviousCureScreen as never) }
-	function onPressCard() {  }
+	const navigation = useNavigation();
+
+	function onPressSeeAll() {
+		navigation.navigate(NavigationTree.app.PreviousCureScreen as never);
+	}
+	function onPressCard() {}
 
 	return (
 		<View style={Styles.container}>
 			<View style={Styles.headerContainer}>
 				<Text style={Styles.headerText}>Previous Cures</Text>
-				<Pressable onPress={onPressSeeAll} style={Styles.seeAllContainer}>
+				<Pressable
+					onPress={onPressSeeAll}
+					style={Styles.seeAllContainer}
+				>
 					<Text style={Styles.seeText}>see all</Text>
 					<ForwardIcon />
 				</Pressable>
