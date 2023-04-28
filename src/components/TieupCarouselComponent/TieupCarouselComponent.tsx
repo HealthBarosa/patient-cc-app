@@ -3,7 +3,7 @@
 /* eslint-disable no-extra-semi */
 /* eslint-disable semi */
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, ImageSourcePropType } from "react-native";
 
 import Styles from "./Styles";
 
@@ -26,7 +26,7 @@ export default function TieupCarouselComponent({
 }: TieupCarouselComponentPropsType): JSX.Element {
 	return (
 		<View style={Styles.container}>
-			<Image source={item.image} style={Styles.image} />
+			<Image source={item.image as ImageSourcePropType } style={Styles.image} />
 			<View style={Styles.content}>
 				<Text style={Styles.headerText}>{item.name}</Text>
 				<View style={Styles.reviewContainer}>
