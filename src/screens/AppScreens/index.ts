@@ -11,7 +11,6 @@ import ReferFriendScreen from "./ReferFriendScreen";
 import PreviousCureScreen from "./PreviousCureScreen";
 import DemoVideosScreen from "./DemoVideosScreen";
 
-
 export {
 	IndividualSplashScreen,
 	HomeScreen,
@@ -24,4 +23,3 @@ export {
 	PreviousCureScreen,
 	DemoVideosScreen,
 };
-

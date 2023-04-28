@@ -1,7 +1,3 @@
 import WarningBanner from "./WarningBanner";
 
-
-export {
-  WarningBanner,
-};
-
+export { WarningBanner };

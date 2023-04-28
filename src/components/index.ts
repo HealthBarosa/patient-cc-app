@@ -52,11 +52,9 @@ export {
 
 // PaymentScreens export
 export { BillCard, ReciptPart, TrackStatus };
-	
-	
+
 /**
  * Unecessary components
- * 
+ *
  * TieupCarouselComponents.
  */
-

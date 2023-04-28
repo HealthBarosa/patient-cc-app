@@ -5,7 +5,7 @@ import AppStyles from "@/AppStyles";
 
 export default StyleSheet.create({
 	container: {
-		width: Dimensions.get('window').width * 0.5 - 25,
+		width: Dimensions.get("window").width * 0.5 - 25,
 		borderWidth: 1,
 		borderColor: "rgba(46, 46, 46, 0.5)",
 		borderRadius: 10,
@@ -34,7 +34,7 @@ export default StyleSheet.create({
 	priceContainer: {
 		flexDirection: "row",
 		alignItems: "center",
-		gap: 3
+		gap: 3,
 	},
 	priceText: {
 		fontFamily: AppStyles.fontPoppinsSemiBold,

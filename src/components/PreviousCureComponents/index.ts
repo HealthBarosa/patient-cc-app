@@ -1,7 +1,3 @@
 import PreviousCureCard from "./PreviousCureCard";
 
-
-export {
-  PreviousCureCard,
-};
-
+export { PreviousCureCard };

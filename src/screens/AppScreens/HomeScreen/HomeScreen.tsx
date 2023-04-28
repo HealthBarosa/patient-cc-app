@@ -27,47 +27,47 @@ import { BottomSheetView } from "@gorhom/bottom-sheet";
 import Style from "@/screens/PolicyScreen/Style";
 
 const cures: {
-  id: number;
-  image: ImageSourcePropType,
-  name: string;
-  price: string;
-  location: string;
+	id: number;
+	image: ImageSourcePropType;
+	name: string;
+	price: string;
+	location: string;
 }[] = [
-  {
-    id: 1,
-    image: require("@/constants/image/Hospital1.png"),
-    name: "Apollo Hospital",
-    price: "1200",
-    location: "Hyderabad, Secunderabad"
-  },
-  {
-    id: 2,
-    image: require("@/constants/image/Hospital1.png"),
-    name: "Apollo Hospital",
-    price: "1200",
-    location: "Hyderabad, Secunderabad"
-  },
-  {
-    id: 3,
-    image: require("@/constants/image/Hospital1.png"),
-    name: "Apollo Hospital",
-    price: "1200",
-    location: "Hyderabad, Secunderabad"
-  },
-  {
-    id: 4,
-    image: require("@/constants/image/Hospital1.png"),
-    name: "Apollo Hospital",
-    price: "1200",
-    location: "Hyderabad, Secunderabad"
-  },
-  {
-    id: 5,
-    image: require("@/constants/image/Hospital1.png"),
-    name: "Apollo Hospital",
-    price: "1200",
-    location: "Hyderabad, Secunderabad"
-  },
+	{
+		id: 1,
+		image: require("@/constants/image/Hospital1.png"),
+		name: "Apollo Hospital",
+		price: "1200",
+		location: "Hyderabad, Secunderabad",
+	},
+	{
+		id: 2,
+		image: require("@/constants/image/Hospital1.png"),
+		name: "Apollo Hospital",
+		price: "1200",
+		location: "Hyderabad, Secunderabad",
+	},
+	{
+		id: 3,
+		image: require("@/constants/image/Hospital1.png"),
+		name: "Apollo Hospital",
+		price: "1200",
+		location: "Hyderabad, Secunderabad",
+	},
+	{
+		id: 4,
+		image: require("@/constants/image/Hospital1.png"),
+		name: "Apollo Hospital",
+		price: "1200",
+		location: "Hyderabad, Secunderabad",
+	},
+	{
+		id: 5,
+		image: require("@/constants/image/Hospital1.png"),
+		name: "Apollo Hospital",
+		price: "1200",
+		location: "Hyderabad, Secunderabad",
+	},
 ];
 const HowItWorks = [
 	{ id: 1, image: require("../../../constants/image/How1.png") },
@@ -94,7 +94,11 @@ export default function HomeScreen(): JSX.Element {
 
 	return (
 		<SafeAreaView style={Styles.container}>
-			<StatusBar barStyle={"dark-content"} translucent backgroundColor={"transparent"} />
+			<StatusBar
+				barStyle={"dark-content"}
+				translucent
+				backgroundColor={"transparent"}
+			/>
 			<ScrollView
 				nestedScrollEnabled
 				showsVerticalScrollIndicator={false}
