@@ -6,6 +6,7 @@ import {
 	StatusBar,
 	TouchableOpacity,
 	Pressable,
+	ImageSourcePropType,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -25,31 +26,48 @@ import AppStyles from "@/AppStyles";
 import { BottomSheetView } from "@gorhom/bottom-sheet";
 import Style from "@/screens/PolicyScreen/Style";
 
-const TieupHospitals = [
-	{
-		id: 1,
-		name: "Apollo Hospitals",
-		image: require("../../../constants/image/Hospital1.png"),
-		star: "4.8",
-		reviews: "20,171",
-		location: "Hyderabad, Secunderabad",
-	},
-	{
-		id: 2,
-		name: "Aditya Hospitals",
-		image: require("../../../constants/image/Hospital2.png"),
-		star: "4.8",
-		reviews: "2,011",
-		location: "Nallagandala, Telengana",
-	},
-	{
-		id: 3,
-		name: "Aditya Hospitals",
-		image: require("../../../constants/image/Hospital2.png"),
-		star: "4.8",
-		reviews: "2,011",
-		location: "Nallagandala, Telengana",
-	},
+const cures: {
+  id: number;
+  image: ImageSourcePropType,
+  name: string;
+  price: string;
+  location: string;
+}[] = [
+  {
+    id: 1,
+    image: require("@/constants/image/Hospital1.png"),
+    name: "Apollo Hospital",
+    price: "1200",
+    location: "Hyderabad, Secunderabad"
+  },
+  {
+    id: 2,
+    image: require("@/constants/image/Hospital1.png"),
+    name: "Apollo Hospital",
+    price: "1200",
+    location: "Hyderabad, Secunderabad"
+  },
+  {
+    id: 3,
+    image: require("@/constants/image/Hospital1.png"),
+    name: "Apollo Hospital",
+    price: "1200",
+    location: "Hyderabad, Secunderabad"
+  },
+  {
+    id: 4,
+    image: require("@/constants/image/Hospital1.png"),
+    name: "Apollo Hospital",
+    price: "1200",
+    location: "Hyderabad, Secunderabad"
+  },
+  {
+    id: 5,
+    image: require("@/constants/image/Hospital1.png"),
+    name: "Apollo Hospital",
+    price: "1200",
+    location: "Hyderabad, Secunderabad"
+  },
 ];
 const HowItWorks = [
 	{ id: 1, image: require("../../../constants/image/How1.png") },
@@ -76,7 +94,7 @@ export default function HomeScreen(): JSX.Element {
 
 	return (
 		<SafeAreaView style={Styles.container}>
-			<StatusBar barStyle={"dark-content"} translucent />
+			<StatusBar barStyle={"dark-content"} translucent backgroundColor={"transparent"} />
 			<ScrollView
 				nestedScrollEnabled
 				showsVerticalScrollIndicator={false}
@@ -121,7 +139,7 @@ export default function HomeScreen(): JSX.Element {
 					/>
 				</View>*/}
 				<View style={Styles.tieupCarouselContainer}>
-					<TieupCarousel data={TieupHospitals as any} />
+					<TieupCarousel data={cures as any} />
 				</View>
 				<View style={Styles.howItWorkContainer}>
 					<HowItWorkCarousel data={HowItWorks as any} />

@@ -8,6 +8,9 @@ import ChangeLanguage from "./ChangeLanguage";
 import EditProfile from "./EditProfile";
 import AddBankScreen from "./AddBankScreen";
 import ReferFriendScreen from "./ReferFriendScreen";
+import PreviousCureScreen from "./PreviousCureScreen";
+import DemoVideosScreen from "./DemoVideosScreen";
+
 
 export {
 	IndividualSplashScreen,
@@ -18,4 +21,7 @@ export {
 	EditProfile,
 	AddBankScreen,
 	ReferFriendScreen,
+	PreviousCureScreen,
+	DemoVideosScreen,
 };
+

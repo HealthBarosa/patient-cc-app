@@ -7,7 +7,7 @@ import Banner from "./Banner";
 import OTPBox from "./OTPScreenComponents";
 import { SignupWithGoogleBtn } from "./SignupScreenComponents";
 import ReferButton from "./ReferButton";
-import TieupCarouselComponent from "./TieupCarouselComponent";
+//import TieupCarouselComponent from "./TieupCarouselComponent";
 import HowItWorksCarouselComponent from "./HowItWorksCarouselComponent";
 import ScreenHeader from "./ScreenHeader";
 import Tab from "./Tab";
@@ -15,6 +15,8 @@ import MoreOptions from "./common/MoreOptions/MoreOptions";
 import LanguageTab from "./LanguageTab";
 import Skeleton from "./Skeleton";
 import { MainButton, ApplyCouponBar, Coupon } from "./ApplyCouponComponents";
+import { PreviousCureCard } from "./PreviousCureComponents";
+import { WarningBanner } from "./WarningBanner";
 
 // PaymentScreens
 import { BillCard, ReciptPart, TrackStatus } from "./PaymentScreenComponent";
@@ -28,13 +30,19 @@ export {
 	SignupWithGoogleBtn,
 	Banner,
 	ReferButton,
-	TieupCarouselComponent,
+	//TieupCarouselComponent,
 	HowItWorksCarouselComponent,
 	ScreenHeader,
 	Tab,
 	MoreOptions,
 	LanguageTab,
 	Skeleton,
+
+	// warning banner
+	WarningBanner,
+
+	// Previous Cure Components
+	PreviousCureCard,
 
 	// Apply Coupon Components
 	MainButton,
@@ -44,3 +52,11 @@ export {
 
 // PaymentScreens export
 export { BillCard, ReciptPart, TrackStatus };
+	
+	
+/**
+ * Unecessary components
+ * 
+ * TieupCarouselComponents.
+ */
+

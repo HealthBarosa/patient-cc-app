@@ -22,6 +22,8 @@ import {
 	EditProfile,
 	AddBankScreen,
 	ReferFriendScreen,
+	PreviousCureScreen,
+	DemoVideosScreen,
 } from "./AppScreens";
 
 // export
@@ -55,6 +57,8 @@ export {
 	EditProfile,
 	AddBankScreen,
 	ReferFriendScreen,
+	PreviousCureScreen,
+	DemoVideosScreen,
 };
 
 // PaymentScreens export
