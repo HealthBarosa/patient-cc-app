@@ -26,7 +26,6 @@ import {
 import Styles from "./Styles";
 import AppStyles from "@/AppStyles";
 
-
 const cures: {
 	id: number;
 	image: ImageSourcePropType;
