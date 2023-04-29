@@ -25,6 +25,7 @@ import {
 	IndividualSplashScreen,
 } from "./src/screens";
 import { AuthNavigation } from "@/navigations";
+import AppStyles from "@/AppStyles";
 
 const Stack = createNativeStackNavigator();
 
@@ -45,9 +46,10 @@ function App(): JSX.Element {
 						backgroundColor="transparent"
 					/>
 					<NavigationContainer>
-						<AppNavigation />
+						{/* <AppNavigation /> */}
 						{/*<PaymentProcessScreen />*/}
 						{/* <PaymentHistory /> */}
+						{isLoggedIn ? <AppNavigation /> : <AuthNavigation />}
 					</NavigationContainer>
 				</View>
 			</GestureHandlerRootView>
@@ -60,6 +62,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		flexGrow: 1,
 		backgroundColor: "#FFFFFF",
+		color: AppStyles.colorDark1,
 	},
 });
 

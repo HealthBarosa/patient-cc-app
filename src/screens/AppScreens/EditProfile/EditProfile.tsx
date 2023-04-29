@@ -2,10 +2,9 @@ import React from "react";
 import { View, StatusBar, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import { ScreenHeader } from "../../../components";
-import { EditProfileInputArea } from "../../../containers";
-
 import Styles from "./Styles";
+import { EditProfileInputArea } from "@/containers";
+import { ScreenHeader } from "@/components";
 
 export default function EditProfile(): JSX.Element {
 	const navigation = useNavigation();
