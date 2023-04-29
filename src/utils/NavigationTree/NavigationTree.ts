@@ -20,5 +20,6 @@ export default {
 		ApplyCouponScreen: "apply-coupon-screen",
 		PreviousCureScreen: "previous-cure-screen",
 		DemoVideosScreen: "demo-videos-screen",
+		ReferCaseScreen: "refer-case-screen",
 	},
 };

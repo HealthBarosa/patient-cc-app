@@ -10,6 +10,8 @@ import AddBankScreen from "./AddBankScreen";
 import ReferFriendScreen from "./ReferFriendScreen";
 import PreviousCureScreen from "./PreviousCureScreen";
 import DemoVideosScreen from "./DemoVideosScreen";
+import ReferCaseScreen from "./ReferCaseScreen";
+
 
 export {
 	IndividualSplashScreen,
@@ -22,4 +24,6 @@ export {
 	ReferFriendScreen,
 	PreviousCureScreen,
 	DemoVideosScreen,
+	ReferCaseScreen,
 };
+

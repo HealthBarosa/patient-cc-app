@@ -8,11 +8,13 @@ import {
 	Pressable,
 	ImageSourcePropType,
 } from "react-native";
+import { BottomSheetView } from "@gorhom/bottom-sheet";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import CopyGreyIcon from "@/constants/svg/icons/CopyGreyIcon.svg";
 import AddIcon from "@/constants/svg/icons/AddIcon.svg";
 import SetupSVG from "@/constants/svg/SetupSVG.svg";
+
 import { Banner, PrimaryButton } from "@/components";
 import {
 	AppReferContainer,
@@ -23,8 +25,7 @@ import {
 
 import Styles from "./Styles";
 import AppStyles from "@/AppStyles";
-import { BottomSheetView } from "@gorhom/bottom-sheet";
-import Style from "@/screens/PolicyScreen/Style";
+
 
 const cures: {
 	id: number;
