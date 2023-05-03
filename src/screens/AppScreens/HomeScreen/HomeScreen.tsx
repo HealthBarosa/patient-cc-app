@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { BottomSheetView } from "@gorhom/bottom-sheet";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Clipboard from '@react-native-clipboard/clipboard';
+import Clipboard from "@react-native-clipboard/clipboard";
 import { useNavigation } from "@react-navigation/native";
 import Share, { ShareOptions } from "react-native-share";
 
@@ -80,23 +80,22 @@ const HowItWorks = [
 ];
 
 export default function HomeScreen(): JSX.Element {
-	const navigation = useNavigation()
-	const [code, setCode] = useState<string>('docvhg')
-	const [isCodeCopied, setIsCodeCopied] = useState<boolean>(false)
-	const snapPoints = useMemo(() => ["45%"], [])
+	const navigation = useNavigation();
+	const [code, setCode] = useState<string>("docvhg");
+	const [isCodeCopied, setIsCodeCopied] = useState<boolean>(false);
+	const snapPoints = useMemo(() => ["45%"], []);
 	const [isBottomSheetActive, setIsBottomSheetActive] =
 		useState<boolean>(false);
-	const [method, setMethod] = useState<"refer" | "treat">("refer")
+	const [method, setMethod] = useState<"refer" | "treat">("refer");
 
 	function openBottomSheet(): void {
 		setIsBottomSheetActive(true);
 	}
 	function onPressContinue(): void {
-		setIsBottomSheetActive(false)
+		setIsBottomSheetActive(false);
 		if (method === "refer") {
-			navigation.navigate(NavigationTree.app.ReferCaseScreen as never)
+			navigation.navigate(NavigationTree.app.ReferCaseScreen as never);
 		} else {
-			
 		}
 	}
 	function onPressRefer(): void {
@@ -106,21 +105,21 @@ export default function HomeScreen(): JSX.Element {
 		setMethod("treat");
 	}
 	function onPressCopy(): void {
-		Clipboard.setString(code)
-		setIsCodeCopied(true)
+		Clipboard.setString(code);
+		setIsCodeCopied(true);
 	}
 	async function onPressShare(): Promise<void> {
 		try {
 			Share.open({
 				title: "invitation Code",
-				message: code.toString()
-			})
+				message: code.toString(),
+			});
 		} catch (error: unknown) {
 			console.log(error);
 		}
 	}
 	function onPressSetupnow(): void {
-		navigation.navigate(NavigationTree.app.ProfileScreen as never)
+		navigation.navigate(NavigationTree.app.ProfileScreen as never);
 	}
 
 	return (
@@ -189,11 +188,21 @@ export default function HomeScreen(): JSX.Element {
 							<CopyGreyIcon />
 							<Text style={Styles.codeText}>{code}</Text>
 						</View>
-						<TouchableOpacity activeOpacity={0.85} onPress={onPressCopy} style={Styles.copyContainer}>
-							<Text style={Styles.copyText}>{isCodeCopied ? "Copied" : "Copy"}</Text>
+						<TouchableOpacity
+							activeOpacity={0.85}
+							onPress={onPressCopy}
+							style={Styles.copyContainer}
+						>
+							<Text style={Styles.copyText}>
+								{isCodeCopied ? "Copied" : "Copy"}
+							</Text>
 						</TouchableOpacity>
 					</View>
-					<TouchableOpacity activeOpacity={0.85} onPress={onPressShare} style={Styles.inviteButton}>
+					<TouchableOpacity
+						activeOpacity={0.85}
+						onPress={onPressShare}
+						style={Styles.inviteButton}
+					>
 						<Text style={Styles.inviteButtonText}>Invite</Text>
 					</TouchableOpacity>
 				</View>
