@@ -94,7 +94,7 @@ export default function EditProfile(): JSX.Element {
 							containerStyle={{ width: "42%" }}
 						/>
 					</View>
-					<EditProfileInputArea
+					{/*<EditProfileInputArea
 						label="User Type"
 						keyboardType="default"
 						placeholder=""
@@ -102,7 +102,7 @@ export default function EditProfile(): JSX.Element {
 						containerStyle={{ width: "100%", marginBottom: 25 }}
 						buttonText="Update"
 						buttonOnPress={() => {}}
-					/>
+					/>*/}
 				</ScrollView>
 			</View>
 		</View>

@@ -12,6 +12,10 @@ import {
 	AddBankScreen,
 	ReferFriendScreen,
 	IndividualSplashScreen,
+	ApplyCoupon,
+	PreviousCureScreen,
+	DemoVideosScreen,
+	ReferCaseScreen,
 } from "../screens";
 
 import { NavigationTree } from "@/utils";
@@ -49,6 +53,22 @@ export default function AppNavigation(): JSX.Element {
 				<AppNavigationStack.Screen
 					name={NavigationTree.app.ReferFriendScreen}
 					component={ReferFriendScreen}
+				/>
+				{/*<AppNavigationStack.Screen
+					name={NavigationTree.app.ApplyCouponScreen}
+					component={ApplyCoupon}
+				/>*/}
+				<AppNavigationStack.Screen
+					name={NavigationTree.app.PreviousCureScreen}
+					component={PreviousCureScreen}
+				/>
+				<AppNavigationStack.Screen
+					name={NavigationTree.app.DemoVideosScreen}
+					component={DemoVideosScreen}
+				/>
+				<AppNavigationStack.Screen
+					name={NavigationTree.app.ReferCaseScreen}
+					component={ReferCaseScreen}
 				/>
 			</AppNavigationStack.Navigator>
 			<PortalHost name="bottom-sheet" />

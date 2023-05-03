@@ -22,7 +22,7 @@ import { AppNavigation } from "@/navigations";
 import {
 	PaymentHistory,
 	PaymentProcessScreen,
-	IndividualSplashScreen,
+	ApplyCoupon,
 } from "./src/screens";
 import { AuthNavigation } from "@/navigations";
 import AppStyles from "@/AppStyles";
@@ -46,10 +46,9 @@ function App(): JSX.Element {
 						backgroundColor="transparent"
 					/>
 					<NavigationContainer>
-						{/* <AppNavigation /> */}
+						<AppNavigation />
 						{/*<PaymentProcessScreen />*/}
 						{/* <PaymentHistory /> */}
-						{isLoggedIn ? <AppNavigation /> : <AuthNavigation />}
 					</NavigationContainer>
 				</View>
 			</GestureHandlerRootView>

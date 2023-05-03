@@ -6,12 +6,18 @@ import {
 	StatusBar,
 	TouchableOpacity,
 	Pressable,
+	ImageSourcePropType,
 } from "react-native";
+import { BottomSheetView } from "@gorhom/bottom-sheet";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Clipboard from "@react-native-clipboard/clipboard";
+import { useNavigation } from "@react-navigation/native";
+import Share, { ShareOptions } from "react-native-share";
 
 import CopyGreyIcon from "@/constants/svg/icons/CopyGreyIcon.svg";
 import AddIcon from "@/constants/svg/icons/AddIcon.svg";
 import SetupSVG from "@/constants/svg/SetupSVG.svg";
+
 import { Banner, PrimaryButton } from "@/components";
 import {
 	AppReferContainer,
@@ -22,33 +28,49 @@ import {
 
 import Styles from "./Styles";
 import AppStyles from "@/AppStyles";
-import { BottomSheetView } from "@gorhom/bottom-sheet";
-import Style from "@/screens/PolicyScreen/Style";
+import { NavigationTree } from "@/utils";
 
-const TieupHospitals = [
+const cures: {
+	id: number;
+	image: ImageSourcePropType;
+	name: string;
+	price: string;
+	location: string;
+}[] = [
 	{
 		id: 1,
-		name: "Apollo Hospitals",
-		image: require("../../../constants/image/Hospital1.png"),
-		star: "4.8",
-		reviews: "20,171",
+		image: require("@/constants/image/Hospital1.png"),
+		name: "Apollo Hospital",
+		price: "1200",
 		location: "Hyderabad, Secunderabad",
 	},
 	{
 		id: 2,
-		name: "Aditya Hospitals",
-		image: require("../../../constants/image/Hospital2.png"),
-		star: "4.8",
-		reviews: "2,011",
-		location: "Nallagandala, Telengana",
+		image: require("@/constants/image/Hospital1.png"),
+		name: "Apollo Hospital",
+		price: "1200",
+		location: "Hyderabad, Secunderabad",
 	},
 	{
 		id: 3,
-		name: "Aditya Hospitals",
-		image: require("../../../constants/image/Hospital2.png"),
-		star: "4.8",
-		reviews: "2,011",
-		location: "Nallagandala, Telengana",
+		image: require("@/constants/image/Hospital1.png"),
+		name: "Apollo Hospital",
+		price: "1200",
+		location: "Hyderabad, Secunderabad",
+	},
+	{
+		id: 4,
+		image: require("@/constants/image/Hospital1.png"),
+		name: "Apollo Hospital",
+		price: "1200",
+		location: "Hyderabad, Secunderabad",
+	},
+	{
+		id: 5,
+		image: require("@/constants/image/Hospital1.png"),
+		name: "Apollo Hospital",
+		price: "1200",
+		location: "Hyderabad, Secunderabad",
 	},
 ];
 const HowItWorks = [
@@ -58,25 +80,55 @@ const HowItWorks = [
 ];
 
 export default function HomeScreen(): JSX.Element {
+	const navigation = useNavigation();
+	const [code, setCode] = useState<string>("docvhg");
+	const [isCodeCopied, setIsCodeCopied] = useState<boolean>(false);
 	const snapPoints = useMemo(() => ["45%"], []);
 	const [isBottomSheetActive, setIsBottomSheetActive] =
 		useState<boolean>(false);
-	const [method, setMethod] = useState<"refer" | "treat">();
+	const [method, setMethod] = useState<"refer" | "treat">("refer");
 
-	function openBottomSheet() {
+	function openBottomSheet(): void {
 		setIsBottomSheetActive(true);
 	}
-	function onPressContinue() {}
-	function onPressRefer() {
+	function onPressContinue(): void {
+		setIsBottomSheetActive(false);
+		if (method === "refer") {
+			navigation.navigate(NavigationTree.app.ReferCaseScreen as never);
+		} else {
+		}
+	}
+	function onPressRefer(): void {
 		setMethod("refer");
 	}
-	function onPressTreat() {
+	function onPressTreat(): void {
 		setMethod("treat");
+	}
+	function onPressCopy(): void {
+		Clipboard.setString(code);
+		setIsCodeCopied(true);
+	}
+	async function onPressShare(): Promise<void> {
+		try {
+			Share.open({
+				title: "invitation Code",
+				message: code.toString(),
+			});
+		} catch (error: unknown) {
+			console.log(error);
+		}
+	}
+	function onPressSetupnow(): void {
+		navigation.navigate(NavigationTree.app.ProfileScreen as never);
 	}
 
 	return (
 		<SafeAreaView style={Styles.container}>
-			<StatusBar barStyle={"dark-content"} translucent />
+			<StatusBar
+				barStyle={"dark-content"}
+				translucent
+				backgroundColor={"transparent"}
+			/>
 			<ScrollView
 				nestedScrollEnabled
 				showsVerticalScrollIndicator={false}
@@ -103,6 +155,7 @@ export default function HomeScreen(): JSX.Element {
 							</Text>
 							<TouchableOpacity
 								activeOpacity={0.85}
+								onPress={onPressSetupnow}
 								style={Styles.completeSetupButton}
 							>
 								<Text style={Styles.completeSetupButtonText}>
@@ -121,7 +174,7 @@ export default function HomeScreen(): JSX.Element {
 					/>
 				</View>*/}
 				<View style={Styles.tieupCarouselContainer}>
-					<TieupCarousel data={TieupHospitals as any} />
+					<TieupCarousel data={cures as any} />
 				</View>
 				<View style={Styles.howItWorkContainer}>
 					<HowItWorkCarousel data={HowItWorks as any} />
@@ -133,13 +186,23 @@ export default function HomeScreen(): JSX.Element {
 					<View style={Styles.codeContainer}>
 						<View style={Styles.codeTextContainer}>
 							<CopyGreyIcon />
-							<Text style={Styles.codeText}>docvhg</Text>
+							<Text style={Styles.codeText}>{code}</Text>
 						</View>
-						<TouchableOpacity style={Styles.copyContainer}>
-							<Text style={Styles.copyText}>Copy</Text>
+						<TouchableOpacity
+							activeOpacity={0.85}
+							onPress={onPressCopy}
+							style={Styles.copyContainer}
+						>
+							<Text style={Styles.copyText}>
+								{isCodeCopied ? "Copied" : "Copy"}
+							</Text>
 						</TouchableOpacity>
 					</View>
-					<TouchableOpacity style={Styles.inviteButton}>
+					<TouchableOpacity
+						activeOpacity={0.85}
+						onPress={onPressShare}
+						style={Styles.inviteButton}
+					>
 						<Text style={Styles.inviteButtonText}>Invite</Text>
 					</TouchableOpacity>
 				</View>

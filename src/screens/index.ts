@@ -31,6 +31,9 @@ import {
 	EditProfile,
 	AddBankScreen,
 	ReferFriendScreen,
+	PreviousCureScreen,
+	DemoVideosScreen,
+	ReferCaseScreen,
 } from "./AppScreens";
 
 // export
@@ -40,6 +43,7 @@ import {
 	SubscriptionScreen,
 	PaymentHistory,
 	PaymentProcessScreen,
+	ApplyCoupon,
 } from "./PaymentScreens";
 
 export {
@@ -68,6 +72,9 @@ export {
 	EditProfile,
 	AddBankScreen,
 	ReferFriendScreen,
+	PreviousCureScreen,
+	DemoVideosScreen,
+	ReferCaseScreen,
 };
 
 // PaymentScreens export
@@ -76,4 +83,5 @@ export {
 	SubscriptionScreen,
 	PaymentHistory,
 	PaymentProcessScreen,
+	ApplyCoupon,
 };

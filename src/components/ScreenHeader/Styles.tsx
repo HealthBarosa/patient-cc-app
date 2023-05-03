@@ -8,7 +8,7 @@ export default StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center",
 		gap: 10,
-		paddingTop: 35,
+		paddingTop: 50,
 		paddingHorizontal: 10,
 		paddingBottom: 15,
 		backgroundColor: AppStyles.colorBrand1,

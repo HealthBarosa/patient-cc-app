@@ -10,6 +10,8 @@ import DocumentPicker, {
 	isCancel,
 } from "react-native-document-picker";
 
+import CorrectGreenIcon from "@/constants/svg/icons/CorrectGreenIcon.svg";
+
 import { MoreOptions, PrimaryButton } from "@/components";
 import { BottomActionSheet } from "@/containers";
 import { NavigationTree } from "@/utils";
@@ -24,13 +26,15 @@ import AppStyles from "@/AppStyles";
 
 export default function ProfileScreen(): JSX.Element {
 	const navigation = useNavigation();
+	const [pickedMediaError, setPickedMediaError] = useState<boolean>(false);
+	const [pickedAadharError, setPickedAadharError] = useState<boolean>(false);
 	const [isBottomSheetActive, setIsBottomSheetActive] =
 		useState<boolean>(false);
 	const [pickedMediaDocument, setPickedMediaDocument] = useState<
-		DocumentPickerResponse | DirectoryPickerResponse | undefined | null
+		DocumentPickerResponse | undefined
 	>();
 	const [pickedAadhar, setPickedAadhar] = useState<
-		DocumentPickerResponse | DirectoryPickerResponse | undefined | null
+		DocumentPickerResponse | undefined
 	>();
 
 	function onPressEditProfile() {
@@ -46,17 +50,19 @@ export default function ProfileScreen(): JSX.Element {
 		navigation.navigate(NavigationTree.app.ReferFriendScreen as never);
 	}
 
-	const snapPoints = useMemo(() => ["45%"], []);
+	const snapPoints = useMemo(() => ["35%"], []);
 
 	async function onPressUploadDocument() {
 		try {
-			const files = await DocumentPicker.pickSingle({
+			const file = await DocumentPicker.pickSingle({
 				type: [types.doc, types.docx, types.pdf],
 				presentationStyle: "fullScreen",
+				allowMultiSelection: false,
 			});
-			console.log(files);
-			setPickedMediaDocument(files);
+			setPickedMediaError(true);
+			setPickedMediaDocument(file);
 		} catch (error) {
+			setPickedMediaError(false);
 			console.log(error);
 		}
 	}
@@ -66,11 +72,17 @@ export default function ProfileScreen(): JSX.Element {
 				type: [types.doc, types.docx, types.pdf],
 				presentationStyle: "fullScreen",
 			});
-			console.log(files);
+			setPickedAadharError(false);
 			setPickedAadhar(files);
 		} catch (error) {
+			setPickedAadharError(true);
 			console.log(error);
 		}
+	}
+
+	async function onPressContinue(): Promise<void> {
+		if (pickedAadhar === undefined) setPickedAadharError(true);
+		if (pickedMediaDocument === undefined) setPickedMediaError(true);
 	}
 
 	return (
@@ -186,19 +198,79 @@ export default function ProfileScreen(): JSX.Element {
 							<TouchableOpacity
 								activeOpacity={0.85}
 								onPress={onPressUploadDocument}
-								style={Styles.bottomSheetButton}
+								style={[
+									Styles.bottomSheetButton,
+									{ width: "48%" },
+									pickedMediaDocument !== undefined
+										? { borderColor: AppStyles.colorGreen1 }
+										: pickedMediaError
+										? {
+												borderColor:
+													"rgba(255, 108, 81, 0.8)",
+										  }
+										: {
+												borderColor:
+													"rgba(46, 46, 46, 0.3)",
+										  },
+								]}
 							>
-								<Text style={Styles.bottomSheetButtonText}>
-									Upload Medical Document
+								{pickedMediaDocument && <CorrectGreenIcon />}
+								<Text
+									numberOfLines={1}
+									ellipsizeMode="tail"
+									style={[
+										Styles.bottomSheetButtonText,
+										pickedMediaDocument !== undefined
+											? { color: AppStyles.colorGreen1 }
+											: pickedMediaError
+											? {
+													color: "rgba(255, 108, 81, 0.8)",
+											  }
+											: { color: AppStyles.colorGrey2 },
+									]}
+								>
+									{pickedMediaDocument !== undefined
+										? `${pickedMediaDocument.name}`
+										: "Upload Medical Document"}
 								</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
 								activeOpacity={0.85}
 								onPress={onPressUploadAadhar}
-								style={Styles.bottomSheetButton}
+								style={[
+									Styles.bottomSheetButton,
+									{ width: "48%" },
+									pickedAadhar !== undefined
+										? { borderColor: AppStyles.colorGreen1 }
+										: pickedAadharError
+										? {
+												borderColor:
+													"rgba(255, 108, 81, 0.8)",
+										  }
+										: {
+												borderColor:
+													"rgba(46, 46, 46, 0.3)",
+										  },
+								]}
 							>
-								<Text style={Styles.bottomSheetButtonText}>
-									Upload Aadhar Card
+								{pickedAadhar && <CorrectGreenIcon />}
+								<Text
+									numberOfLines={1}
+									ellipsizeMode="tail"
+									style={[
+										Styles.bottomSheetButtonText,
+										pickedAadhar !== undefined
+											? { color: AppStyles.colorGreen1 }
+											: pickedAadharError
+											? {
+													color: "rgba(255, 108, 81, 0.8)",
+											  }
+											: { color: AppStyles.colorGrey2 },
+									]}
+								>
+									{pickedAadhar !== undefined
+										? `${pickedAadhar.name}`
+										: "Upload Aadhar Card"}
 								</Text>
 							</TouchableOpacity>
 						</View>
@@ -207,7 +279,8 @@ export default function ProfileScreen(): JSX.Element {
 						</Text>
 					</View>
 					<PrimaryButton
-						onPress={() => {}}
+						activeOpacity={0.85}
+						onPress={onPressContinue}
 						backgroundColor={AppStyles.colorBrand1}
 					>
 						Continue with this
