@@ -6,16 +6,15 @@ import { ScreenHeader } from "@/components";
 
 import Styles from "./Styles";
 
-
 export default function ReferCaseScreen(): JSX.Element {
-	const navigation = useNavigation()
+	const navigation = useNavigation();
 
 	function onPressGoBack() {
-		navigation.goBack()
+		navigation.goBack();
 	}
-	
+
 	return (
-		<View style={Styles.container} >
+		<View style={Styles.container}>
 			{/* status bar */}
 			<StatusBar
 				barStyle={"light-content"}
@@ -28,4 +27,3 @@ export default function ReferCaseScreen(): JSX.Element {
 		</View>
 	);
 }
-
