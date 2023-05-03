@@ -24,8 +24,15 @@ module.exports = {
 				"@/navigations": "./src/navigations",
 				"@/containers": "./src/containers",
 				"@/constants": "./src/constants",
+				"@/api": "./src/api",
 				}
 			},
+		],
+		["module:react-native-dotenv",{
+			envName: "APP_ENV",
+			moduleName: "@env",
+			path: ".env",
+		}
 		],
 		"react-native-reanimated/plugin",
 	],

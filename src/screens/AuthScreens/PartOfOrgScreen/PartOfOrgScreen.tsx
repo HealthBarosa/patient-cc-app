@@ -2,8 +2,13 @@ import React from "react";
 import { Image, Pressable, StatusBar, Text, View } from "react-native";
 import Styles from "./Styles";
 import { CoverPartOfOrgImage } from "@/constants/image/authScreen/PartOfOrg";
+import { NavigationTree } from "@/utils";
 
-const PartOfOrgScreen = () => {
+const PartOfOrgScreen = ({ navigation }) => {
+	const handleContinuePress = () => {
+		navigation.navigate(NavigationTree.app.HomeScreen);
+	};
+
 	return (
 		<>
 			<StatusBar
@@ -26,12 +31,18 @@ const PartOfOrgScreen = () => {
 				</View>
 
 				<View style={Styles.buttonContainer}>
-					<Pressable style={Styles.button}>
+					<Pressable
+						style={Styles.button}
+						onPress={handleContinuePress}
+					>
 						<Text style={Styles.buttonText}>Yes, I am</Text>
 					</Pressable>
-					<View style={Styles.button}>
+					<Pressable
+						style={Styles.button}
+						onPress={handleContinuePress}
+					>
 						<Text style={Styles.buttonText}>No, I am not</Text>
-					</View>
+					</Pressable>
 				</View>
 			</View>
 		</>
