@@ -1,10 +1,31 @@
-import { View, Text } from "react-native";
 import React from "react";
+import { View, Text, StatusBar } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-export default function ReferCaseScreen() {
+import { ScreenHeader } from "@/components";
+
+import Styles from "./Styles";
+
+
+export default function ReferCaseScreen(): JSX.Element {
+	const navigation = useNavigation()
+
+	function onPressGoBack() {
+		navigation.goBack()
+	}
+	
 	return (
-		<View>
+		<View style={Styles.container} >
+			{/* status bar */}
+			<StatusBar
+				barStyle={"light-content"}
+				translucent
+				backgroundColor={"transparent"}
+			/>
+			{/* header */}
+			<ScreenHeader screenName="Previous Cure" onPress={onPressGoBack} />
 			<Text>ReferCaseScreen</Text>
 		</View>
 	);
 }
+

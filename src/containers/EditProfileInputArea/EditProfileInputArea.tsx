@@ -9,37 +9,47 @@ import {
 } from "react-native";
 
 import Styles from "./Styles";
+import AppStyles from "@/AppStyles";
 
-export type EditProfileInputAreaPropsType = {
+interface EditProfileInputAreaPropsType<T>
+	extends React.ComponentProps<typeof TextInput> {
 	label: string;
-	value: string;
-	placeholder: string;
-	keyboardType: string;
+	value?: string;
+	valueOf: keyof T;
 	buttonText?: string;
-	isPassword?: boolean;
 	buttonOnPress?: () => void;
 	containerStyle: StyleProp<ViewStyle>;
-};
+	/**
+	 * Used to set the state of the parent component
+	 */
+	setUserDetials?: React.Dispatch<React.SetStateAction<T>>;
+}
 
-export default function EditProfileInputArea({
+export default function EditProfileInputArea<T>({
 	label,
-	placeholder,
 	value,
-	keyboardType,
+	valueOf,
 	buttonText,
 	buttonOnPress,
 	containerStyle,
-	isPassword,
-}: EditProfileInputAreaPropsType): JSX.Element {
+	setUserDetials,
+	...EditInputProps
+}: EditProfileInputAreaPropsType<T>): JSX.Element {
 	return (
 		<View style={[Styles.container, containerStyle]}>
 			<Text style={Styles.label}>{label}</Text>
 			<View style={Styles.inputContainer}>
 				<TextInput
-					placeholder={placeholder}
 					value={value}
-					keyboardType={keyboardType}
-					secureTextEntry={isPassword}
+					{...EditInputProps}
+					placeholderTextColor={AppStyles.colorGrey1}
+					onChange={(text) => {
+						setUserDetials &&
+							setUserDetials((prevState) => ({
+								...prevState,
+								[valueOf]: text.nativeEvent.text,
+							}));
+					}}
 					style={[
 						Styles.input,
 						{ width: buttonText ? "85%" : "100%" },

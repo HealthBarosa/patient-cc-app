@@ -29,6 +29,10 @@ export default {
 	colorGreyLight2: "#979797",
 	colorGreyLight3: "#F3F3F3",
 	colorGreyLight4: "#C7C7C7",
+	/**
+	 * #D9D9D9
+	 */
+	colorGreyLight5: "#D9D9D9",
 	colorRed1: "#F55459",
 	buttonBlue1: "#8A86F1",
 	colorGreen1: "#1AA703",

@@ -11,6 +11,7 @@ import Styles from "./Styles";
 import { OTPBox, PrimaryButton } from "@/components";
 import AppStyles from "@/AppStyles";
 import { LeftIconSVG } from "@/constants/svg/OTPScreen";
+import { NavigationTree } from "@/utils";
 
 interface OTPTimmerProps {
 	OTPTime: number;
@@ -52,11 +53,15 @@ const OTPNotRecived = () => {
 };
 
 const OTPScreen = ({ navigation }): JSX.Element => {
-	const [OTPTime, setOTPTime] = useState(43);
+	const [OTPTime, setOTPTime] = useState<number>(43);
 	const [OTP, setOTP] = useState<string>("");
 
 	const handleBackPress = () => {
 		navigation.goBack();
+	};
+
+	const handleContinuePress = () => {
+		navigation.navigate(NavigationTree.auth.EnterRefferCodeScreen);
 	};
 
 	const disableContinueButton = () => {
@@ -101,7 +106,7 @@ const OTPScreen = ({ navigation }): JSX.Element => {
 
 			<View style={{ marginTop: 180 }}>
 				<PrimaryButton
-					onPress={() => {}}
+					onPress={handleContinuePress}
 					backgroundColor={AppStyles.colorBrand1}
 					disabled={disableContinueButton()}
 				>

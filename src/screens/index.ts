@@ -8,7 +8,16 @@ import {
 } from "./ConfigurationScreens";
 
 // auth screens
-import { OTPScreen, SignupScreen, SignInScreen } from "./AuthScreens";
+import {
+	OTPScreen,
+	SignupScreen,
+	SignInScreen,
+	OnboardingScreen,
+	EnterRefferCodeScreen,
+	EnterDetailsScreen,
+	EnterProfessionScreen,
+	PartOfOrgScreen,
+} from "./AuthScreens";
 
 import { TermsOfService } from "./PolicyScreen";
 
@@ -48,6 +57,11 @@ export {
 	SignupScreen,
 	TermsOfService,
 	SignInScreen,
+	OnboardingScreen,
+	EnterRefferCodeScreen,
+	EnterDetailsScreen,
+	EnterProfessionScreen,
+	PartOfOrgScreen,
 
 	// app screens
 	IndividualSplashScreen,

@@ -2,10 +2,9 @@ import React from "react";
 import { View, StatusBar, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import { ScreenHeader } from "../../../components";
-import { EditProfileInputArea } from "../../../containers";
-
 import Styles from "./Styles";
+import { EditProfileInputArea } from "@/containers";
+import { ScreenHeader } from "@/components";
 
 export default function EditProfile(): JSX.Element {
 	const navigation = useNavigation();
@@ -95,7 +94,7 @@ export default function EditProfile(): JSX.Element {
 							containerStyle={{ width: "42%" }}
 						/>
 					</View>
-					<EditProfileInputArea
+					{/*<EditProfileInputArea
 						label="User Type"
 						keyboardType="default"
 						placeholder=""
@@ -103,7 +102,7 @@ export default function EditProfile(): JSX.Element {
 						containerStyle={{ width: "100%", marginBottom: 25 }}
 						buttonText="Update"
 						buttonOnPress={() => {}}
-					/>
+					/>*/}
 				</ScrollView>
 			</View>
 		</View>

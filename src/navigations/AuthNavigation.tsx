@@ -5,7 +5,12 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import {
+	EnterDetailsScreen,
+	EnterProfessionScreen,
+	EnterRefferCodeScreen,
 	OTPScreen,
+	OnboardingScreen,
+	PartOfOrgScreen,
 	SignInScreen,
 	SignupScreen,
 	TermsOfService,
@@ -21,6 +26,10 @@ export default function AuthNavigation(): JSX.Element {
 
 	return (
 		<AuthNavigationStack.Navigator screenOptions={screenOptions}>
+			{/* <AuthNavigationStack.Screen
+				name={NavigationTree.auth.OnboardingScreen}
+				component={OnboardingScreen}
+			/> */}
 			<AuthNavigationStack.Screen
 				name={NavigationTree.auth.SignupScreen}
 				component={SignupScreen}
@@ -32,6 +41,22 @@ export default function AuthNavigation(): JSX.Element {
 			<AuthNavigationStack.Screen
 				name={NavigationTree.auth.OTPScreen}
 				component={OTPScreen}
+			/>
+			<AuthNavigationStack.Screen
+				name={NavigationTree.auth.EnterRefferCodeScreen}
+				component={EnterRefferCodeScreen}
+			/>
+			<AuthNavigationStack.Screen
+				name={NavigationTree.auth.EnterDetailsScreen}
+				component={EnterDetailsScreen}
+			/>
+			<AuthNavigationStack.Screen
+				name={NavigationTree.auth.EnterProfessionScreen}
+				component={EnterProfessionScreen}
+			/>
+			<AuthNavigationStack.Screen
+				name={NavigationTree.auth.PartOfOrgScreen}
+				component={PartOfOrgScreen}
 			/>
 			<AuthNavigationStack.Screen
 				name={NavigationTree.auth.TermsOfService}
