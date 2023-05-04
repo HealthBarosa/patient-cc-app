@@ -96,7 +96,9 @@ export default function HomeScreen(): JSX.Element {
 		if (method === "refer") {
 			navigation.navigate(NavigationTree.app.ReferCaseScreen as never);
 		} else {
-			navigation.navigate(NavigationTree.app.LiveReferCaseScreen as never);
+			navigation.navigate(
+				NavigationTree.app.LiveReferCaseScreen as never
+			);
 		}
 	}
 	function onPressRefer(): void {
@@ -113,17 +115,17 @@ export default function HomeScreen(): JSX.Element {
 		try {
 			const result = await Share.share({
 				title: "Invite people to get discount",
-        message: code,
-      });
-      if (result.action === Share.sharedAction) {
-        if (result.activityType) {
-          // shared with activity type of result.activityType
-        } else {
-          // shared
-        }
-      } else if (result.action === Share.dismissedAction) {
-        // dismissed
-      }
+				message: code,
+			});
+			if (result.action === Share.sharedAction) {
+				if (result.activityType) {
+					// shared with activity type of result.activityType
+				} else {
+					// shared
+				}
+			} else if (result.action === Share.dismissedAction) {
+				// dismissed
+			}
 		} catch (error: unknown) {
 			console.log(error);
 		}
