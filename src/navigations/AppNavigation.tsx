@@ -16,6 +16,7 @@ import {
 	PreviousCureScreen,
 	DemoVideosScreen,
 	ReferCaseScreen,
+	LiveReferCaseScreen,
 } from "../screens";
 
 import { NavigationTree } from "@/utils";
@@ -69,6 +70,10 @@ export default function AppNavigation(): JSX.Element {
 				<AppNavigationStack.Screen
 					name={NavigationTree.app.ReferCaseScreen}
 					component={ReferCaseScreen}
+				/>
+				<AppNavigationStack.Screen
+					name={NavigationTree.app.LiveReferCaseScreen}
+					component={LiveReferCaseScreen}
 				/>
 			</AppNavigationStack.Navigator>
 			<PortalHost name="bottom-sheet" />

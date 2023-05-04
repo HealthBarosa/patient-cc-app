@@ -34,6 +34,7 @@ import {
 	PreviousCureScreen,
 	DemoVideosScreen,
 	ReferCaseScreen,
+	LiveReferCaseScreen,
 } from "./AppScreens";
 
 // export
@@ -75,6 +76,7 @@ export {
 	PreviousCureScreen,
 	DemoVideosScreen,
 	ReferCaseScreen,
+	LiveReferCaseScreen,
 };
 
 // PaymentScreens export

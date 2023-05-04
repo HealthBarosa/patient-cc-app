@@ -7,12 +7,12 @@ import {
 	TouchableOpacity,
 	Pressable,
 	ImageSourcePropType,
+	Share,
 } from "react-native";
 import { BottomSheetView } from "@gorhom/bottom-sheet";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Clipboard from "@react-native-clipboard/clipboard";
 import { useNavigation } from "@react-navigation/native";
-import Share, { ShareOptions } from "react-native-share";
 
 import CopyGreyIcon from "@/constants/svg/icons/CopyGreyIcon.svg";
 import AddIcon from "@/constants/svg/icons/AddIcon.svg";
@@ -96,6 +96,9 @@ export default function HomeScreen(): JSX.Element {
 		if (method === "refer") {
 			navigation.navigate(NavigationTree.app.ReferCaseScreen as never);
 		} else {
+			navigation.navigate(
+				NavigationTree.app.LiveReferCaseScreen as never
+			);
 		}
 	}
 	function onPressRefer(): void {
@@ -110,10 +113,19 @@ export default function HomeScreen(): JSX.Element {
 	}
 	async function onPressShare(): Promise<void> {
 		try {
-			Share.open({
-				title: "invitation Code",
-				message: code.toString(),
+			const result = await Share.share({
+				title: "Invite people to get discount",
+				message: code,
 			});
+			if (result.action === Share.sharedAction) {
+				if (result.activityType) {
+					// shared with activity type of result.activityType
+				} else {
+					// shared
+				}
+			} else if (result.action === Share.dismissedAction) {
+				// dismissed
+			}
 		} catch (error: unknown) {
 			console.log(error);
 		}
