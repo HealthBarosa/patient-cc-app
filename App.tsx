@@ -46,10 +46,9 @@ function App(): JSX.Element {
 						backgroundColor="transparent"
 					/>
 					<NavigationContainer>
-						{/* <AppNavigation /> */}
+						<AppNavigation />
 						{/*<PaymentProcessScreen />*/}
 						{/* <PaymentHistory /> */}
-						{isLoggedIn ? <AppNavigation /> : <AuthNavigation />}
 					</NavigationContainer>
 				</View>
 			</GestureHandlerRootView>
