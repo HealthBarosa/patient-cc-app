@@ -7,13 +7,16 @@ import { PrimaryButton, SignupWithGoogleBtn } from "@/components";
 import { NavigationTree } from "@/utils";
 import { CallIconFocousedSVG, CallIconSVG } from "@/constants/svg/Signup";
 import CheckBox from "@react-native-community/checkbox";
+import apiAuthInstance from "@/api";
+import axios from "axios";
+import { REACT_APP_BASE_URL } from "@env";
 
 const SignupScreen = ({ navigation }) => {
 	const [isFocoused, setIsFocoused] = useState<boolean>(false);
 	const [toggleCheckBox, setToggleCheckBox] = useState(false);
 	const [phoneNumber, setPhoneNumber] = useState<string>("");
 
-	const handleSigninPress = () => {
+	const handleSigninPress = async () => {
 		navigation.navigate(NavigationTree.auth.SignInScreen);
 		console.log("Signin Pressed");
 	};
@@ -23,9 +26,39 @@ const SignupScreen = ({ navigation }) => {
 		console.log("termsOfService Pressed");
 	};
 
-	const handleContinuePress = () => {
-		navigation.navigate(NavigationTree.auth.OTPScreen);
+	const handleContinuePress = async (phoneNumber: string) => {
+		// const response = await apiAuthInstance.get(`/signup?mobile=${phoneNumber}`);
 		console.log("Continue Pressed");
+		console.log("phoneNumber", phoneNumber);
+		console.log(
+			`${REACT_APP_BASE_URL}/api/global/auth/signup?mobile=${phoneNumber}`
+		);
+		navigation.navigate(NavigationTree.auth.OTPScreen);
+		// await fetch(
+		// 	`${REACT_APP_BASE_URL}/api/global/auth/signup?mobile=${phoneNumber}`
+		// 	// "https://jsonplaceholder.typicode.com/todos/1"
+		// ).then((response) => {
+		// 	console.log(response);
+		// 	navigation.navigate(NavigationTree.auth.OTPScreen);
+		// })
+		// .catch((error) => {
+		// 	console.log("Error:",error);
+		// });
+
+		// axios
+		// 	.get(
+		// 		// `${REACT_APP_BASE_URL}/api/global/auth/signup?mobile=${phoneNumber}`
+		// 		// `https://stage.api.webapp.patientcc.in/actuator/health`
+		// 		// "https://jsonplaceholder.typicode.com/todos/1"
+		// 		"https://api.coindesk.com/v1/bpi/currentprice.json"
+		// 	)
+		// 	.then((response) => {
+		// 		console.log(response.status);
+		// 		navigation.navigate(NavigationTree.auth.OTPScreen);
+		// 	})
+		// 	.catch((error) => {
+		// 		console.log(error);
+		// 	});
 	};
 
 	const handleGoogleSignupPress = () => {
@@ -134,7 +167,7 @@ const SignupScreen = ({ navigation }) => {
 			</View>
 			<PrimaryButton
 				backgroundColor={AppStyles.colorBrand1}
-				onPress={() => handleContinuePress()}
+				onPress={() => handleContinuePress(phoneNumber)}
 				disabled={!enableContinueBtn()}
 			>
 				Continue
